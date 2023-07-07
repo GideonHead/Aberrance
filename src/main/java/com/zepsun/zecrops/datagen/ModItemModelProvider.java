@@ -1,6 +1,7 @@
 package com.zepsun.zecrops.datagen;
 
 import com.zepsun.zecrops.ZECrops;
+import com.zepsun.zecrops.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
@@ -16,7 +17,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        //simpleItem(ModItems.EXAMPLE_ITEM);
+        simpleItem(ModItems.PARSNIP);
+        simpleItem(ModItems.PARSNIP_SEEDS);
 
     }
 
