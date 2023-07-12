@@ -1,5 +1,6 @@
 package com.zepsun.zecrops.datagen;
 
+import com.zepsun.zecrops.item.ModItems;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
@@ -23,10 +24,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 //                        of(ModItems.EXAMPLE_ITEM.get()).build()))
 //                .save(pWriter);
 //
-//        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.EXAMPLE_ITEM.get(), 9)
-//                .requires(ModBlocks.EXAMPLE_BLOCK.get())
-//                .unlockedBy("has_exampleitem", inventoryTrigger(ItemPredicate.Builder.item().
-//                        of(ModItems.EXAMPLE_ITEM.get()).build()))
-//                .save(pWriter);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.WINTER_WHEAT_BREAD.get(), 1)
+                .requires(ModItems.WINTER_WHEAT.get())
+                .requires(ModItems.WINTER_WHEAT.get())
+                .requires(ModItems.WINTER_WHEAT.get())
+                .unlockedBy("has_exampleitem", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.WINTER_WHEAT.get()).build()))
+                .save(pWriter);
     }
 }
