@@ -2,6 +2,7 @@ package com.zepsun.zecrops.datagen.loot;
 
 import com.zepsun.zecrops.block.ModBlocks;
 import com.zepsun.zecrops.block.crop.ModCropBlock;
+
 import com.zepsun.zecrops.item.ModItems;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
@@ -27,6 +28,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         LootItemCondition.Builder lootitemcondition$builder1 = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.PARSNIP_CROP.get())
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(ModCropBlock.AGE, 6));
         this.add(ModBlocks.PARSNIP_CROP.get(), this.createCropDrops(ModBlocks.PARSNIP_CROP.get(), ModItems.PARSNIP.get(), ModItems.PARSNIP_SEEDS.get(), lootitemcondition$builder1));
+
+        LootItemCondition.Builder lootitemcondition$builder2 = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.WINTER_WHEAT_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(ModCropBlock.AGE, 6));
+        this.add(ModBlocks.WINTER_WHEAT_CROP.get(), this.createCropDrops(ModBlocks.WINTER_WHEAT_CROP.get(), ModItems.WINTER_WHEAT.get(), ModItems.WINTER_WHEAT_SEEDS.get(), lootitemcondition$builder1));
 
     }
 

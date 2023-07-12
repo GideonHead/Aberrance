@@ -19,6 +19,8 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         simpleItem(ModItems.PARSNIP);
         simpleItem(ModItems.PARSNIP_SEEDS);
+        simpleItem(ModItems.WINTER_WHEAT);
+        simpleItem(ModItems.WINTER_WHEAT_SEEDS);
 
     }
 

@@ -1,6 +1,7 @@
 package com.zepsun.zecrops.tab;
 
 import com.zepsun.zecrops.ZECrops;
+import com.zepsun.zecrops.block.ModBlocks;
 import com.zepsun.zecrops.item.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -20,6 +21,10 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.PARSNIP.get());
                         output.accept(ModItems.PARSNIP_SEEDS.get());
+                        output.accept(ModItems.WINTER_WHEAT.get());
+                        output.accept(ModItems.WINTER_WHEAT_SEEDS.get());
+
+                        output.accept(ModBlocks.ACACIA_MESQUITE_LEAVES.get());
 
                     }).build());
 
