@@ -23,7 +23,7 @@ public class ModPlacedFeatures {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, ACACIA_MESQUITE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ACACIA_MESQUITE_KEY),
-                VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(1/2, 0.1f, 2),
                         ModBlocks.ACACIA_MESQUITE_SAPLING.get()));
     }
 
