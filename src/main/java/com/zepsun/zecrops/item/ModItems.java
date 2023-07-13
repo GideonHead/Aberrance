@@ -34,6 +34,8 @@ public class ModItems {
             () -> new ItemNameBlockItem(ModBlocks.ONION_CROP.get(), new Item.Properties().food(ModFoodProperties.PARSNIP)));
 
     //Mesquite
+    public static final RegistryObject<Item> MESQUITE = ITEMS.register("mesquite",
+            () -> new Item(new Item.Properties().food(Foods.SWEET_BERRIES)));
 
 
     public static void register(IEventBus eventBus) {

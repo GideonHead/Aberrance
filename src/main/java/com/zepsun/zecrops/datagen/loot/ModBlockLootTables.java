@@ -37,6 +37,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(ModCropBlock.AGE, 6));
         this.add(ModBlocks.ONION_CROP.get(), this.createCropDrops(ModBlocks.ONION_CROP.get(), ModItems.ONION.get(), ModItems.ONION.get(), lootitemcondition$builder3));
 
+        this.add(ModBlocks.ACACIA_MESQUITE_LEAVES.get(), block ->
+                createSingleItemTable(ModItems.MESQUITE.get()));
+
     }
 
     @Override
