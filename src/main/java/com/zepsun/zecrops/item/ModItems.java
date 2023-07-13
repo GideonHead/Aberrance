@@ -29,6 +29,10 @@ public class ModItems {
     public static final RegistryObject<Item> WINTER_WHEAT_BREAD = ITEMS.register("winter_wheat_bread",
             () -> new Item(new Item.Properties().food(Foods.BREAD)));
 
+    //Onion
+    public static final RegistryObject<Item> ONION = ITEMS.register("onion",
+            () -> new ItemNameBlockItem(ModBlocks.ONION_CROP.get(), new Item.Properties().food(ModFoodProperties.PARSNIP)));
+
     //Mesquite
 
 

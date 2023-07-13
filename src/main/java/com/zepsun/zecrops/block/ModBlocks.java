@@ -33,6 +33,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> WINTER_WHEAT_CROP = BLOCKS.register("winter_wheat_crop",
             () -> new ModCropBlock(ModItems.WINTER_WHEAT_SEEDS::get, BlockBehaviour.Properties.copy(Blocks.WHEAT)));
 
+    //Onion
+    public static final RegistryObject<Block> ONION_CROP = BLOCKS.register("onion_crop",
+            () -> new ModCropBlock(ModItems.ONION::get, BlockBehaviour.Properties.copy(Blocks.WHEAT)));
+
     //Mesquite
     public static final RegistryObject<Block> ACACIA_MESQUITE_LEAVES = registerBlock("acacia_mesquite_leaves",
             () -> new LeavesBlock(BlockBehaviour.Properties.of().noLootTable().mapColor(MapColor.PLANT).strength(0.2F)

@@ -22,6 +22,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.WINTER_WHEAT);
         simpleItem(ModItems.WINTER_WHEAT_SEEDS);
         simpleItem(ModItems.WINTER_WHEAT_BREAD);
+        simpleItem(ModItems.ONION);
 
     }
 

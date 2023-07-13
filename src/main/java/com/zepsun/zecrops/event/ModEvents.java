@@ -22,7 +22,8 @@ public class ModEvents {
         if(event.getType() == VillagerProfession.FARMER) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack parsnip_seeds_stack = new ItemStack(ModItems.PARSNIP_SEEDS.get(), 6);
-            ItemStack winter_wheat_seeds_stack = new ItemStack(ModItems.PARSNIP_SEEDS.get(), 6);
+            ItemStack winter_wheat_seeds_stack = new ItemStack(ModItems.WINTER_WHEAT_SEEDS.get(), 6);
+            ItemStack onion_stack = new ItemStack(ModItems.ONION.get(), 6);
             int villagerLevel = 1;
 
             trades.get(villagerLevel).add((pTrader, pRandom) -> new MerchantOffer(
@@ -30,6 +31,9 @@ public class ModEvents {
             ));
             trades.get(villagerLevel).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemStack(Items.WHEAT_SEEDS, 6), winter_wheat_seeds_stack, 10, 2, 0.02f
+            ));
+            trades.get(villagerLevel).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(Items.CARROT, 6), onion_stack, 10, 2, 0.02f
             ));
 
         }
@@ -40,13 +44,17 @@ public class ModEvents {
     public static void addCustomWanderingTrades(WandererTradesEvent event) {
         List<VillagerTrades.ItemListing> trades = event.getGenericTrades();
         ItemStack parsnip_seeds_stack = new ItemStack(ModItems.PARSNIP_SEEDS.get(), 6);
-        ItemStack winter_wheat_seeds_stack = new ItemStack(ModItems.PARSNIP_SEEDS.get(), 6);
+        ItemStack winter_wheat_seeds_stack = new ItemStack(ModItems.WINTER_WHEAT_SEEDS.get(), 6);
+        ItemStack onion_stack = new ItemStack(ModItems.ONION.get(), 6);
 
         trades.add((pTrader, pRandom) -> new MerchantOffer(
                 new ItemStack(Items.WHEAT_SEEDS, 6), parsnip_seeds_stack, 10, 2, 0.02f
         ));
         trades.add((pTrader, pRandom) -> new MerchantOffer(
                 new ItemStack(Items.WHEAT_SEEDS, 6), winter_wheat_seeds_stack, 10, 2, 0.02f
+        ));
+        trades.add((pTrader, pRandom) -> new MerchantOffer(
+                new ItemStack(Items.CARROT, 6), onion_stack, 10, 2, 0.02f
         ));
     }
 }
