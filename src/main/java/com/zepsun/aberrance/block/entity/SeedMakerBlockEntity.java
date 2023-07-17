@@ -1,5 +1,6 @@
 package com.zepsun.aberrance.block.entity;
 
+import com.zepsun.aberrance.recipe.SeedMakingRecipe;
 import com.zepsun.aberrance.screen.SeedMakerMenu;
 import com.zepsun.aberrance.tag.ModTags;
 import net.minecraft.core.BlockPos;
@@ -13,6 +14,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -25,6 +27,8 @@ import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Optional;
+
 
 public class SeedMakerBlockEntity extends BlockEntity implements MenuProvider {
     private final ItemStackHandler itemHandler = new ItemStackHandler(3) {
@@ -36,8 +40,7 @@ public class SeedMakerBlockEntity extends BlockEntity implements MenuProvider {
         @Override
         public boolean isItemValid(int slot, @NotNull ItemStack stack) {
             return switch(slot) {
-                case 0 -> stack.is(ModTags.Items.SEED_MAKER_CROPS);
-                case 1 -> true;
+                case 0, 1 -> true;
                 case 2 -> false;
                 default -> super.isItemValid(slot, stack);
             };
@@ -138,7 +141,73 @@ public class SeedMakerBlockEntity extends BlockEntity implements MenuProvider {
     }
 
     public void tick(Level level, BlockPos pPos, BlockState pState) {
+        if (isOutputSlotEmptyOrReceivable() && hasRecipe()) {
+            increaseCraftingProcess();
+            setChanged(level, pPos, pState);
 
+            if (hasProgressFinished()) {
+                craftItem();
+                resetProgress();
+            }
+        } else {
+            resetProgress();
+        }
     }
 
+    private void craftItem() {
+        Optional<SeedMakingRecipe> recipe = getCurrentRecipe();
+        ItemStack resultItem = recipe.get().getResultItem(getLevel().registryAccess());
+
+        this.itemHandler.extractItem(INPUT_SLOT, 1, false);
+
+        this.itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(resultItem.getItem(),
+                this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + resultItem.getCount()));
+    }
+
+    private void resetProgress() {
+        this.progress = 0;
+    }
+
+    private boolean hasProgressFinished() {
+        return this.progress >= this.maxProgress;
+    }
+
+    private void increaseCraftingProcess() {
+        this.progress++;
+    }
+
+    private boolean hasRecipe() {
+        Optional<SeedMakingRecipe> recipe = getCurrentRecipe();
+
+        if (recipe.isEmpty()) {
+            return false;
+        }
+        ItemStack resultItem = recipe.get().getResultItem(getLevel().registryAccess());
+
+        return canInsertAmountIntoOutputSlot(resultItem.getCount())
+                && canInsertItemIntoOutputSlot(resultItem.getItem());
+    }
+
+    private Optional<SeedMakingRecipe> getCurrentRecipe() {
+        SimpleContainer inventory = new SimpleContainer(this.itemHandler.getSlots());
+        for(int i = 0; i < this.itemHandler.getSlots(); i++) {
+            inventory.setItem(i, this.itemHandler.getStackInSlot(i));
+        }
+
+        return this.level.getRecipeManager().getRecipeFor(SeedMakingRecipe.Type.INSTANCE, inventory, level);
+    }
+
+    private boolean canInsertItemIntoOutputSlot(Item item) {
+        return this.itemHandler.getStackInSlot(OUTPUT_SLOT).isEmpty() || this.itemHandler.getStackInSlot(OUTPUT_SLOT).is(item);
+    }
+
+    private boolean canInsertAmountIntoOutputSlot(int count) {
+        return this.itemHandler.getStackInSlot(OUTPUT_SLOT).getMaxStackSize() >=
+                this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + count;
+    }
+
+    private boolean isOutputSlotEmptyOrReceivable() {
+        return this.itemHandler.getStackInSlot(OUTPUT_SLOT).isEmpty() ||
+                this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() < this.itemHandler.getStackInSlot(OUTPUT_SLOT).getMaxStackSize();
+    }
 }

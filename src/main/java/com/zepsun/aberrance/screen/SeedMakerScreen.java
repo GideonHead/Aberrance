@@ -40,7 +40,7 @@ public class SeedMakerScreen extends AbstractContainerScreen<SeedMakerMenu> {
 
     private void renderProgressArrow(GuiGraphics guiGraphics, int x, int y) {
         if(menu.isCrafting()) {
-            guiGraphics.blit(TEXTURE, x + 109, y + 33, 176, 0, 11, menu.getScaledProgress());
+            guiGraphics.blit(TEXTURE, x + 109, y + 33, 176, 0, 15, menu.getScaledProgress());
         }
     }
 

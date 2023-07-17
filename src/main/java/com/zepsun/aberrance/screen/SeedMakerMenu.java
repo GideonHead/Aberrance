@@ -23,7 +23,6 @@ public class SeedMakerMenu extends AbstractContainerMenu {
 
     public SeedMakerMenu(int pContainerId, Inventory inv, BlockEntity entity, ContainerData data) {
         super(ModMenuTypes.SEED_MAKER_MENU.get(), pContainerId);
-        checkContainerSize(inv, 4);
         blockEntity = ((SeedMakerBlockEntity) entity);
         this.level = inv.player.level();
         this.data = data;
@@ -32,9 +31,9 @@ public class SeedMakerMenu extends AbstractContainerMenu {
         addPlayerHotbar(inv);
 
         this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(iItemHandler -> {
-            this.addSlot(new SlotItemHandler(iItemHandler, 0, 106, 14));
-            this.addSlot(new SlotItemHandler(iItemHandler, 1, 52, 62));
-            this.addSlot(new SlotItemHandler(iItemHandler, 2, 106, 62));
+            this.addSlot(new SlotItemHandler(iItemHandler, 0, 107, 15));
+            this.addSlot(new SlotItemHandler(iItemHandler, 1, 53, 63));
+            this.addSlot(new SlotItemHandler(iItemHandler, 2, 107, 63));
 
         });
 
@@ -48,7 +47,7 @@ public class SeedMakerMenu extends AbstractContainerMenu {
     public int getScaledProgress() {
         int progress = this.data.get(0);
         int maxProgress = this.data.get(1);
-        int progressArrowSize = 26;
+        int progressArrowSize = 28;
 
         return maxProgress != 0 && progress != 0 ? progress * progressArrowSize / maxProgress : 0;
     }

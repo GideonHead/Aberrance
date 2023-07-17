@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import com.zepsun.aberrance.block.ModBlocks;
 import com.zepsun.aberrance.block.entity.ModBlockEntities;
 import com.zepsun.aberrance.item.ModItems;
+import com.zepsun.aberrance.recipe.ModRecipes;
 import com.zepsun.aberrance.screen.ModMenuTypes;
 import com.zepsun.aberrance.screen.SeedMakerScreen;
 import com.zepsun.aberrance.tab.ModCreativeModeTabs;
@@ -33,12 +34,12 @@ public class Aberrance
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModCreativeModeTabs.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
+        ModRecipes.register(modEventBus);
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModBlockEntities.register(modEventBus);
-
-        ModMenuTypes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

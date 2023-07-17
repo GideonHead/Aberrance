@@ -1,3 +1,11 @@
-// 1.20.1	2023-07-17T11:30:42.3420645	Recipes
+// 1.20.1	2023-07-17T14:42:11.825997	Recipes
+e765e2ac0de523437eaa54b6903b540d67dedf42 data/minecraft/advancements/recipes/beetroot_seeds.json
+eaee6bed278488b0ddc5014d0e7eabf5b67cc587 data/minecraft/advancements/recipes/wheat_seeds.json
 c275958a8363912f0763c3d3c46408a01e720834 data/zecrops/advancements/recipes/misc/winter_wheat_bread.json
+3af967d5320eaa7ba67885b6471b422f2fc9fc10 data/zecrops/advancements/recipes/parsnip_seeds.json
+e34f96de491260fb76f697700bf87f2b74962b70 data/zecrops/advancements/recipes/winter_wheat_seeds.json
+9820635b9f8df456ca846334f89bcdf51f3ca78d data/zecrops/recipes/beetroot_seeds_seed_making.json
+83f15b1a7c6adf91bb71cda634a92d32e00ab02e data/zecrops/recipes/parsnip_seeds_seed_making.json
+b8eaad5d011a6c56631f4b932d0e446fdce7fbcf data/zecrops/recipes/wheat_seeds_seed_making.json
 1dca2d0526de492a67968682f882d46745a0ce47 data/zecrops/recipes/winter_wheat_bread.json
+20b2f485762af1f72178e5c21e301a9f0ccb6fc9 data/zecrops/recipes/winter_wheat_seeds_seed_making.json

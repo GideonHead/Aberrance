@@ -1,0 +1,12 @@
+{
+  "type": "zecrops:seed_making",
+  "ingredients": [
+    {
+      "item": "zecrops:winter_wheat"
+    }
+  ],
+  "output": {
+    "count": 2,
+    "item": "zecrops:winter_wheat_seeds"
+  }
+}
