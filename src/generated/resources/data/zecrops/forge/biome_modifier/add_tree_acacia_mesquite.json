@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#minecraft:is_savanna",
-  "features": "zecrops:acacia_mesquite_placed",
-  "step": "vegetal_decoration"
-}
