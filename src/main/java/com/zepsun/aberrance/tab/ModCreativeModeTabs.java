@@ -28,6 +28,8 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.ONION.get());
 
+                        output.accept(ModBlocks.SEED_MAKER.get());
+
                         output.accept(ModBlocks.ACACIA_MESQUITE_LEAVES.get());
                         output.accept(ModBlocks.ACACIA_MESQUITE_SAPLING.get());
                         output.accept(ModItems.MESQUITE.get());

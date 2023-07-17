@@ -37,10 +37,15 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.ACACIA_MESQUITE_LEAVES.get(), block ->
                 createSingleItemTable(ModItems.MESQUITE.get()));
 
+        this.add(ModBlocks.SEED_MAKER.get(), block ->
+                createSingleItemTable(ModBlocks.SEED_MAKER.get()));
+
     }
 
     @Override
     protected Iterable<Block> getKnownBlocks() {
         return ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
     }
+
+
 }

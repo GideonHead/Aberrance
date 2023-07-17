@@ -8,6 +8,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CropBlock;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
@@ -30,6 +31,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         makeCrossCrop(((ModCropBlock) ModBlocks.PARSNIP_CROP.get()), "parsnip_stage", "parsnip_stage");
         makeCropCrop(((ModCropBlock) ModBlocks.WINTER_WHEAT_CROP.get()), "winter_wheat_stage", "winter_wheat_stage");
         makeCropCrop(((ModCropBlock) ModBlocks.ONION_CROP.get()), "onion_stage", "onion_stage");
+        orientableBlockWithItem(ModBlocks.SEED_MAKER, "seed_maker_side", "seed_maker_side", "cobblestone_case");
 
     }
 
@@ -69,4 +71,24 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlock(blockRegistryObject.get(),
                 models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
+
+    private void orientableBlockWithItem(RegistryObject<Block> blockRegistryObject, String side, String front, String top) {
+        simpleBlockWithItem(blockRegistryObject.get(), models().orientable(name(blockRegistryObject.get()),
+                new ResourceLocation(Aberrance.MOD_ID, blockTexturePath(side)),
+                new ResourceLocation(Aberrance.MOD_ID, blockTexturePath(front)),
+                new ResourceLocation(Aberrance.MOD_ID, blockTexturePath(top))));
+    }
+
+    private String name(Block block) {
+        return key(block).getPath();
+    }
+
+    private ResourceLocation key(Block block) {
+        return ForgeRegistries.BLOCKS.getKey(block);
+    }
+
+    private String blockTexturePath(String name) {
+        return "block/" + name;
+    }
+
 }

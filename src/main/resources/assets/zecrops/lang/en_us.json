@@ -5,10 +5,13 @@
   "item.zecrops.winter_wheat_seeds": "Winter Wheat Seeds",
   "item.zecrops.winter_wheat_bread": "Winter Wheat Bread",
   "item.zecrops.onion": "Onion",
+  "item.zecrops.mesquite": "Mesquite",
 
   "block.zecrops.parsnip_crop": "Parsnip Crop",
   "block.zecrops.winter_wheat_crop": "Winter Wheat Crop",
   "block.zecrops.acacia_mesquite_leaves": "Acacia Mesquite Leaves",
+  "block.zecrops.acacia_mesquite_sapling": "Acacia Mesquite Sapling",
+  "block.zecrops.seed_maker": "Seed Maker",
 
   "creativetab.zecrops_tab": "Zeps' Extra Crops"
 }
