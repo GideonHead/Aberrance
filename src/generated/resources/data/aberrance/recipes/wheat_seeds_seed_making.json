@@ -1,0 +1,12 @@
+{
+  "type": "aberrance:seed_making",
+  "ingredients": [
+    {
+      "item": "minecraft:wheat"
+    }
+  ],
+  "output": {
+    "count": 2,
+    "item": "minecraft:wheat_seeds"
+  }
+}

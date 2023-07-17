@@ -32,6 +32,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         makeCropCrop(((ModCropBlock) ModBlocks.WINTER_WHEAT_CROP.get()), "winter_wheat_stage", "winter_wheat_stage");
         makeCropCrop(((ModCropBlock) ModBlocks.ONION_CROP.get()), "onion_stage", "onion_stage");
         orientableBlockWithItem(ModBlocks.SEED_MAKER, "seed_maker_side", "seed_maker_side", "cobblestone_case");
+        blockWithItem(ModBlocks.COBBLESTONE_CASE);
 
     }
 

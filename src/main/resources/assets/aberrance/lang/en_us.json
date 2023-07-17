@@ -1,0 +1,18 @@
+{
+  "item.aberrance.parsnip": "Parsnip",
+  "item.aberrance.parsnip_seeds": "Parsnip Seeds",
+  "item.aberrance.winter_wheat": "Winter Wheat",
+  "item.aberrance.winter_wheat_seeds": "Winter Wheat Seeds",
+  "item.aberrance.winter_wheat_bread": "Winter Wheat Bread",
+  "item.aberrance.onion": "Onion",
+  "item.aberrance.mesquite": "Mesquite",
+
+  "block.aberrance.parsnip_crop": "Parsnip Crop",
+  "block.aberrance.winter_wheat_crop": "Winter Wheat Crop",
+  "block.aberrance.acacia_mesquite_leaves": "Acacia Mesquite Leaves",
+  "block.aberrance.acacia_mesquite_sapling": "Acacia Mesquite Sapling",
+  "block.aberrance.seed_maker": "Seed Maker",
+  "block.aberrance.cobblestone_case": "Cobblestone Case",
+
+  "creativetab.aberrance_tab": "Aberrance"
+}

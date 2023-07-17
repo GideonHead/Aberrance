@@ -1,0 +1,25 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "aberrance:block/onion_stage0"
+    },
+    "age=1": {
+      "model": "aberrance:block/onion_stage1"
+    },
+    "age=2": {
+      "model": "aberrance:block/onion_stage2"
+    },
+    "age=3": {
+      "model": "aberrance:block/onion_stage3"
+    },
+    "age=4": {
+      "model": "aberrance:block/onion_stage4"
+    },
+    "age=5": {
+      "model": "aberrance:block/onion_stage5"
+    },
+    "age=6": {
+      "model": "aberrance:block/onion_stage6"
+    }
+  }
+}

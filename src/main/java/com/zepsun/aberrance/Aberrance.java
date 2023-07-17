@@ -26,7 +26,7 @@ import org.slf4j.Logger;
 public class Aberrance
 {
     // Define mod id in a common place for everything to reference
-    public static final String MOD_ID = "zecrops";
+    public static final String MOD_ID = "aberrance";
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public Aberrance()

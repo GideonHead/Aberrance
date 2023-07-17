@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "aberrance:block/seed_maker_side",
+    "side": "aberrance:block/seed_maker_side",
+    "top": "aberrance:block/cobblestone_case"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:raw_iron"
+    },
+    "C": {
+      "item": "minecraft:cobblestone"
+    },
+    "O": []
+  },
+  "pattern": [
+    "OAO",
+    "ACA",
+    "OAO"
+  ],
+  "result": {
+    "item": "aberrance:cobblestone_case"
+  },
+  "show_notification": true
+}

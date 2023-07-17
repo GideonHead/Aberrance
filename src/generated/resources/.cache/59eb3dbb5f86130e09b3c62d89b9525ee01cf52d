@@ -1,6 +1,6 @@
-// 1.20.1	2023-07-17T11:30:42.3420645	Loot Tables
-741fcb4228be870c3eacd699f447c1a22299b371 data/zecrops/loot_tables/blocks/acacia_mesquite_leaves.json
-c0b8408d2efcb0b63df17d142dacb72bb0e37479 data/zecrops/loot_tables/blocks/onion_crop.json
-68cc63f2442278dad21e752befe688abc83b7946 data/zecrops/loot_tables/blocks/parsnip_crop.json
-6327e4bf521648e10e14077fdac351750fd4bfb8 data/zecrops/loot_tables/blocks/seed_maker.json
-8bd6c0b6c591ac608d97927bf4067742cd4729ce data/zecrops/loot_tables/blocks/winter_wheat_crop.json
+// 1.20.1	2023-07-17T17:12:29.6611912	Loot Tables
+7c42149e07b56d27d06c1f2f65b090398a446faa data/aberrance/loot_tables/blocks/acacia_mesquite_leaves.json
+9157bca8ddaa494302fb62e1903c7ae963958efe data/aberrance/loot_tables/blocks/onion_crop.json
+259f981fc5debcb3c5d9dbafa8c83a29f8d867d0 data/aberrance/loot_tables/blocks/parsnip_crop.json
+2313573847173a8ccc2cc2ae43f756ea7a72c9fb data/aberrance/loot_tables/blocks/seed_maker.json
+9ef3d3b65bc65d0865afe053b3f04936862a32ff data/aberrance/loot_tables/blocks/winter_wheat_crop.json

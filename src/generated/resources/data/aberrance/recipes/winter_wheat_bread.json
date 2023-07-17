@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "aberrance:winter_wheat"
+    },
+    {
+      "item": "aberrance:winter_wheat"
+    },
+    {
+      "item": "aberrance:winter_wheat"
+    }
+  ],
+  "result": {
+    "item": "aberrance:winter_wheat_bread"
+  }
+}

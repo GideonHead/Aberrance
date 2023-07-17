@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/orientable",
-  "textures": {
-    "front": "zecrops:block/seed_maker_side",
-    "side": "zecrops:block/seed_maker_side",
-    "top": "zecrops:block/cobblestone_case"
-  }
-}

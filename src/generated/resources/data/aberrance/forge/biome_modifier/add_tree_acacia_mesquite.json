@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_savanna",
+  "features": "aberrance:acacia_mesquite_placed",
+  "step": "vegetal_decoration"
+}

@@ -63,7 +63,7 @@ public class SeedMakerMenu extends AbstractContainerMenu {
     private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
 
 
-    private static final int TE_INVENTORY_SLOT_COUNT = 4;
+    private static final int TE_INVENTORY_SLOT_COUNT = 3;
     @Override
     public ItemStack quickMoveStack(Player playerIn, int pIndex) {
         Slot sourceSlot = slots.get(pIndex);

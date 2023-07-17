@@ -1,5 +1,6 @@
 package com.zepsun.aberrance.datagen;
 
+import com.zepsun.aberrance.block.ModBlocks;
 import com.zepsun.aberrance.datagen.custom.SeedMakingRecipeBuilder;
 import com.zepsun.aberrance.item.ModItems;
 import net.minecraft.advancements.critereon.ItemPredicate;
@@ -17,21 +18,35 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
-//        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.EXAMPLE_BLOCK.get())
-//                .pattern("AAA")
-//                .pattern("AAA")
-//                .pattern("AAA")
-//                .define('A', ModItems.EXAMPLE_ITEM.get())
-//                .unlockedBy("has_exampleitem", inventoryTrigger(ItemPredicate.Builder.item().
-//                        of(ModItems.EXAMPLE_ITEM.get()).build()))
-//                .save(pWriter);
-//
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.WINTER_WHEAT_BREAD.get(), 1)
                 .requires(ModItems.WINTER_WHEAT.get())
                 .requires(ModItems.WINTER_WHEAT.get())
                 .requires(ModItems.WINTER_WHEAT.get())
                 .unlockedBy("has_exampleitem", inventoryTrigger(ItemPredicate.Builder.item().
                         of(ModItems.WINTER_WHEAT.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.COBBLESTONE_CASE.get())
+                .pattern("OAO")
+                .pattern("ACA")
+                .pattern("OAO")
+                .define('A', Items.RAW_IRON)
+                .define('O', Items.AIR)
+                .define('C', Items.COBBLESTONE)
+                .unlockedBy("has_cobblestone", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.COBBLESTONE).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SEED_MAKER.get())
+                .pattern("OAO")
+                .pattern("ACA")
+                .pattern("OAO")
+                .define('A', ModBlocks.COBBLESTONE_CASE.get())
+                .define('O', Items.QUARTZ)
+                .define('C', Items.DIAMOND_HOE)
+                .unlockedBy("has_cobblestone", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.COBBLESTONE).build()))
                 .save(pWriter);
 
         new SeedMakingRecipeBuilder(Items.WHEAT, Items.WHEAT_SEEDS, 2)

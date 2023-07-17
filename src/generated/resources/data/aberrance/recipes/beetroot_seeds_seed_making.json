@@ -1,0 +1,12 @@
+{
+  "type": "aberrance:seed_making",
+  "ingredients": [
+    {
+      "item": "minecraft:beetroot"
+    }
+  ],
+  "output": {
+    "count": 2,
+    "item": "minecraft:beetroot_seeds"
+  }
+}

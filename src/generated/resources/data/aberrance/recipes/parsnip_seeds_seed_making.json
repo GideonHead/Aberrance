@@ -1,0 +1,12 @@
+{
+  "type": "aberrance:seed_making",
+  "ingredients": [
+    {
+      "item": "aberrance:parsnip"
+    }
+  ],
+  "output": {
+    "count": 2,
+    "item": "aberrance:parsnip_seeds"
+  }
+}

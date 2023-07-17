@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "zecrops:item/winter_wheat_bread"
-  }
-}

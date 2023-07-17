@@ -44,7 +44,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> ACACIA_MESQUITE_SAPLING = registerBlock("acacia_mesquite_sapling",
             () -> new SaplingBlock(new AcaciaMesquiteTreeGrower(), BlockBehaviour.Properties.copy(Blocks.ACACIA_SAPLING).noLootTable()));
 
-    //Seed Maker
+    //Stations and Station parts
+    public static final RegistryObject<Block> COBBLESTONE_CASE = registerBlock("cobblestone_case",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).noLootTable()));
     public static final RegistryObject<Block> SEED_MAKER = registerBlock("seed_maker",
             () -> new SeedMakerBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()));
 

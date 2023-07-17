@@ -1,0 +1,12 @@
+{
+  "type": "aberrance:seed_making",
+  "ingredients": [
+    {
+      "item": "aberrance:winter_wheat"
+    }
+  ],
+  "output": {
+    "count": 2,
+    "item": "aberrance:winter_wheat_seeds"
+  }
+}

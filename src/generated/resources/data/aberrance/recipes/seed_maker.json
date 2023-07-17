@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "aberrance:cobblestone_case"
+    },
+    "C": {
+      "item": "minecraft:diamond_hoe"
+    },
+    "O": {
+      "item": "minecraft:quartz"
+    }
+  },
+  "pattern": [
+    "OAO",
+    "ACA",
+    "OAO"
+  ],
+  "result": {
+    "item": "aberrance:seed_maker"
+  },
+  "show_notification": true
+}
