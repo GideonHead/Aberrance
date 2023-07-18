@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.4.1-1.20.1
+
+### Added
+
+- Seed Maker
+- Cobblestone Case
+
+### Fixed
+
+- Mesquite and Mesquite Sapling Lang.
+
+### Changed
+
+- Name of Mod
+
 ## 0.3.2-1.20.1
 
 ### Changed
