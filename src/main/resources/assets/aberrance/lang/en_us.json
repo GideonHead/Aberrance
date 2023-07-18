@@ -14,5 +14,8 @@
   "block.aberrance.seed_maker": "Seed Maker",
   "block.aberrance.cobblestone_case": "Cobblestone Case",
 
-  "creativetab.aberrance_tab": "Aberrance"
+  "creativetab.aberrance": "Aberrance",
+
+  "aberrance.tooltip.liquid.amount.with.capacity": "%s / %s mB",
+  "aberrance.tooltip.liquid.amount": "%s mB"
 }

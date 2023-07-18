@@ -15,7 +15,7 @@ public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Aberrance.MOD_ID);
 
-    public static final RegistryObject<CreativeModeTab> ABERRANCE = CREATIVE_MODE_TABS.register("aberrance",
+    public static final RegistryObject<CreativeModeTab> ABERRANCE = CREATIVE_MODE_TABS.register("aberrance_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.PARSNIP.get()))
                     .title(Component.translatable("creativetab.aberrance")).displayItems((displayParameters, output) -> {
 
