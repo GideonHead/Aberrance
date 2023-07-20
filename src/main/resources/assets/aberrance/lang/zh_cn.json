@@ -1,0 +1,21 @@
+{
+  "item.aberrance.parsnip": "防风草",
+  "item.aberrance.parsnip_seeds": "防风草种子",
+  "item.aberrance.winter_wheat": "冬麦",
+  "item.aberrance.winter_wheat_seeds": "冬麦种子",
+  "item.aberrance.winter_wheat_bread": "冬麦面包",
+  "item.aberrance.onion": "洋葱",
+  "item.aberrance.mesquite": "牧豆",
+
+  "block.aberrance.parsnip_crop": "防风草",
+  "block.aberrance.winter_wheat_crop": "冬麦",
+  "block.aberrance.acacia_mesquite_leaves": "金合欢牧豆树叶",
+  "block.aberrance.acacia_mesquite_sapling": "金合欢牧豆树苗",
+  "block.aberrance.seed_maker": "产种器",
+  "block.aberrance.cobblestone_case": "圆石箱子",
+
+  "creativetab.aberrance": "异畸",
+
+  "aberrance.tooltip.liquid.amount.with.capacity": "%s / %s mB",
+  "aberrance.tooltip.liquid.amount": "%s mB"
+}
