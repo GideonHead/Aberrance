@@ -18,6 +18,7 @@ import java.util.List;
 
 public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> ACACIA_MESQUITE_PLACED_KEY = registerKey("acacia_mesquite_placed");
+    public static final ResourceKey<PlacedFeature> CREPE_MYRTLE_PLACED_KEY = registerKey("crepe_myrtle_placed");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -25,7 +26,13 @@ public class ModPlacedFeatures {
         register(context, ACACIA_MESQUITE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ACACIA_MESQUITE_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(1/2, 0.1f, 2),
                         ModBlocks.ACACIA_MESQUITE_SAPLING.get()));
+
+        register(context, CREPE_MYRTLE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CREPE_MYRTLE_KEY),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(1/2, 0.1f, 2),
+                        ModBlocks.CREPE_MYRTLE_SAPLING.get()));
     }
+
+
 
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {

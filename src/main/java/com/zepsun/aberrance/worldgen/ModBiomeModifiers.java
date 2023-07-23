@@ -14,6 +14,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_TREE_ACACIA_MESQUITE = registerKey("add_tree_acacia_mesquite");
+    public static final ResourceKey<BiomeModifier> ADD_TREE_CREPE_MYRTLE = registerKey("add_tree_crepe_myrtle");
 
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
@@ -22,6 +23,11 @@ public class ModBiomeModifiers {
         context.register(ADD_TREE_ACACIA_MESQUITE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_SAVANNA),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.ACACIA_MESQUITE_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        context.register(ADD_TREE_CREPE_MYRTLE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_FOREST),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.CREPE_MYRTLE_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
     }

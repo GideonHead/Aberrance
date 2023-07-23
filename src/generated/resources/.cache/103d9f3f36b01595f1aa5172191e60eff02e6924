@@ -1,4 +1,7 @@
-// 1.20.1	2023-07-17T17:12:29.6621922	Registries
+// 1.20.1	2023-07-23T15:52:26.0676584	Registries
 989759ea91fbfcebf22bba86f659f6e485d323bc data/aberrance/forge/biome_modifier/add_tree_acacia_mesquite.json
+dfa0469f5b094def6fbb46d110f67dbe6272766c data/aberrance/forge/biome_modifier/add_tree_crepe_myrtle.json
 d49372c7a392291392167a6b6f5712664339f1c7 data/aberrance/worldgen/configured_feature/acacia_mesquite.json
+d653d33a214364468184ceec97ef24602d917e1c data/aberrance/worldgen/configured_feature/crepe_myrtle.json
 cb36ba0b94bf6d642fe68dd65ef7b986a24b5506 data/aberrance/worldgen/placed_feature/acacia_mesquite_placed.json
+d13278855139a3ee1ca3a3d60e73acf3f6833490 data/aberrance/worldgen/placed_feature/crepe_myrtle_placed.json

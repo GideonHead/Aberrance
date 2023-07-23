@@ -40,6 +40,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.SEED_MAKER.get(), block ->
                 createSingleItemTable(ModBlocks.SEED_MAKER.get()));
 
+
+
     }
 
     @Override

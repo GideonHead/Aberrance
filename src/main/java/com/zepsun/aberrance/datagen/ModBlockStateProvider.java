@@ -15,6 +15,7 @@ import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.client.model.generators.ModelFile;
 
 import java.util.function.Function;
 
@@ -33,6 +34,26 @@ public class ModBlockStateProvider extends BlockStateProvider {
         makeCropCrop(((ModCropBlock) ModBlocks.ONION_CROP.get()), "onion_stage", "onion_stage");
         orientableBlockWithItem(ModBlocks.SEED_MAKER, "seed_maker_side", "seed_maker_side", "cobblestone_case");
         blockWithItem(ModBlocks.COBBLESTONE_CASE);
+        blockWithItem(ModBlocks.KYANITE_ORE);
+        blockWithItem(ModBlocks.KYANITE_ORE_DEEPSLATE);
+        blockWithItem(ModBlocks.KYANITE_ORE_END);
+        blockWithItem(ModBlocks.KYANITE_ORE_NETHER);
+        blockWithItem(ModBlocks.KYANITE_BLOCK);
+        blockWithItem(ModBlocks.RAW_KYANITE_BLOCK);
+        blockWithItem(ModBlocks.CREPE_MYRTLE_COMPOST);
+        blockWithItem(ModBlocks.CREPE_MYRTLE_LEAVES);
+        blockWithItem(ModBlocks.CREPE_MYRTLE_PLANKS);
+        saplingBlock(ModBlocks.CREPE_MYRTLE_SAPLING);
+        logBlock(((RotatedPillarBlock) ModBlocks.CREPE_MYRTLE_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.CREPE_MYRTLE_WOOD.get()), blockTexture(ModBlocks.CREPE_MYRTLE_LOG.get()), blockTexture(ModBlocks.CREPE_MYRTLE_LOG.get()));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_CREPE_MYRTLE_LOG.get(), new ResourceLocation(Aberrance.MOD_ID, "block/stripped_crepe_myrtle_log"),
+                new ResourceLocation(Aberrance.MOD_ID, "block/stripped_crepe_myrtle_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_CREPE_MYRTLE_WOOD.get(), new ResourceLocation(Aberrance.MOD_ID, "block/stripped_crepe_myrtle_log"),
+                new ResourceLocation(Aberrance.MOD_ID, "block/stripped_crepe_myrtle_log"));
+        blockItem(ModBlocks.CREPE_MYRTLE_LOG);
+        blockItem(ModBlocks.CREPE_MYRTLE_WOOD);
+        blockItem(ModBlocks.STRIPPED_CREPE_MYRTLE_LOG);
+        blockItem(ModBlocks.STRIPPED_CREPE_MYRTLE_WOOD);
 
     }
 
@@ -78,6 +99,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 new ResourceLocation(Aberrance.MOD_ID, blockTexturePath(side)),
                 new ResourceLocation(Aberrance.MOD_ID, blockTexturePath(front)),
                 new ResourceLocation(Aberrance.MOD_ID, blockTexturePath(top))));
+    }
+
+    private void blockItem(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("aberrance:block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
     }
 
     private String name(Block block) {

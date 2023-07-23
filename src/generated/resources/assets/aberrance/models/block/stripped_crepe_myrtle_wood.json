@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "aberrance:block/stripped_crepe_myrtle_log",
+    "side": "aberrance:block/stripped_crepe_myrtle_log"
+  }
+}

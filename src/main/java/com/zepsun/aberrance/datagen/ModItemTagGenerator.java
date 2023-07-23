@@ -1,11 +1,13 @@
 package com.zepsun.aberrance.datagen;
 
 import com.zepsun.aberrance.Aberrance;
+import com.zepsun.aberrance.block.ModBlocks;
 import com.zepsun.aberrance.item.ModItems;
 import com.zepsun.aberrance.tag.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -31,6 +33,9 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModItems.PARSNIP_SEEDS.get())
                 .add(Items.WHEAT_SEEDS)
                 .add(Items.BEETROOT_SEEDS);
+
+        this.tag(ItemTags.PLANKS)
+                .add(ModBlocks.CREPE_MYRTLE_PLANKS.get().asItem());
     }
 
     @Override

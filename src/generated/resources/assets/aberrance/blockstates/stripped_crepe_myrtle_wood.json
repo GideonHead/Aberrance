@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "aberrance:block/stripped_crepe_myrtle_wood_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "aberrance:block/stripped_crepe_myrtle_wood"
+    },
+    "axis=z": {
+      "model": "aberrance:block/stripped_crepe_myrtle_wood_horizontal",
+      "x": 90
+    }
+  }
+}

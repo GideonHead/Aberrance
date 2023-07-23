@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "aberrance:block/crepe_myrtle_planks"
+  }
+}
