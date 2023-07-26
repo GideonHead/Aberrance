@@ -97,6 +97,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> SEED_MAKER = registerBlock("seed_maker",
             () -> new SeedMakerBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()));
 
+    //Miscellaneous
+    public static final RegistryObject<Block> WHITE_COBBLESTONE = registerBlock("white_cobblestone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).noLootTable()));
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

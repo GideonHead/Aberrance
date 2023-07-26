@@ -40,6 +40,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.KYANITE_ORE_NETHER);
         blockWithItem(ModBlocks.KYANITE_BLOCK);
         blockWithItem(ModBlocks.RAW_KYANITE_BLOCK);
+        blockWithItem(ModBlocks.WHITE_COBBLESTONE);
         blockWithItem(ModBlocks.CREPE_MYRTLE_COMPOST);
         blockWithItem(ModBlocks.CREPE_MYRTLE_LEAVES);
         blockWithItem(ModBlocks.CREPE_MYRTLE_PLANKS);

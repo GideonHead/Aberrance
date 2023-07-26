@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "aberrance:stripped_crepe_myrtle_log"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "aberrance:crepe_myrtle_planks"
+  }
+}

@@ -1,9 +1,13 @@
-// 1.20.1	2023-07-23T13:29:00.6482046	Item Models: aberrance
+// 1.20.1	2023-07-25T15:50:23.0234393	Item Models: aberrance
 3296f62ca044b5b0968b6455237c6946e781f85e assets/aberrance/models/item/acacia_mesquite_sapling.json
 3b6eb2eed5f59c42755e9ab5b8a5fb4f317dd3b5 assets/aberrance/models/item/crepe_myrtle_sapling.json
 34fdcddf725400802a71ecc14fcf0864942c6495 assets/aberrance/models/item/kyanite_axe.json
+011ea637ad8850f634943a4bf0a8acb6b467f147 assets/aberrance/models/item/kyanite_boots.json
+627896ca19b037b9e307a72e275d185fa115963a assets/aberrance/models/item/kyanite_chestplate.json
+cdfae36f6903cf29ab558eb51e254871e5ccd680 assets/aberrance/models/item/kyanite_helmet.json
 def0e1759322ea693e23cd7e8e6b8ed9e655a5f8 assets/aberrance/models/item/kyanite_hoe.json
 4b15211a4c87324378c2d3da5f1d8257c08ad0e5 assets/aberrance/models/item/kyanite_ingot.json
+4885dd2feca3f3b44daa2c3aa2bd0960149d7cfd assets/aberrance/models/item/kyanite_leggings.json
 96a3c385c2159727e02e5f778637c62ae99a7d05 assets/aberrance/models/item/kyanite_nugget.json
 6228d7eb495bc0b6eb87ee13b3bab2a834831384 assets/aberrance/models/item/kyanite_pickaxe.json
 6d7080b42d53dac53ebe5012a2638e70f8148846 assets/aberrance/models/item/kyanite_shovel.json

@@ -21,12 +21,16 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         simpleItem(ModItems.PARSNIP);
         simpleItem(ModItems.PARSNIP_SEEDS);
+
         simpleItem(ModItems.WINTER_WHEAT);
         simpleItem(ModItems.WINTER_WHEAT_SEEDS);
         simpleItem(ModItems.WINTER_WHEAT_BREAD);
+
         simpleItem(ModItems.ONION);
+
         simpleItem(ModItems.MESQUITE);
         saplingItem(ModBlocks.ACACIA_MESQUITE_SAPLING);
+
         simpleHandheldItem(ModItems.KYANITE_AXE);
         simpleHandheldItem(ModItems.KYANITE_SHOVEL);
         simpleHandheldItem(ModItems.KYANITE_PICKAXE);
@@ -35,25 +39,42 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.KYANITE_INGOT);
         simpleItem(ModItems.RAW_KYANITE);
         simpleItem(ModItems.KYANITE_NUGGET);
+        simpleItem(ModItems.KYANITE_HELMET);
+        simpleItem(ModItems.KYANITE_CHESTPLATE);
+        simpleItem(ModItems.KYANITE_LEGGINGS);
+        simpleItem(ModItems.KYANITE_BOOTS);
+
         saplingItem(ModBlocks.CREPE_MYRTLE_SAPLING);
     }
 
-    private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
+    private <T> ItemModelBuilder simpleItem(RegistryObject<T> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(Aberrance.MOD_ID, "item/" + item.getId().getPath()));
     }
 
-    private ItemModelBuilder simpleHandheldItem(RegistryObject<Item> item) {
+    private <T> ItemModelBuilder simpleItemTextureName(RegistryObject<T> item, String name) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Aberrance.MOD_ID, "item/" + name));
+    }
+
+    private <T> ItemModelBuilder simpleHandheldItem(RegistryObject<T> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/handheld")).texture("layer0",
                 new ResourceLocation(Aberrance.MOD_ID, "item/" + item.getId().getPath()));
     }
 
-    private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
+    private <T> ItemModelBuilder simpleHandheldItemTextureName(RegistryObject<T> item, String name) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/handheld")).texture("layer0",
+                new ResourceLocation(Aberrance.MOD_ID, "item/" + name));
+    }
+
+    private <T> ItemModelBuilder saplingItem(RegistryObject<T> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(Aberrance.MOD_ID,"block/" + item.getId().getPath()));
+                new ResourceLocation(Aberrance.MOD_ID, "block/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder blockItem(RegistryObject<Block> block) {

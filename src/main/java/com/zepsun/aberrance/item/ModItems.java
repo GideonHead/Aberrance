@@ -2,6 +2,7 @@ package com.zepsun.aberrance.item;
 
 import com.zepsun.aberrance.Aberrance;
 import com.zepsun.aberrance.block.ModBlocks;
+import com.zepsun.aberrance.tiers.ModArmorTiers;
 import com.zepsun.aberrance.tiers.ModTiers;
 import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.*;
@@ -48,6 +49,7 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> RAW_KYANITE = ITEMS.register("raw_kyanite",
             () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> KYANITE_PICKAXE = ITEMS.register("kyanite_pickaxe",
             () -> new PickaxeItem(ModTiers.KYANITE, 1, -2.8F, new Item.Properties()));
     public static final RegistryObject<Item> KYANITE_SHOVEL = ITEMS.register("kyanite_shovel",
@@ -58,6 +60,15 @@ public class ModItems {
             () -> new HoeItem(ModTiers.KYANITE, 1, -2.8F, new Item.Properties()));
     public static final RegistryObject<Item> KYANITE_SWORD = ITEMS.register("kyanite_sword",
             () -> new SwordItem(ModTiers.KYANITE, 4, -2.8F, new Item.Properties()));
+
+    public static final RegistryObject<Item> KYANITE_HELMET = ITEMS.register("kyanite_helmet",
+            () -> new ArmorItem(ModArmorTiers.KYANITE, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> KYANITE_CHESTPLATE = ITEMS.register("kyanite_chestplate",
+            () -> new ArmorItem(ModArmorTiers.KYANITE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> KYANITE_LEGGINGS = ITEMS.register("kyanite_leggings",
+            () -> new ArmorItem(ModArmorTiers.KYANITE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> KYANITE_BOOTS = ITEMS.register("kyanite_boots",
+            () -> new ArmorItem(ModArmorTiers.KYANITE, ArmorItem.Type.BOOTS, new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

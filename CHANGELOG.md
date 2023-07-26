@@ -4,6 +4,13 @@
 
 ### Added
 
+- Kyanite Ore Set
+- Crepe Myrtle Trees
+
+## 0.4.1-1.20.1
+
+### Added
+
 - Seed Maker
 - Cobblestone Case
 

@@ -43,6 +43,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.KYANITE_SWORD.get());
                         output.accept(ModItems.KYANITE_PICKAXE.get());
                         output.accept(ModItems.KYANITE_SHOVEL.get());
+                        output.accept(ModItems.KYANITE_HELMET.get());
+                        output.accept(ModItems.KYANITE_CHESTPLATE.get());
+                        output.accept(ModItems.KYANITE_LEGGINGS.get());
+                        output.accept(ModItems.KYANITE_BOOTS.get());
                         output.accept(ModBlocks.KYANITE_ORE.get());
                         output.accept(ModBlocks.KYANITE_ORE_DEEPSLATE.get());
                         output.accept(ModBlocks.KYANITE_ORE_END.get());
@@ -58,6 +62,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.STRIPPED_CREPE_MYRTLE_LOG.get());
                         output.accept(ModBlocks.STRIPPED_CREPE_MYRTLE_WOOD.get());
                         output.accept(ModBlocks.CREPE_MYRTLE_COMPOST.get());
+
+                        output.accept(ModBlocks.WHITE_COBBLESTONE.get());
 
                     }).build());
 

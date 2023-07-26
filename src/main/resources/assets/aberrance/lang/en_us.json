@@ -11,9 +11,13 @@
   "item.aberrance.raw_kyanite": "Raw Kyanite",
   "item.aberrance.kyanite_pickaxe": "Kyanite Pickaxe",
   "item.aberrance.kyanite_sword": "Kyanite Sword",
-  "item.aberrance.kyanite_hoe": "Kyanite How",
+  "item.aberrance.kyanite_hoe": "Kyanite Hoe",
   "item.aberrance.kyanite_axe": "Kyanite Axe",
   "item.aberrance.kyanite_shovel": "Kyanite Shovel",
+  "item.aberrance.kyanite_helmet": "Kyanite Helmet",
+  "item.aberrance.kyanite_chestplate": "Kyanite Chestplate",
+  "item.aberrance.kyanite_leggings": "Kyanite Leggings",
+  "item.aberrance.kyanite_boots": "Kyanite Boots",
 
   "block.aberrance.parsnip_crop": "Parsnip Crop",
   "block.aberrance.winter_wheat_crop": "Winter Wheat Crop",
@@ -35,6 +39,7 @@
   "block.aberrance.stripped_crepe_myrtle_wood": "Stripped Crepe Myrtle Wood",
   "block.aberrance.stripped_crepe_myrtle_log": "Stripped Crepe Myrtle Log",
   "block.aberrance.crepe_myrtle_compost": "Crepe Myrtle Compost",
+  "block.aberrance.white_cobblestone": "White Cobblestone",
 
   "creativetab.aberrance": "Aberrance",
 
