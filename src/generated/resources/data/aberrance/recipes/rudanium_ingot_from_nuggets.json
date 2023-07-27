@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "rudanium",
+  "ingredients": [
+    {
+      "item": "aberrance:rudanium_ingot"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "aberrance:rudanium_nugget"
+  }
+}

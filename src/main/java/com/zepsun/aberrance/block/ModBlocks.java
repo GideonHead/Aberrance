@@ -10,6 +10,8 @@ import com.zepsun.aberrance.item.ModItems;
 import com.zepsun.aberrance.worldgen.tree.AcaciaMesquiteTreeGrower;
 import com.zepsun.aberrance.worldgen.tree.CrepeMyrtleTreeGrower;
 import net.minecraft.core.BlockPos;
+import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
@@ -43,6 +45,8 @@ public class ModBlocks {
     //Onion
     public static final RegistryObject<Block> ONION_CROP = BLOCKS.register("onion_crop",
             () -> new ModCropBlock(ModItems.ONION::get, BlockBehaviour.Properties.copy(Blocks.WHEAT)));
+    public static final RegistryObject<Block> WILD_ONION_PLANT = registerBlock("wild_onion_plant",
+            () -> new FlowerBlock(() -> MobEffects.WITHER, 4, BlockBehaviour.Properties.copy(Blocks.ALLIUM)));
 
 
     //Mesquite
@@ -77,17 +81,41 @@ public class ModBlocks {
 
     //Kyanite
     public static final RegistryObject<Block> KYANITE_ORE = registerBlock("kyanite_ore",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).noLootTable()));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+                    .strength(5f).requiresCorrectToolForDrops(), UniformInt.of(2, 5)));
     public static final RegistryObject<Block> KYANITE_ORE_DEEPSLATE = registerBlock("kyanite_ore_deepslate",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE).noLootTable()));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)
+                    .strength(5f).requiresCorrectToolForDrops(), UniformInt.of(3, 7)));
     public static final RegistryObject<Block> KYANITE_ORE_END = registerBlock("kyanite_ore_end",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.END_STONE).noLootTable()));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.END_STONE)
+                    .strength(5f).requiresCorrectToolForDrops(), UniformInt.of(5, 8)));
     public static final RegistryObject<Block> KYANITE_ORE_NETHER = registerBlock("kyanite_ore_nether",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.NETHERRACK).noLootTable()));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.NETHERRACK)
+                    .strength(5f).requiresCorrectToolForDrops(), UniformInt.of(3, 6)));
 
     public static final RegistryObject<Block> KYANITE_BLOCK = registerBlock("kyanite_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noLootTable()));
     public static final RegistryObject<Block> RAW_KYANITE_BLOCK = registerBlock("raw_kyanite_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.RAW_IRON_BLOCK).noLootTable()));
+
+
+    //Rudanium
+    public static final RegistryObject<Block> RUDANIUM_ORE = registerBlock("rudanium_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+                    .strength(3f, 3f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> RUDANIUM_ORE_DEEPSLATE = registerBlock("rudanium_ore_deepslate",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)
+                    .strength(3f, 3f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> RUDANIUM_ORE_END = registerBlock("rudanium_ore_end",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.END_STONE)
+                    .strength(3f, 3f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> RUDANIUM_ORE_NETHER = registerBlock("rudanium_ore_nether",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.NETHERRACK)
+                    .strength(3f, 3f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> RUDANIUM_BLOCK = registerBlock("rudanium_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noLootTable()));
+    public static final RegistryObject<Block> RAW_RUDANIUM_BLOCK = registerBlock("raw_rudanium_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.RAW_IRON_BLOCK).noLootTable()));
 
 
@@ -97,9 +125,13 @@ public class ModBlocks {
     public static final RegistryObject<Block> SEED_MAKER = registerBlock("seed_maker",
             () -> new SeedMakerBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()));
 
-    //Miscellaneous
+
+    //White Stone
     public static final RegistryObject<Block> WHITE_COBBLESTONE = registerBlock("white_cobblestone",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).noLootTable()));
+    public static final RegistryObject<Block> WHITE_STONE_BRICKS = registerBlock("white_stone_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS).noLootTable()));
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

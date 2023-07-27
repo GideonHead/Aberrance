@@ -1,6 +1,15 @@
-// 1.20.1	2023-07-17T17:12:29.6611912	Loot Tables
+// 1.20.1	2023-07-27T14:21:12.8039747	Loot Tables
 7c42149e07b56d27d06c1f2f65b090398a446faa data/aberrance/loot_tables/blocks/acacia_mesquite_leaves.json
+0df57408feb1fde436e55ffe56126c2740f00b8e data/aberrance/loot_tables/blocks/kyanite_ore.json
+082f9436e5697413a788c96cabbe1ccc004fa40d data/aberrance/loot_tables/blocks/kyanite_ore_deepslate.json
+a65a763f6eda3549ebacdd93d4f141715dfdeb6c data/aberrance/loot_tables/blocks/kyanite_ore_end.json
+002f37ca1a909f17b8cfbfdcbd502e9b1922b5c9 data/aberrance/loot_tables/blocks/kyanite_ore_nether.json
 9157bca8ddaa494302fb62e1903c7ae963958efe data/aberrance/loot_tables/blocks/onion_crop.json
 259f981fc5debcb3c5d9dbafa8c83a29f8d867d0 data/aberrance/loot_tables/blocks/parsnip_crop.json
+84147bb55c2326600f6149bad98cf432dea27da3 data/aberrance/loot_tables/blocks/rudanium_ore.json
+5910aba38858afdc19a84e60b1f97c31777c3f79 data/aberrance/loot_tables/blocks/rudanium_ore_deepslate.json
+79c4c3c65b76fe3cb85109ae1b8047138384ac6c data/aberrance/loot_tables/blocks/rudanium_ore_end.json
+57df4c80790e2e60505047eafdcc3c699ab8484e data/aberrance/loot_tables/blocks/rudanium_ore_nether.json
 2313573847173a8ccc2cc2ae43f756ea7a72c9fb data/aberrance/loot_tables/blocks/seed_maker.json
+189f4ee7961ca8af64688a331da8b9344fa0c3f7 data/aberrance/loot_tables/blocks/wild_onion_plant.json
 9ef3d3b65bc65d0865afe053b3f04936862a32ff data/aberrance/loot_tables/blocks/winter_wheat_crop.json

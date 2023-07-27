@@ -18,6 +18,19 @@ public class ModItemGroups {
             ModItems.KYANITE_BOOTS.get()
     );
 
+    public static final ArmorToolsGroup RUDANIUM_ARMOR_TOOLS_GROUP = new ArmorToolsGroup(
+            ModItems.RUDANIUM_INGOT.get(),
+            ModItems.RUDANIUM_SWORD.get(),
+            ModItems.RUDANIUM_PICKAXE.get(),
+            ModItems.RUDANIUM_SHOVEL.get(),
+            ModItems.RUDANIUM_AXE.get(),
+            ModItems.RUDANIUM_HOE.get(),
+            ModItems.RUDANIUM_HELMET.get(),
+            ModItems.RUDANIUM_CHESTPLATE.get(),
+            ModItems.RUDANIUM_LEGGINGS.get(),
+            ModItems.RUDANIUM_BOOTS.get()
+    );
+
     public static final ArmorToolsGroup IRON_ARMOR_TOOLS_GROUP = new ArmorToolsGroup(
             Items.IRON_INGOT,
             Items.IRON_SWORD,

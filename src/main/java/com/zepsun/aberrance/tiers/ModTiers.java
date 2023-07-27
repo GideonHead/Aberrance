@@ -12,7 +12,12 @@ import java.util.function.Supplier;
 public enum ModTiers implements Tier {
     KYANITE(5, 3031, 12.0F, 4.7F, 17, () -> {
         return Ingredient.of(ModItems.KYANITE_INGOT.get());
+    }),
+    RUDANIUM(2, 375, 8.0F, 2.7F, 14, () -> {
+        return Ingredient.of(ModItems.RUDANIUM_INGOT.get());
     });
+
+
 
     private final int level;
     private final int uses;

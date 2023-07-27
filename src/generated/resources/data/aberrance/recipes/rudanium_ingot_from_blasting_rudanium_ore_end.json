@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "rudanium",
+  "ingredient": {
+    "item": "aberrance:rudanium_ore_end"
+  },
+  "result": "aberrance:rudanium_ingot"
+}

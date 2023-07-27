@@ -44,6 +44,19 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.KYANITE_LEGGINGS);
         simpleItem(ModItems.KYANITE_BOOTS);
 
+        simpleHandheldItem(ModItems.RUDANIUM_AXE);
+        simpleHandheldItem(ModItems.RUDANIUM_SHOVEL);
+        simpleHandheldItem(ModItems.RUDANIUM_PICKAXE);
+        simpleHandheldItem(ModItems.RUDANIUM_HOE);
+        simpleHandheldItem(ModItems.RUDANIUM_SWORD);
+        simpleItem(ModItems.RUDANIUM_INGOT);
+        simpleItem(ModItems.RAW_RUDANIUM);
+        simpleItem(ModItems.RUDANIUM_NUGGET);
+        simpleItem(ModItems.RUDANIUM_HELMET);
+        simpleItem(ModItems.RUDANIUM_CHESTPLATE);
+        simpleItem(ModItems.RUDANIUM_LEGGINGS);
+        simpleItem(ModItems.RUDANIUM_BOOTS);
+
         saplingItem(ModBlocks.CREPE_MYRTLE_SAPLING);
     }
 

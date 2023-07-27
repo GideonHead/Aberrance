@@ -27,6 +27,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.WINTER_WHEAT_BREAD.get());
 
                         output.accept(ModItems.ONION.get());
+                        output.accept(ModBlocks.WILD_ONION_PLANT.get());
 
                         output.accept(ModBlocks.SEED_MAKER.get());
                         output.accept(ModBlocks.COBBLESTONE_CASE.get());
@@ -54,6 +55,25 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.KYANITE_BLOCK.get());
                         output.accept(ModBlocks.RAW_KYANITE_BLOCK.get());
 
+                        output.accept(ModItems.RUDANIUM_INGOT.get());
+                        output.accept(ModItems.RUDANIUM_NUGGET.get());
+                        output.accept(ModItems.RAW_RUDANIUM.get());
+                        output.accept(ModItems.RUDANIUM_AXE.get());
+                        output.accept(ModItems.RUDANIUM_HOE.get());
+                        output.accept(ModItems.RUDANIUM_SWORD.get());
+                        output.accept(ModItems.RUDANIUM_PICKAXE.get());
+                        output.accept(ModItems.RUDANIUM_SHOVEL.get());
+                        output.accept(ModItems.RUDANIUM_HELMET.get());
+                        output.accept(ModItems.RUDANIUM_CHESTPLATE.get());
+                        output.accept(ModItems.RUDANIUM_LEGGINGS.get());
+                        output.accept(ModItems.RUDANIUM_BOOTS.get());
+                        output.accept(ModBlocks.RUDANIUM_ORE.get());
+                        output.accept(ModBlocks.RUDANIUM_ORE_DEEPSLATE.get());
+                        output.accept(ModBlocks.RUDANIUM_ORE_END.get());
+                        output.accept(ModBlocks.RUDANIUM_ORE_NETHER.get());
+                        output.accept(ModBlocks.RUDANIUM_BLOCK.get());
+                        output.accept(ModBlocks.RAW_RUDANIUM_BLOCK.get());
+
                         output.accept(ModBlocks.CREPE_MYRTLE_LEAVES.get());
                         output.accept(ModBlocks.CREPE_MYRTLE_LOG.get());
                         output.accept(ModBlocks.CREPE_MYRTLE_PLANKS.get());
@@ -64,6 +84,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.CREPE_MYRTLE_COMPOST.get());
 
                         output.accept(ModBlocks.WHITE_COBBLESTONE.get());
+                        output.accept(ModBlocks.WHITE_STONE_BRICKS.get());
 
                     }).build());
 

@@ -41,6 +41,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.KYANITE_BLOCK);
         blockWithItem(ModBlocks.RAW_KYANITE_BLOCK);
         blockWithItem(ModBlocks.WHITE_COBBLESTONE);
+        blockWithItem(ModBlocks.WHITE_STONE_BRICKS);
         blockWithItem(ModBlocks.CREPE_MYRTLE_COMPOST);
         blockWithItem(ModBlocks.CREPE_MYRTLE_LEAVES);
         blockWithItem(ModBlocks.CREPE_MYRTLE_PLANKS);
@@ -55,6 +56,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.CREPE_MYRTLE_WOOD);
         blockItem(ModBlocks.STRIPPED_CREPE_MYRTLE_LOG);
         blockItem(ModBlocks.STRIPPED_CREPE_MYRTLE_WOOD);
+        flowerBlock(ModBlocks.WILD_ONION_PLANT);
+        blockWithItem(ModBlocks.RUDANIUM_ORE);
+        blockWithItem(ModBlocks.RUDANIUM_ORE_DEEPSLATE);
+        blockWithItem(ModBlocks.RUDANIUM_ORE_END);
+        blockWithItem(ModBlocks.RUDANIUM_ORE_NETHER);
+        blockWithItem(ModBlocks.RUDANIUM_BLOCK);
+        blockWithItem(ModBlocks.RAW_RUDANIUM_BLOCK);
+
 
     }
 
@@ -88,6 +97,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
     private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(),
                 models().cubeAll(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
+
+    private void flowerBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlock(blockRegistryObject.get(),
+                models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
 
     private void saplingBlock(RegistryObject<Block> blockRegistryObject) {

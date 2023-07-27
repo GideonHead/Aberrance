@@ -70,6 +70,35 @@ public class ModItems {
     public static final RegistryObject<Item> KYANITE_BOOTS = ITEMS.register("kyanite_boots",
             () -> new ArmorItem(ModArmorTiers.KYANITE, ArmorItem.Type.BOOTS, new Item.Properties()));
 
+
+    //Rudanium
+    public static final RegistryObject<Item> RUDANIUM_INGOT = ITEMS.register("rudanium_ingot",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RUDANIUM_NUGGET = ITEMS.register("rudanium_nugget",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RAW_RUDANIUM = ITEMS.register("raw_rudanium",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> RUDANIUM_PICKAXE = ITEMS.register("rudanium_pickaxe",
+            () -> new PickaxeItem(ModTiers.RUDANIUM, 1, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> RUDANIUM_SHOVEL = ITEMS.register("rudanium_shovel",
+            () -> new ShovelItem(ModTiers.RUDANIUM, 1, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> RUDANIUM_AXE = ITEMS.register("rudanium_axe",
+            () -> new AxeItem(ModTiers.RUDANIUM, 5, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> RUDANIUM_HOE = ITEMS.register("rudanium_hoe",
+            () -> new HoeItem(ModTiers.RUDANIUM, 1, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> RUDANIUM_SWORD = ITEMS.register("rudanium_sword",
+            () -> new SwordItem(ModTiers.RUDANIUM, 4, -2.8F, new Item.Properties()));
+
+    public static final RegistryObject<Item> RUDANIUM_HELMET = ITEMS.register("rudanium_helmet",
+            () -> new ArmorItem(ModArmorTiers.RUDANIUM, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> RUDANIUM_CHESTPLATE = ITEMS.register("rudanium_chestplate",
+            () -> new ArmorItem(ModArmorTiers.RUDANIUM, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> RUDANIUM_LEGGINGS = ITEMS.register("rudanium_leggings",
+            () -> new ArmorItem(ModArmorTiers.RUDANIUM, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> RUDANIUM_BOOTS = ITEMS.register("rudanium_boots",
+            () -> new ArmorItem(ModArmorTiers.RUDANIUM, ArmorItem.Type.BOOTS, new Item.Properties()));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

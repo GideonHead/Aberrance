@@ -1,4 +1,4 @@
-// 1.20.1	2023-07-25T15:50:23.0234393	Item Models: aberrance
+// 1.20.1	2023-07-27T14:21:12.7999713	Item Models: aberrance
 3296f62ca044b5b0968b6455237c6946e781f85e assets/aberrance/models/item/acacia_mesquite_sapling.json
 3b6eb2eed5f59c42755e9ab5b8a5fb4f317dd3b5 assets/aberrance/models/item/crepe_myrtle_sapling.json
 34fdcddf725400802a71ecc14fcf0864942c6495 assets/aberrance/models/item/kyanite_axe.json
@@ -17,6 +17,18 @@ ff5db7b3c042ca3dfaee43396496ccd2fe37f9e3 assets/aberrance/models/item/kyanite_sw
 1bfb63768847afc2782cd4ecf2641233114c0b41 assets/aberrance/models/item/parsnip.json
 592a96eb2de687afe686e7f49379ec37f525d0db assets/aberrance/models/item/parsnip_seeds.json
 b8c45a10f0296e1a8edb0f544d5024dee9bb8cc7 assets/aberrance/models/item/raw_kyanite.json
+11449d9aaaf1c3db0593acc8eea4c1b7575cb0b1 assets/aberrance/models/item/raw_rudanium.json
+b937268574251095709796af63a1e6b63d6eadc4 assets/aberrance/models/item/rudanium_axe.json
+0564bdbf582dd24dbe2fae87d061612a57123ab9 assets/aberrance/models/item/rudanium_boots.json
+2652d94ff1319cfcfac1651f4a2ba2dcd0f61c46 assets/aberrance/models/item/rudanium_chestplate.json
+959ff7a13aabeab9557b3856855adfa9a704e8aa assets/aberrance/models/item/rudanium_helmet.json
+f27ce1f3b365b793b044dec0c38575cf6fdff30e assets/aberrance/models/item/rudanium_hoe.json
+15caf0200be059400b373c40fb6357b315e8c722 assets/aberrance/models/item/rudanium_ingot.json
+40788ab60136913cc6103877baed4511e93f7e65 assets/aberrance/models/item/rudanium_leggings.json
+984d3259797a5c752564befd46d78064733e56c9 assets/aberrance/models/item/rudanium_nugget.json
+4c6bd1415fe5585b018a448b9d2ddb4e7f8fd517 assets/aberrance/models/item/rudanium_pickaxe.json
+e04abb6eebcd26d4af9d2daf81dfe00825b3e161 assets/aberrance/models/item/rudanium_shovel.json
+66b96b9daf33382f9658c36f42be862b626eb3d0 assets/aberrance/models/item/rudanium_sword.json
 d220e0f035020de5056b0bbb17e99fc4a706380d assets/aberrance/models/item/winter_wheat.json
 c887be168c0caff59008b3ae2eeda994a93c9dd0 assets/aberrance/models/item/winter_wheat_bread.json
 e986905c1bf4cbd7e551eeceb829a67713130ae2 assets/aberrance/models/item/winter_wheat_seeds.json

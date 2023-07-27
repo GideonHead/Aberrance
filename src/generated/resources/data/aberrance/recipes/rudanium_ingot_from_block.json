@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "rudanium",
+  "key": {
+    "#": {
+      "item": "aberrance:rudanium_ingot"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "aberrance:rudanium_block"
+  },
+  "show_notification": true
+}

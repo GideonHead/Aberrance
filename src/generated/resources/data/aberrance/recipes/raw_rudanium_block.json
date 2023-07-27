@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "rudanium",
+  "ingredients": [
+    {
+      "item": "aberrance:raw_rudanium_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "aberrance:raw_rudanium"
+  }
+}

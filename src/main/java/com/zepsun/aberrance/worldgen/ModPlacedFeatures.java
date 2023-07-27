@@ -12,9 +12,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import net.minecraft.world.level.levelgen.placement.HeightRangePlacement;
-import net.minecraft.world.level.levelgen.placement.PlacedFeature;
-import net.minecraft.world.level.levelgen.placement.PlacementModifier;
+import net.minecraft.world.level.levelgen.placement.*;
 
 import java.util.List;
 
@@ -25,6 +23,14 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> KYANITE_ORE_PLACED_KEY = registerKey("kyanite_ore_placed");
     public static final ResourceKey<PlacedFeature> NETHER_KYANITE_ORE_PLACED_KEY = registerKey("nether_kyanite_ore_placed");
     public static final ResourceKey<PlacedFeature> END_KYANITE_ORE_PLACED_KEY = registerKey("end_kyanite_ore_placed");
+
+    public static final ResourceKey<PlacedFeature> RUDANIUM_ORE_PLACED_KEY = registerKey("rudanium_ore_placed");
+    public static final ResourceKey<PlacedFeature> NETHER_RUDANIUM_ORE_PLACED_KEY = registerKey("nether_rudanium_ore_placed");
+    public static final ResourceKey<PlacedFeature> END_RUDANIUM_ORE_PLACED_KEY = registerKey("end_rudanium_ore_placed");
+
+    public static final ResourceKey<PlacedFeature> WHITE_COBBLESTONE_PLACED_KEY = registerKey("white_cobblestone_placed");
+
+    public static final ResourceKey<PlacedFeature> WILD_ONION_PLANT_PLACED_KEY = registerKey("wild_onion_plant_placed");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -43,10 +49,20 @@ public class ModPlacedFeatures {
                 WorldGenUtil.commonOrePlacement(4, HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(64))));
         register(context, END_KYANITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.END_KYANITE_ORE_KEY),
                 WorldGenUtil.commonOrePlacement(8, HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(120))));
+
+        register(context, RUDANIUM_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_RUDANIUM_ORE_KEY),
+                WorldGenUtil.commonOrePlacement(9, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(120))));
+        register(context, NETHER_RUDANIUM_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_RUDANIUM_ORE_KEY),
+                WorldGenUtil.commonOrePlacement(8, HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(120))));
+        register(context, END_RUDANIUM_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.END_RUDANIUM_ORE_KEY),
+                WorldGenUtil.commonOrePlacement(12, HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(120))));
+
+        register(context, WHITE_COBBLESTONE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.WHITE_COBBLESTONE_KEY),
+                WorldGenUtil.commonOrePlacement(5, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(120))));
+
+        register(context, WILD_ONION_PLANT_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.WILD_ONION_PLANT_KEY),
+                List.of(RarityFilter.onAverageOnceEvery(16), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
     }
-
-
-
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {
         return ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(Aberrance.MOD_ID, name));

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "rudanium",
+  "key": {
+    "#": {
+      "item": "aberrance:raw_rudanium"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "aberrance:raw_rudanium_block"
+  },
+  "show_notification": true
+}

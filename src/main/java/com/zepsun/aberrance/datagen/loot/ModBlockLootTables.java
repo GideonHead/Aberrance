@@ -40,7 +40,26 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.SEED_MAKER.get(), block ->
                 createSingleItemTable(ModBlocks.SEED_MAKER.get()));
 
+        this.add(ModBlocks.KYANITE_ORE.get(), block ->
+                createSingleItemTable(ModItems.RAW_KYANITE.get()));
+        this.add(ModBlocks.KYANITE_ORE_DEEPSLATE.get(), block ->
+                createSingleItemTable(ModItems.RAW_KYANITE.get()));
+        this.add(ModBlocks.KYANITE_ORE_END.get(), block ->
+                createSingleItemTable(ModItems.RAW_KYANITE.get()));
+        this.add(ModBlocks.KYANITE_ORE_NETHER.get(), block ->
+                createSingleItemTable(ModItems.RAW_KYANITE.get()));
 
+        this.add(ModBlocks.RUDANIUM_ORE.get(), block ->
+                createSingleItemTable(ModItems.RAW_RUDANIUM.get()));
+        this.add(ModBlocks.RUDANIUM_ORE_DEEPSLATE.get(), block ->
+                createSingleItemTable(ModItems.RAW_RUDANIUM.get()));
+        this.add(ModBlocks.RUDANIUM_ORE_END.get(), block ->
+                createSingleItemTable(ModItems.RAW_RUDANIUM.get()));
+        this.add(ModBlocks.RUDANIUM_ORE_NETHER.get(), block ->
+                createSingleItemTable(ModItems.RAW_RUDANIUM.get()));
+
+        this.add(ModBlocks.WILD_ONION_PLANT.get(), block ->
+                createSingleItemTable(ModItems.ONION.get()));
 
     }
 
