@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.6.0-1.20.1
+
+### Added
+
+- Rudanium Ore Set
+- Wild Onion Plant
+
 ## 0.5.0-1.20.1
 
 ### Added

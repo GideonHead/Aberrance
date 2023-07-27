@@ -27,6 +27,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.WINTER_WHEAT_BREAD);
 
         simpleItem(ModItems.ONION);
+        saplingItem(ModBlocks.WILD_ONION_PLANT);
 
         simpleItem(ModItems.MESQUITE);
         saplingItem(ModBlocks.ACACIA_MESQUITE_SAPLING);
