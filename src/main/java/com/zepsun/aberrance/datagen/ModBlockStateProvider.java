@@ -6,10 +6,9 @@ import com.zepsun.aberrance.block.ModBlocks;
 import com.zepsun.aberrance.block.custom.crop.ModCropBlock;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.CropBlock;
-import net.minecraft.world.level.block.RotatedPillarBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -56,6 +55,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.CREPE_MYRTLE_WOOD);
         blockItem(ModBlocks.STRIPPED_CREPE_MYRTLE_LOG);
         blockItem(ModBlocks.STRIPPED_CREPE_MYRTLE_WOOD);
+        stairsBlock((StairBlock) ModBlocks.CREPE_MYRTLE_STAIRS.get(), blockTexture(ModBlocks.CREPE_MYRTLE_PLANKS.get()));
+        slabBlock((SlabBlock) ModBlocks.CREPE_MYRTLE_SLAB.get(), blockTexture(ModBlocks.CREPE_MYRTLE_PLANKS.get()), blockTexture(ModBlocks.CREPE_MYRTLE_PLANKS.get()));
+        blockItem(ModBlocks.CREPE_MYRTLE_STAIRS);
+        blockItem(ModBlocks.CREPE_MYRTLE_SLAB);
         flowerBlock(ModBlocks.WILD_ONION_PLANT);
         blockWithItem(ModBlocks.RUDANIUM_ORE);
         blockWithItem(ModBlocks.RUDANIUM_ORE_DEEPSLATE);
@@ -63,8 +66,41 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.RUDANIUM_ORE_NETHER);
         blockWithItem(ModBlocks.RUDANIUM_BLOCK);
         blockWithItem(ModBlocks.RAW_RUDANIUM_BLOCK);
-
-
+        logBlock(((RotatedPillarBlock) ModBlocks.LIVE_OAK_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.LIVE_OAK_WOOD.get()), blockTexture(ModBlocks.LIVE_OAK_LOG.get()), blockTexture(ModBlocks.LIVE_OAK_LOG.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_LIVE_OAK_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_LIVE_OAK_WOOD.get()), blockTexture(ModBlocks.STRIPPED_LIVE_OAK_LOG.get()), blockTexture(ModBlocks.STRIPPED_LIVE_OAK_LOG.get()));
+        blockWithItem(ModBlocks.LIVE_OAK_LEAVES);
+        blockWithItem(ModBlocks.LIVE_OAK_PLANKS);
+        saplingBlock(ModBlocks.LIVE_OAK_SAPLING);
+        blockItem(ModBlocks.LIVE_OAK_LOG);
+        blockItem(ModBlocks.LIVE_OAK_WOOD);
+        blockItem(ModBlocks.STRIPPED_LIVE_OAK_LOG);
+        blockItem(ModBlocks.STRIPPED_LIVE_OAK_WOOD);
+        stairsBlock((StairBlock) ModBlocks.LIVE_OAK_STAIRS.get(), blockTexture(ModBlocks.LIVE_OAK_PLANKS.get()));
+        slabBlock((SlabBlock) ModBlocks.LIVE_OAK_SLAB.get(), blockTexture(ModBlocks.LIVE_OAK_PLANKS.get()), blockTexture(ModBlocks.LIVE_OAK_PLANKS.get()));
+        blockItem(ModBlocks.LIVE_OAK_STAIRS);
+        blockItem(ModBlocks.LIVE_OAK_SLAB);
+        doorBlockWithRenderType((DoorBlock) ModBlocks.LIVE_OAK_DOOR.get(), modLoc("block/live_oak_door_bottom"), modLoc("block/live_oak_door_top"), "cutout");
+        doorBlockWithRenderType((DoorBlock) ModBlocks.CREPE_MYRTLE_DOOR.get(), modLoc("block/crepe_myrtle_door_bottom"), modLoc("block/crepe_myrtle_door_top"), "cutout");
+        trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.LIVE_OAK_TRAPDOOR.get(), modLoc("block/live_oak_trapdoor"), true, "cutout");
+        trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.CREPE_MYRTLE_TRAPDOOR.get(), modLoc("block/crepe_myrtle_trapdoor"), true, "cutout");
+        trapdoorBlockItem(ModBlocks.LIVE_OAK_TRAPDOOR);
+        trapdoorBlockItem(ModBlocks.CREPE_MYRTLE_TRAPDOOR);
+        buttonBlock((ButtonBlock) ModBlocks.LIVE_OAK_BUTTON.get(), blockTexture(ModBlocks.LIVE_OAK_PLANKS.get()));
+        pressurePlateBlock((PressurePlateBlock) ModBlocks.LIVE_OAK_PRESSURE_PLATE.get(), blockTexture(ModBlocks.LIVE_OAK_PLANKS.get()));
+        buttonBlock((ButtonBlock) ModBlocks.CREPE_MYRTLE_BUTTON.get(), blockTexture(ModBlocks.CREPE_MYRTLE_PLANKS.get()));
+        pressurePlateBlock((PressurePlateBlock) ModBlocks.CREPE_MYRTLE_PRESSURE_PLATE.get(), blockTexture(ModBlocks.CREPE_MYRTLE_PLANKS.get()));
+        blockItem(ModBlocks.LIVE_OAK_PRESSURE_PLATE);
+        blockItem(ModBlocks.CREPE_MYRTLE_PRESSURE_PLATE);
+        fenceBlock((FenceBlock) ModBlocks.LIVE_OAK_FENCE.get(), blockTexture(ModBlocks.LIVE_OAK_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.LIVE_OAK_FENCE_GATE.get(), blockTexture(ModBlocks.LIVE_OAK_PLANKS.get()));
+        fenceBlock((FenceBlock) ModBlocks.CREPE_MYRTLE_FENCE.get(), blockTexture(ModBlocks.CREPE_MYRTLE_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.CREPE_MYRTLE_FENCE_GATE.get(), blockTexture(ModBlocks.CREPE_MYRTLE_PLANKS.get()));
+        wallBlock((WallBlock) ModBlocks.WHITE_STONE_BRICK_WALL.get(), blockTexture(ModBlocks.WHITE_STONE_BRICKS.get()));
+        wallBlock((WallBlock) ModBlocks.WHITE_COBBLESTONE_WALL.get(), blockTexture(ModBlocks.WHITE_COBBLESTONE.get()));
+        blockItem(ModBlocks.CREPE_MYRTLE_FENCE_GATE);
+        blockItem(ModBlocks.LIVE_OAK_FENCE_GATE);
     }
 
     public void makeCrossCrop(CropBlock block, String modelName, String textureName) {
@@ -118,6 +154,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     private void blockItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("aberrance:block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
+    }
+
+    private void trapdoorBlockItem(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("aberrance:block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath() + "_bottom"));
     }
 
     private String name(Block block) {

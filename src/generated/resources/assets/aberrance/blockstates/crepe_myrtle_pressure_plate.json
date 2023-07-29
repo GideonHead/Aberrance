@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "aberrance:block/crepe_myrtle_pressure_plate"
+    },
+    "powered=true": {
+      "model": "aberrance:block/crepe_myrtle_pressure_plate_down"
+    }
+  }
+}

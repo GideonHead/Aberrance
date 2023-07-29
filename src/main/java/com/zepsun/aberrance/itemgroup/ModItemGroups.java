@@ -1,5 +1,6 @@
 package com.zepsun.aberrance.itemgroup;
 
+import com.zepsun.aberrance.block.ModBlocks;
 import com.zepsun.aberrance.item.ModItems;
 import net.minecraft.world.item.Items;
 
@@ -55,6 +56,59 @@ public class ModItemGroups {
             Items.NETHERITE_CHESTPLATE,
             Items.NETHERITE_LEGGINGS,
             Items.NETHERITE_BOOTS
+    );
+
+    public static final TreeGroup CREPE_MYRTLE_TREE_GROUP = new TreeGroup(
+            ModBlocks.CREPE_MYRTLE_LOG.get(),
+            ModBlocks.CREPE_MYRTLE_WOOD.get(),
+            ModBlocks.STRIPPED_CREPE_MYRTLE_LOG.get(),
+            ModBlocks.STRIPPED_CREPE_MYRTLE_WOOD.get(),
+            ModBlocks.CREPE_MYRTLE_PLANKS.get(),
+            ModBlocks.CREPE_MYRTLE_LEAVES.get(),
+            ModBlocks.CREPE_MYRTLE_SAPLING.get(),
+            ModBlocks.CREPE_MYRTLE_DOOR.get(),
+            ModBlocks.CREPE_MYRTLE_TRAPDOOR.get(),
+            ModBlocks.CREPE_MYRTLE_BUTTON.get(),
+            ModBlocks.CREPE_MYRTLE_PRESSURE_PLATE.get(),
+            ModBlocks.CREPE_MYRTLE_FENCE.get(),
+            ModBlocks.CREPE_MYRTLE_FENCE_GATE.get(),
+            ModBlocks.CREPE_MYRTLE_SLAB.get(),
+            ModBlocks.CREPE_MYRTLE_STAIRS.get()
+    );
+
+    public static final TreeGroup LIVE_OAK_TREE_GROUP = new TreeGroup(
+            ModBlocks.LIVE_OAK_LOG.get(),
+            ModBlocks.LIVE_OAK_WOOD.get(),
+            ModBlocks.STRIPPED_LIVE_OAK_LOG.get(),
+            ModBlocks.STRIPPED_LIVE_OAK_WOOD.get(),
+            ModBlocks.LIVE_OAK_PLANKS.get(),
+            ModBlocks.LIVE_OAK_LEAVES.get(),
+            ModBlocks.LIVE_OAK_SAPLING.get(),
+            ModBlocks.LIVE_OAK_DOOR.get(),
+            ModBlocks.LIVE_OAK_TRAPDOOR.get(),
+            ModBlocks.LIVE_OAK_BUTTON.get(),
+            ModBlocks.LIVE_OAK_PRESSURE_PLATE.get(),
+            ModBlocks.LIVE_OAK_FENCE.get(),
+            ModBlocks.LIVE_OAK_FENCE_GATE.get(),
+            ModBlocks.LIVE_OAK_SLAB.get(),
+            ModBlocks.LIVE_OAK_STAIRS.get()
+    );
+    public static final TreeGroup ACACIA_MESQUITE_TREE_GROUP = new TreeGroup(
+            null,
+            null,
+            null,
+            null,
+            null,
+            ModBlocks.ACACIA_MESQUITE_LEAVES.get(),
+            ModBlocks.ACACIA_MESQUITE_SAPLING.get(),
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
     );
 
 }

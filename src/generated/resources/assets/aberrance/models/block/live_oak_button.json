@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "aberrance:block/live_oak_planks"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "aberrance:stripped_live_oak_wood"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "aberrance:live_oak_planks"
+  }
+}

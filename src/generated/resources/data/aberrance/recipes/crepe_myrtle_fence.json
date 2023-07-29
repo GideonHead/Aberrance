@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "aberrance:crepe_myrtle_planks"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "ASA",
+    "ASA"
+  ],
+  "result": {
+    "count": 4,
+    "item": "aberrance:crepe_myrtle_fence"
+  },
+  "show_notification": true
+}

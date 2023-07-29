@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "aberrance:block/live_oak_log_top",
+    "side": "aberrance:block/live_oak_log"
+  }
+}

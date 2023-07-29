@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_side",
+  "textures": {
+    "texture": "aberrance:block/crepe_myrtle_planks"
+  }
+}

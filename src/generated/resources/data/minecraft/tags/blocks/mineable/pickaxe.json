@@ -1,0 +1,22 @@
+{
+  "values": [
+    "aberrance:white_cobblestone",
+    "aberrance:white_stone_bricks",
+    "aberrance:white_stone_brick_wall",
+    "aberrance:white_cobblestone_wall",
+    "aberrance:cobblestone_case",
+    "aberrance:seed_maker",
+    "aberrance:rudanium_block",
+    "aberrance:raw_rudanium_block",
+    "aberrance:rudanium_ore",
+    "aberrance:rudanium_ore_deepslate",
+    "aberrance:rudanium_ore_end",
+    "aberrance:rudanium_ore_nether",
+    "aberrance:kyanite_block",
+    "aberrance:raw_kyanite_block",
+    "aberrance:kyanite_ore_nether",
+    "aberrance:kyanite_ore",
+    "aberrance:kyanite_ore_end",
+    "aberrance:kyanite_ore_deepslate"
+  ]
+}

@@ -1,5 +1,6 @@
 package com.zepsun.aberrance.worldgen;
 
+import com.mojang.datafixers.kinds.Const;
 import com.zepsun.aberrance.Aberrance;
 import com.zepsun.aberrance.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
@@ -16,8 +17,10 @@ import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.*;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.FancyFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.BendingTrunkPlacer;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.FancyTrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
@@ -29,6 +32,7 @@ import java.util.Random;
 public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> ACACIA_MESQUITE_KEY = registerKey("acacia_mesquite");
     public static final ResourceKey<ConfiguredFeature<?, ?>> CREPE_MYRTLE_KEY = registerKey("crepe_myrtle");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> LIVE_OAK_KEY = registerKey("live_oak");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_KYANITE_ORE_KEY = registerKey("kyanite_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_KYANITE_ORE_KEY = registerKey("nether_kyanite_ore");
@@ -59,7 +63,7 @@ public class ModConfiguredFeatures {
 
         register(context, ACACIA_MESQUITE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(Blocks.ACACIA_LOG),
-                new BendingTrunkPlacer(4, 2, 0, 3, UniformInt.of(1, 2)),
+                new FancyTrunkPlacer(3,11,0),
                 BlockStateProvider.simple(ModBlocks.ACACIA_MESQUITE_LEAVES.get()),
                 new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(2), 3),
                 new TwoLayersFeatureSize(1, 0, 2)).build());
@@ -69,6 +73,13 @@ public class ModConfiguredFeatures {
                 new StraightTrunkPlacer(2, 4, 1),
                 BlockStateProvider.simple(ModBlocks.CREPE_MYRTLE_LEAVES.get()),
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 2),
+                new TwoLayersFeatureSize(3, 0, 2)).build());
+
+        register(context, LIVE_OAK_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.LIVE_OAK_LOG.get()),
+                new FancyTrunkPlacer(3, 11, 0),
+                BlockStateProvider.simple(ModBlocks.LIVE_OAK_LEAVES.get()),
+                new FancyFoliagePlacer(ConstantInt.of(2),ConstantInt.of(4),4),
                 new TwoLayersFeatureSize(3, 0, 2)).build());
 
         register(context, OVERWORLD_KYANITE_ORE_KEY, Feature.ORE, new OreConfiguration(overWorldKyaniteOres, 7));

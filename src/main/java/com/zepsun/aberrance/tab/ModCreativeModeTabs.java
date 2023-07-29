@@ -82,9 +82,35 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.STRIPPED_CREPE_MYRTLE_LOG.get());
                         output.accept(ModBlocks.STRIPPED_CREPE_MYRTLE_WOOD.get());
                         output.accept(ModBlocks.CREPE_MYRTLE_COMPOST.get());
+                        output.accept(ModBlocks.CREPE_MYRTLE_STAIRS.get());
+                        output.accept(ModBlocks.CREPE_MYRTLE_SLAB.get());
+                        output.accept(ModBlocks.CREPE_MYRTLE_DOOR.get());
+                        output.accept(ModBlocks.CREPE_MYRTLE_TRAPDOOR.get());
+                        output.accept(ModBlocks.CREPE_MYRTLE_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.CREPE_MYRTLE_BUTTON.get());
+                        output.accept(ModBlocks.CREPE_MYRTLE_FENCE.get());
+                        output.accept(ModBlocks.CREPE_MYRTLE_FENCE_GATE.get());
+
+                        output.accept(ModBlocks.LIVE_OAK_LEAVES.get());
+                        output.accept(ModBlocks.LIVE_OAK_LOG.get());
+                        output.accept(ModBlocks.LIVE_OAK_PLANKS.get());
+                        output.accept(ModBlocks.LIVE_OAK_WOOD.get());
+                        output.accept(ModBlocks.LIVE_OAK_SAPLING.get());
+                        output.accept(ModBlocks.STRIPPED_LIVE_OAK_LOG.get());
+                        output.accept(ModBlocks.STRIPPED_LIVE_OAK_WOOD.get());
+                        output.accept(ModBlocks.LIVE_OAK_STAIRS.get());
+                        output.accept(ModBlocks.LIVE_OAK_SLAB.get());
+                        output.accept(ModBlocks.LIVE_OAK_DOOR.get());
+                        output.accept(ModBlocks.LIVE_OAK_TRAPDOOR.get());
+                        output.accept(ModBlocks.LIVE_OAK_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.LIVE_OAK_BUTTON.get());
+                        output.accept(ModBlocks.LIVE_OAK_FENCE.get());
+                        output.accept(ModBlocks.LIVE_OAK_FENCE_GATE.get());
 
                         output.accept(ModBlocks.WHITE_COBBLESTONE.get());
                         output.accept(ModBlocks.WHITE_STONE_BRICKS.get());
+                        output.accept(ModBlocks.WHITE_COBBLESTONE_WALL.get());
+                        output.accept(ModBlocks.WHITE_STONE_BRICK_WALL.get());
 
                     }).build());
 

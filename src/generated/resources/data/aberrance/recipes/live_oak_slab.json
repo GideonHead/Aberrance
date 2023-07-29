@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "aberrance:live_oak_planks"
+    }
+  },
+  "pattern": [
+    "AAA"
+  ],
+  "result": {
+    "count": 2,
+    "item": "aberrance:live_oak_slab"
+  },
+  "show_notification": true
+}

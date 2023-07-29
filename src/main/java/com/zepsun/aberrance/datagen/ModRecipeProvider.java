@@ -6,6 +6,7 @@ import com.zepsun.aberrance.datagen.custom.SeedMakingRecipeBuilder;
 import com.zepsun.aberrance.item.ModItems;
 import com.zepsun.aberrance.itemgroup.ArmorToolsGroup;
 import com.zepsun.aberrance.itemgroup.ModItemGroups;
+import com.zepsun.aberrance.itemgroup.TreeGroup;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
@@ -43,41 +44,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         of(ModItems.WINTER_WHEAT.get()).build()))
                 .save(pWriter);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.CREPE_MYRTLE_PLANKS.get(), 4)
-                .requires(ModBlocks.CREPE_MYRTLE_LOG.get())
-                .unlockedBy("has_crepe_myrtle", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.CREPE_MYRTLE_LOG.get()).build()))
-                .save(pWriter, new ResourceLocation(Aberrance.MOD_ID, "crepe_myrtle_planks_from_log"));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.CREPE_MYRTLE_PLANKS.get(), 4)
-                .requires(ModBlocks.CREPE_MYRTLE_WOOD.get())
-                .unlockedBy("has_crepe_myrtle", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.CREPE_MYRTLE_LOG.get()).build()))
-                .save(pWriter, new ResourceLocation(Aberrance.MOD_ID, "crepe_myrtle_planks_from_wood"));
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.CREPE_MYRTLE_PLANKS.get(), 4)
-                .requires(ModBlocks.STRIPPED_CREPE_MYRTLE_WOOD.get())
-                .unlockedBy("has_crepe_myrtle", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.CREPE_MYRTLE_LOG.get()).build()))
-                .save(pWriter, new ResourceLocation(Aberrance.MOD_ID, "crepe_myrtle_planks_from_stripped_wood"));
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.CREPE_MYRTLE_PLANKS.get(), 4)
-                .requires(ModBlocks.STRIPPED_CREPE_MYRTLE_LOG.get())
-                .unlockedBy("has_crepe_myrtle", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.CREPE_MYRTLE_LOG.get()).build()))
-                .save(pWriter, new ResourceLocation(Aberrance.MOD_ID, "crepe_myrtle_planks_from_stripped_log"));
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.CREPE_MYRTLE_WOOD.get(), 3)
-                .requires(ModBlocks.CREPE_MYRTLE_LOG.get())
-                .unlockedBy("has_crepe_myrtle", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.CREPE_MYRTLE_LOG.get()).build()))
-                .save(pWriter);
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.STRIPPED_CREPE_MYRTLE_WOOD.get(), 3)
-                .requires(ModBlocks.STRIPPED_CREPE_MYRTLE_LOG.get())
-                .unlockedBy("has_crepe_myrtle", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.CREPE_MYRTLE_LOG.get()).build()))
-                .save(pWriter);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.COBBLESTONE_CASE.get())
                 .pattern("OAO")
@@ -102,6 +69,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter);
 
 
+        treeGroupRecipes(pWriter, "has_crepe_myrtle", ModItemGroups.CREPE_MYRTLE_TREE_GROUP);
+        treeGroupRecipes(pWriter, "has_live_oak", ModItemGroups.LIVE_OAK_TREE_GROUP);
 
 
         armorToolsSmithingRecipes(pWriter, "has_kyanite_ingot", ModItemGroups.NETHERITE_ARMOR_TOOLS_GROUP, ModItemGroups.KYANITE_ARMOR_TOOLS_GROUP);
@@ -133,6 +102,112 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         nineBlockStorageRecipes(pWriter, RecipeCategory.MISC, ModItems.RUDANIUM_NUGGET.get(), RecipeCategory.MISC, ModItems.RUDANIUM_INGOT.get(),
                 "aberrance:rudanium_nugget", "rudanium","aberrance:rudanium_ingot_from_nuggets", "rudanium");
 
+    }
+
+    protected static void treeGroupRecipes(Consumer<FinishedRecipe> finishedRecipeConsumer, String requirementName, TreeGroup itemGroup) {
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, itemGroup.getPlanksBlock(), 4)
+                .requires(itemGroup.getLogBlock())
+                .unlockedBy(requirementName, inventoryTrigger(ItemPredicate.Builder.item().
+                        of(itemGroup.getLogBlock()).build()))
+                .save(finishedRecipeConsumer, new ResourceLocation(Aberrance.MOD_ID, getItemName(itemGroup.getPlanksBlock().asItem()) + "_from_log"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, itemGroup.getPlanksBlock(), 4)
+                .requires(itemGroup.getWoodBlock())
+                .unlockedBy(requirementName, inventoryTrigger(ItemPredicate.Builder.item().
+                        of(itemGroup.getLogBlock()).build()))
+                .save(finishedRecipeConsumer, new ResourceLocation(Aberrance.MOD_ID, getItemName(itemGroup.getPlanksBlock().asItem()) + "_from_wood"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, itemGroup.getPlanksBlock(), 4)
+                .requires(itemGroup.getStrippedWoodBlock())
+                .unlockedBy(requirementName, inventoryTrigger(ItemPredicate.Builder.item().
+                        of(itemGroup.getLogBlock()).build()))
+                .save(finishedRecipeConsumer, new ResourceLocation(Aberrance.MOD_ID, getItemName(itemGroup.getPlanksBlock().asItem()) + "_from_stripped_wood"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, itemGroup.getPlanksBlock(), 4)
+                .requires(itemGroup.getStrippedLogBlock())
+                .unlockedBy(requirementName, inventoryTrigger(ItemPredicate.Builder.item().
+                        of(itemGroup.getLogBlock()).build()))
+                .save(finishedRecipeConsumer, new ResourceLocation(Aberrance.MOD_ID, getItemName(itemGroup.getPlanksBlock().asItem()) + "_from_stripped_log"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, itemGroup.getWoodBlock(), 3)
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', itemGroup.getLogBlock())
+                .unlockedBy(requirementName, inventoryTrigger(ItemPredicate.Builder.item().
+                        of(itemGroup.getLogBlock()).build()))
+                .save(finishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, itemGroup.getStrippedWoodBlock(), 3)
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', itemGroup.getStrippedLogBlock())
+                .unlockedBy(requirementName, inventoryTrigger(ItemPredicate.Builder.item().
+                        of(itemGroup.getLogBlock()).build()))
+                .save(finishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, itemGroup.getStairsBlock(), 4)
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .define('A', itemGroup.getPlanksBlock())
+                .unlockedBy(requirementName, inventoryTrigger(ItemPredicate.Builder.item().
+                        of(itemGroup.getLogBlock()).build()))
+                .save(finishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, itemGroup.getSlabBlock(), 2)
+                .pattern("AAA")
+                .define('A', itemGroup.getPlanksBlock())
+                .unlockedBy(requirementName, inventoryTrigger(ItemPredicate.Builder.item().
+                        of(itemGroup.getLogBlock()).build()))
+                .save(finishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, itemGroup.getDoorBlock(), 3)
+                .pattern("AA")
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', itemGroup.getPlanksBlock())
+                .unlockedBy(requirementName, inventoryTrigger(ItemPredicate.Builder.item().
+                        of(itemGroup.getLogBlock()).build()))
+                .save(finishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, itemGroup.getTrapdoorBlock(), 2)
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', itemGroup.getPlanksBlock())
+                .unlockedBy(requirementName, inventoryTrigger(ItemPredicate.Builder.item().
+                        of(itemGroup.getLogBlock()).build()))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, itemGroup.getButtonBlock(), 1)
+                .requires(itemGroup.getPlanksBlock())
+                .unlockedBy(requirementName, inventoryTrigger(ItemPredicate.Builder.item().
+                        of(itemGroup.getLogBlock()).build()))
+                .save(finishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, itemGroup.getPressurePlateBlock(), 4)
+                .pattern("AA")
+                .define('A', itemGroup.getPlanksBlock())
+                .unlockedBy(requirementName, inventoryTrigger(ItemPredicate.Builder.item().
+                        of(itemGroup.getLogBlock()).build()))
+                .save(finishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, itemGroup.getFenceBlock(), 4)
+                .pattern("ASA")
+                .pattern("ASA")
+                .define('A', itemGroup.getPlanksBlock())
+                .define('S', Items.STICK)
+                .unlockedBy(requirementName, inventoryTrigger(ItemPredicate.Builder.item().
+                        of(itemGroup.getLogBlock()).build()))
+                .save(finishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, itemGroup.getFenceGateBlock(), 1)
+                .pattern("SAS")
+                .pattern("SAS")
+                .define('A', itemGroup.getPlanksBlock())
+                .define('S', Items.STICK)
+                .unlockedBy(requirementName, inventoryTrigger(ItemPredicate.Builder.item().
+                        of(itemGroup.getLogBlock()).build()))
+                .save(finishedRecipeConsumer);
     }
 
     protected static void toolsRecipes(Consumer<FinishedRecipe> finishedRecipeConsumer, String requirementName, ArmorToolsGroup itemGroup) {

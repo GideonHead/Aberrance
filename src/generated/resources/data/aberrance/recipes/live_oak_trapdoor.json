@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "aberrance:live_oak_planks"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "AAA"
+  ],
+  "result": {
+    "count": 2,
+    "item": "aberrance:live_oak_trapdoor"
+  },
+  "show_notification": true
+}

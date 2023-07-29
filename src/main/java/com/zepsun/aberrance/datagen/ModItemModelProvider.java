@@ -10,6 +10,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModItemModelProvider extends ItemModelProvider {
@@ -27,10 +28,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.WINTER_WHEAT_BREAD);
 
         simpleItem(ModItems.ONION);
-        saplingItem(ModBlocks.WILD_ONION_PLANT);
+        simpleBlockItem(ModBlocks.WILD_ONION_PLANT);
 
         simpleItem(ModItems.MESQUITE);
-        saplingItem(ModBlocks.ACACIA_MESQUITE_SAPLING);
+        simpleBlockItem(ModBlocks.ACACIA_MESQUITE_SAPLING);
 
         simpleHandheldItem(ModItems.KYANITE_AXE);
         simpleHandheldItem(ModItems.KYANITE_SHOVEL);
@@ -58,13 +59,41 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.RUDANIUM_LEGGINGS);
         simpleItem(ModItems.RUDANIUM_BOOTS);
 
-        saplingItem(ModBlocks.CREPE_MYRTLE_SAPLING);
+        simpleBlockItem(ModBlocks.CREPE_MYRTLE_SAPLING);
+
+        simpleBlockItem(ModBlocks.LIVE_OAK_SAPLING);
+
+        simpleBlockItem(ModBlocks.LIVE_OAK_DOOR);
+        simpleBlockItem(ModBlocks.CREPE_MYRTLE_DOOR);
+
+        buttonItem(ModBlocks.LIVE_OAK_BUTTON, ModBlocks.LIVE_OAK_PLANKS);
+        buttonItem(ModBlocks.CREPE_MYRTLE_BUTTON, ModBlocks.CREPE_MYRTLE_PLANKS);
+        fenceItem(ModBlocks.LIVE_OAK_FENCE, ModBlocks.LIVE_OAK_PLANKS);
+        fenceItem(ModBlocks.CREPE_MYRTLE_FENCE, ModBlocks.CREPE_MYRTLE_PLANKS);
+        wallItem(ModBlocks.WHITE_COBBLESTONE_WALL, ModBlocks.WHITE_COBBLESTONE);
+        wallItem(ModBlocks.WHITE_STONE_BRICK_WALL, ModBlocks.WHITE_STONE_BRICKS);
+
     }
 
     private <T> ItemModelBuilder simpleItem(RegistryObject<T> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(Aberrance.MOD_ID, "item/" + item.getId().getPath()));
+    }
+
+    public void buttonItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/button_inventory"))
+                .texture("texture", new ResourceLocation(Aberrance.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    }
+
+    public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/fence_inventory"))
+                .texture("texture",  new ResourceLocation(Aberrance.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    }
+
+    public void wallItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/wall_inventory"))
+                .texture("wall",  new ResourceLocation(Aberrance.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
     }
 
     private <T> ItemModelBuilder simpleItemTextureName(RegistryObject<T> item, String name) {
@@ -85,7 +114,7 @@ public class ModItemModelProvider extends ItemModelProvider {
                 new ResourceLocation(Aberrance.MOD_ID, "item/" + name));
     }
 
-    private <T> ItemModelBuilder saplingItem(RegistryObject<T> item) {
+    private <T> ItemModelBuilder simpleBlockItem(RegistryObject<T> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(Aberrance.MOD_ID, "block/" + item.getId().getPath()));

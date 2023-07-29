@@ -1,16 +1,14 @@
-package com.zepsun.aberrance.tiers;
+package com.zepsun.aberrance.tier;
 
 import com.zepsun.aberrance.Aberrance;
 import com.zepsun.aberrance.item.ModItems;
 import net.minecraft.Util;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.util.LazyLoadedValue;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ArmorMaterials;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.EnumMap;

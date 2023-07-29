@@ -4,6 +4,14 @@
 
 ### Added
 
+- Live Oak Tree and Wood Set.
+- Finished Wood Set Recipes.
+- Finished Loot Tables for all Existing Blocks.
+
+## 0.6.0-1.20.1
+
+### Added
+
 - Rudanium Ore Set
 - Wild Onion Plant
 

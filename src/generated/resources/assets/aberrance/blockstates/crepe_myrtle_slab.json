@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "aberrance:block/crepe_myrtle_slab"
+    },
+    "type=double": {
+      "model": "aberrance:block/crepe_myrtle_planks"
+    },
+    "type=top": {
+      "model": "aberrance:block/crepe_myrtle_slab_top"
+    }
+  }
+}

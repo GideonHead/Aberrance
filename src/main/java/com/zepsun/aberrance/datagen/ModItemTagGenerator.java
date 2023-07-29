@@ -35,7 +35,11 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(Items.BEETROOT_SEEDS);
 
         this.tag(ItemTags.PLANKS)
-                .add(ModBlocks.CREPE_MYRTLE_PLANKS.get().asItem());
+                .add(ModBlocks.CREPE_MYRTLE_PLANKS.get().asItem())
+                .add(ModBlocks.LIVE_OAK_PLANKS.get().asItem());
+
+
+
     }
 
     @Override

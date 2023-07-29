@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "aberrance:crepe_myrtle_planks"
+    }
+  ],
+  "result": {
+    "item": "aberrance:crepe_myrtle_button"
+  }
+}

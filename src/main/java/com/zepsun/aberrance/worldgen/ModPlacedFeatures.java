@@ -19,6 +19,7 @@ import java.util.List;
 public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> ACACIA_MESQUITE_PLACED_KEY = registerKey("acacia_mesquite_placed");
     public static final ResourceKey<PlacedFeature> CREPE_MYRTLE_PLACED_KEY = registerKey("crepe_myrtle_placed");
+    public static final ResourceKey<PlacedFeature> LIVE_OAK_PLACED_KEY = registerKey("live_oak_placed");
 
     public static final ResourceKey<PlacedFeature> KYANITE_ORE_PLACED_KEY = registerKey("kyanite_ore_placed");
     public static final ResourceKey<PlacedFeature> NETHER_KYANITE_ORE_PLACED_KEY = registerKey("nether_kyanite_ore_placed");
@@ -42,6 +43,10 @@ public class ModPlacedFeatures {
         register(context, CREPE_MYRTLE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CREPE_MYRTLE_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(1/2, 0.1f, 2),
                         ModBlocks.CREPE_MYRTLE_SAPLING.get()));
+
+        register(context, LIVE_OAK_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.LIVE_OAK_KEY),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(1, 0.1f, 2),
+                        ModBlocks.LIVE_OAK_SAPLING.get()));
 
         register(context, KYANITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_KYANITE_ORE_KEY),
                 WorldGenUtil.commonOrePlacement(1, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(0))));

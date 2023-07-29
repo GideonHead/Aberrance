@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "aberrance:block/live_oak_wood_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "aberrance:block/live_oak_wood"
+    },
+    "axis=z": {
+      "model": "aberrance:block/live_oak_wood_horizontal",
+      "x": 90
+    }
+  }
+}

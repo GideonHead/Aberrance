@@ -1,5 +1,8 @@
-// 1.20.1	2023-07-27T14:21:12.7999713	Item Models: aberrance
+// 1.20.1	2023-07-29T17:10:31.8820765	Item Models: aberrance
 3296f62ca044b5b0968b6455237c6946e781f85e assets/aberrance/models/item/acacia_mesquite_sapling.json
+62d1ce13873bc35a8a8662db0131d1c0e9a7487c assets/aberrance/models/item/crepe_myrtle_button.json
+167bd66634ec51f95d810b47494d9bdaabce1d27 assets/aberrance/models/item/crepe_myrtle_door.json
+675eb835ba8d74aa97bb38593a55bc63b4e5dfd7 assets/aberrance/models/item/crepe_myrtle_fence.json
 3b6eb2eed5f59c42755e9ab5b8a5fb4f317dd3b5 assets/aberrance/models/item/crepe_myrtle_sapling.json
 34fdcddf725400802a71ecc14fcf0864942c6495 assets/aberrance/models/item/kyanite_axe.json
 011ea637ad8850f634943a4bf0a8acb6b467f147 assets/aberrance/models/item/kyanite_boots.json
@@ -12,6 +15,10 @@ def0e1759322ea693e23cd7e8e6b8ed9e655a5f8 assets/aberrance/models/item/kyanite_ho
 6228d7eb495bc0b6eb87ee13b3bab2a834831384 assets/aberrance/models/item/kyanite_pickaxe.json
 6d7080b42d53dac53ebe5012a2638e70f8148846 assets/aberrance/models/item/kyanite_shovel.json
 ff5db7b3c042ca3dfaee43396496ccd2fe37f9e3 assets/aberrance/models/item/kyanite_sword.json
+553f03773d816638058472df773c001316ccd9fb assets/aberrance/models/item/live_oak_button.json
+08c2a0a07d2fce2a9e7db97ba8277ca022eb542b assets/aberrance/models/item/live_oak_door.json
+4963350003ffbb99bf923cbf9e67abf29cfeec90 assets/aberrance/models/item/live_oak_fence.json
+1f551c1ea3dd139e5b1e4ea817fa1f7edf61bbb9 assets/aberrance/models/item/live_oak_sapling.json
 9f50ff5a19db7eba58acd63c1df2416b821c61a1 assets/aberrance/models/item/mesquite.json
 2329e0f376366ebb6e2560464471a03b78650653 assets/aberrance/models/item/onion.json
 1bfb63768847afc2782cd4ecf2641233114c0b41 assets/aberrance/models/item/parsnip.json
@@ -29,6 +36,9 @@ f27ce1f3b365b793b044dec0c38575cf6fdff30e assets/aberrance/models/item/rudanium_h
 4c6bd1415fe5585b018a448b9d2ddb4e7f8fd517 assets/aberrance/models/item/rudanium_pickaxe.json
 e04abb6eebcd26d4af9d2daf81dfe00825b3e161 assets/aberrance/models/item/rudanium_shovel.json
 66b96b9daf33382f9658c36f42be862b626eb3d0 assets/aberrance/models/item/rudanium_sword.json
+73ec0a2e6b63e4c5849c9ada6936b0c1f5210c00 assets/aberrance/models/item/white_cobblestone_wall.json
+e007b7c87a7fc604d7cf6d1b7f06ebdb85b51a5e assets/aberrance/models/item/white_stone_brick_wall.json
+fb150493efbfa4db9c0d3802383c1c2e0fe6550e assets/aberrance/models/item/wild_onion_plant.json
 d220e0f035020de5056b0bbb17e99fc4a706380d assets/aberrance/models/item/winter_wheat.json
 c887be168c0caff59008b3ae2eeda994a93c9dd0 assets/aberrance/models/item/winter_wheat_bread.json
 e986905c1bf4cbd7e551eeceb829a67713130ae2 assets/aberrance/models/item/winter_wheat_seeds.json

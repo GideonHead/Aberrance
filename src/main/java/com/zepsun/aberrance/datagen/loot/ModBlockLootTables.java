@@ -61,6 +61,60 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.WILD_ONION_PLANT.get(), block ->
                 createSingleItemTable(ModItems.ONION.get()));
 
+
+        this.dropSelf(ModBlocks.CREPE_MYRTLE_STAIRS.get());
+        this.add(ModBlocks.CREPE_MYRTLE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.CREPE_MYRTLE_SLAB.get()));
+        this.dropSelf(ModBlocks.CREPE_MYRTLE_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_CREPE_MYRTLE_LOG.get());
+        this.dropSelf(ModBlocks.CREPE_MYRTLE_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_CREPE_MYRTLE_WOOD.get());
+        this.dropSelf(ModBlocks.CREPE_MYRTLE_PLANKS.get());
+        this.dropSelf(ModBlocks.CREPE_MYRTLE_SAPLING.get());
+        this.dropSelf(ModBlocks.CREPE_MYRTLE_COMPOST.get());
+        this.add(ModBlocks.CREPE_MYRTLE_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.CREPE_MYRTLE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.dropSelf(ModBlocks.CREPE_MYRTLE_TRAPDOOR.get());
+        this.add(ModBlocks.CREPE_MYRTLE_DOOR.get(), block ->
+                createDoorTable(ModBlocks.CREPE_MYRTLE_DOOR.get()));
+        this.dropSelf(ModBlocks.CREPE_MYRTLE_BUTTON.get());
+        this.dropSelf(ModBlocks.CREPE_MYRTLE_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.CREPE_MYRTLE_FENCE_GATE.get());
+        this.dropSelf(ModBlocks.CREPE_MYRTLE_FENCE.get());
+
+        this.dropSelf(ModBlocks.LIVE_OAK_STAIRS.get());
+        this.dropSelf(ModBlocks.LIVE_OAK_LOG.get());
+        this.dropSelf(ModBlocks.LIVE_OAK_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_LIVE_OAK_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_LIVE_OAK_WOOD.get());
+        this.dropSelf(ModBlocks.LIVE_OAK_PLANKS.get());
+        this.dropSelf(ModBlocks.LIVE_OAK_SAPLING.get());
+        this.add(ModBlocks.LIVE_OAK_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.LIVE_OAK_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.add(ModBlocks.LIVE_OAK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.LIVE_OAK_SLAB.get()));
+        this.dropSelf(ModBlocks.LIVE_OAK_TRAPDOOR.get());
+        this.add(ModBlocks.LIVE_OAK_DOOR.get(), block ->
+                createDoorTable(ModBlocks.LIVE_OAK_DOOR.get()));
+        this.dropSelf(ModBlocks.LIVE_OAK_BUTTON.get());
+        this.dropSelf(ModBlocks.LIVE_OAK_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.LIVE_OAK_FENCE_GATE.get());
+        this.dropSelf(ModBlocks.LIVE_OAK_FENCE.get());
+
+        this.dropSelf(ModBlocks.WHITE_COBBLESTONE.get());
+        this.dropSelf(ModBlocks.WHITE_COBBLESTONE_WALL.get());
+        this.dropSelf(ModBlocks.WHITE_STONE_BRICK_WALL.get());
+        this.dropSelf(ModBlocks.WHITE_STONE_BRICKS.get());
+
+        this.dropSelf(ModBlocks.COBBLESTONE_CASE.get());
+        this.dropSelf(ModBlocks.ACACIA_MESQUITE_SAPLING.get());
+        this.dropSelf(ModBlocks.KYANITE_BLOCK.get());
+        this.dropSelf(ModBlocks.RAW_KYANITE_BLOCK.get());
+        this.dropSelf(ModBlocks.RUDANIUM_BLOCK.get());
+        this.dropSelf(ModBlocks.RAW_RUDANIUM_BLOCK.get());
+
+
+
     }
 
     @Override

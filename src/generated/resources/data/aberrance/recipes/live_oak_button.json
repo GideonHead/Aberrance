@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "aberrance:live_oak_planks"
+    }
+  ],
+  "result": {
+    "item": "aberrance:live_oak_button"
+  }
+}

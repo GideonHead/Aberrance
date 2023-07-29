@@ -2,8 +2,8 @@ package com.zepsun.aberrance.item;
 
 import com.zepsun.aberrance.Aberrance;
 import com.zepsun.aberrance.block.ModBlocks;
-import com.zepsun.aberrance.tiers.ModArmorTiers;
-import com.zepsun.aberrance.tiers.ModTiers;
+import com.zepsun.aberrance.tier.ModArmorTiers;
+import com.zepsun.aberrance.tier.ModTiersGenerator;
 import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -51,15 +51,15 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> KYANITE_PICKAXE = ITEMS.register("kyanite_pickaxe",
-            () -> new PickaxeItem(ModTiers.KYANITE, 1, -2.8F, new Item.Properties()));
+            () -> new PickaxeItem(ModTiersGenerator.KYANITE, 1, -2.8F, new Item.Properties()));
     public static final RegistryObject<Item> KYANITE_SHOVEL = ITEMS.register("kyanite_shovel",
-            () -> new ShovelItem(ModTiers.KYANITE, 1, -2.8F, new Item.Properties()));
+            () -> new ShovelItem(ModTiersGenerator.KYANITE, 1, -2.8F, new Item.Properties()));
     public static final RegistryObject<Item> KYANITE_AXE = ITEMS.register("kyanite_axe",
-            () -> new AxeItem(ModTiers.KYANITE, 5, -2.8F, new Item.Properties()));
+            () -> new AxeItem(ModTiersGenerator.KYANITE, 5, -2.8F, new Item.Properties()));
     public static final RegistryObject<Item> KYANITE_HOE = ITEMS.register("kyanite_hoe",
-            () -> new HoeItem(ModTiers.KYANITE, 1, -2.8F, new Item.Properties()));
+            () -> new HoeItem(ModTiersGenerator.KYANITE, 1, -2.8F, new Item.Properties()));
     public static final RegistryObject<Item> KYANITE_SWORD = ITEMS.register("kyanite_sword",
-            () -> new SwordItem(ModTiers.KYANITE, 4, -2.8F, new Item.Properties()));
+            () -> new SwordItem(ModTiersGenerator.KYANITE, 4, -2.8F, new Item.Properties()));
 
     public static final RegistryObject<Item> KYANITE_HELMET = ITEMS.register("kyanite_helmet",
             () -> new ArmorItem(ModArmorTiers.KYANITE, ArmorItem.Type.HELMET, new Item.Properties()));
@@ -80,15 +80,15 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> RUDANIUM_PICKAXE = ITEMS.register("rudanium_pickaxe",
-            () -> new PickaxeItem(ModTiers.RUDANIUM, 1, -2.8F, new Item.Properties()));
+            () -> new PickaxeItem(ModTiersGenerator.RUDANIUM, 1, -2.8F, new Item.Properties()));
     public static final RegistryObject<Item> RUDANIUM_SHOVEL = ITEMS.register("rudanium_shovel",
-            () -> new ShovelItem(ModTiers.RUDANIUM, 1, -2.8F, new Item.Properties()));
+            () -> new ShovelItem(ModTiersGenerator.RUDANIUM, 1, -2.8F, new Item.Properties()));
     public static final RegistryObject<Item> RUDANIUM_AXE = ITEMS.register("rudanium_axe",
-            () -> new AxeItem(ModTiers.RUDANIUM, 5, -2.8F, new Item.Properties()));
+            () -> new AxeItem(ModTiersGenerator.RUDANIUM, 5, -2.8F, new Item.Properties()));
     public static final RegistryObject<Item> RUDANIUM_HOE = ITEMS.register("rudanium_hoe",
-            () -> new HoeItem(ModTiers.RUDANIUM, 1, -2.8F, new Item.Properties()));
+            () -> new HoeItem(ModTiersGenerator.RUDANIUM, 1, -2.8F, new Item.Properties()));
     public static final RegistryObject<Item> RUDANIUM_SWORD = ITEMS.register("rudanium_sword",
-            () -> new SwordItem(ModTiers.RUDANIUM, 4, -2.8F, new Item.Properties()));
+            () -> new SwordItem(ModTiersGenerator.RUDANIUM, 4, -2.8F, new Item.Properties()));
 
     public static final RegistryObject<Item> RUDANIUM_HELMET = ITEMS.register("rudanium_helmet",
             () -> new ArmorItem(ModArmorTiers.RUDANIUM, ArmorItem.Type.HELMET, new Item.Properties()));

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_inventory",
+  "textures": {
+    "texture": "aberrance:block/crepe_myrtle_planks"
+  }
+}

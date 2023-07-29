@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "aberrance:block/crepe_myrtle_planks",
+    "side": "aberrance:block/crepe_myrtle_planks",
+    "top": "aberrance:block/crepe_myrtle_planks"
+  }
+}

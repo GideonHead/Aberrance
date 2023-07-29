@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "aberrance:crepe_myrtle_planks"
+    }
+  },
+  "pattern": [
+    "AA"
+  ],
+  "result": {
+    "count": 4,
+    "item": "aberrance:crepe_myrtle_pressure_plate"
+  },
+  "show_notification": true
+}
