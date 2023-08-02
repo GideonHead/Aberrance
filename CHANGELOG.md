@@ -1,6 +1,15 @@
 # Changelog
 
-## 0.6.0-1.20.1
+## 0.8.0-1.20.1
+
+### Added
+
+ - Broadleaf Wood Set and Tree
+ - Expanded White Stone Set
+ - Crepe Myrtle Hills Biome
+ - Fences, Doors, Buttons, Etc. All wood items for every wood set.
+
+## 0.7.0-1.20.1
 
 ### Added
 
