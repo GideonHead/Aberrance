@@ -93,6 +93,25 @@ public class ModItemGroups {
             ModBlocks.LIVE_OAK_SLAB.get(),
             ModBlocks.LIVE_OAK_STAIRS.get()
     );
+
+    public static final TreeGroup BROADLEAF_TREE_GROUP = new TreeGroup(
+            ModBlocks.BROADLEAF_LOG.get(),
+            ModBlocks.BROADLEAF_WOOD.get(),
+            ModBlocks.STRIPPED_BROADLEAF_LOG.get(),
+            ModBlocks.STRIPPED_BROADLEAF_WOOD.get(),
+            ModBlocks.BROADLEAF_PLANKS.get(),
+            ModBlocks.BROADLEAF_LEAVES.get(),
+            ModBlocks.BROADLEAF_SAPLING.get(),
+            ModBlocks.BROADLEAF_DOOR.get(),
+            ModBlocks.BROADLEAF_TRAPDOOR.get(),
+            ModBlocks.BROADLEAF_BUTTON.get(),
+            ModBlocks.BROADLEAF_PRESSURE_PLATE.get(),
+            ModBlocks.BROADLEAF_FENCE.get(),
+            ModBlocks.BROADLEAF_FENCE_GATE.get(),
+            ModBlocks.BROADLEAF_SLAB.get(),
+            ModBlocks.BROADLEAF_STAIRS.get()
+    );
+
     public static final TreeGroup ACACIA_MESQUITE_TREE_GROUP = new TreeGroup(
             null,
             null,

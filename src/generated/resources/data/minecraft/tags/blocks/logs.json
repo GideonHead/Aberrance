@@ -7,6 +7,10 @@
     "aberrance:live_oak_log",
     "aberrance:live_oak_wood",
     "aberrance:stripped_live_oak_log",
-    "aberrance:stripped_live_oak_wood"
+    "aberrance:stripped_live_oak_wood",
+    "aberrance:broadleaf_log",
+    "aberrance:broadleaf_wood",
+    "aberrance:stripped_broadleaf_log",
+    "aberrance:stripped_broadleaf_wood"
   ]
 }

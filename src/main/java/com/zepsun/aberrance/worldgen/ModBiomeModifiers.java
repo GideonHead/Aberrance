@@ -21,6 +21,8 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_TREE_CREPE_MYRTLE_FOREST = registerKey("add_tree_crepe_myrtle_forest");
     public static final ResourceKey<BiomeModifier> ADD_TREE_CREPE_MYRTLE_PLAINS = registerKey("add_tree_crepe_myrtle_plains");
 
+    public static final ResourceKey<BiomeModifier> ADD_TREE_BROADLEAF_JUNGLE = registerKey("add_tree_broadleaf_jungle");
+
     public static final ResourceKey<BiomeModifier> ADD_KYANITE_ORE = registerKey("add_kyanite_ore");
     public static final ResourceKey<BiomeModifier> ADD_NETHER_KYANITE_ORE = registerKey("add_nether_kyanite_ore");
     public static final ResourceKey<BiomeModifier> ADD_END_KYANITE_ORE = registerKey("add_end_kyanite_ore");
@@ -55,6 +57,11 @@ public class ModBiomeModifiers {
         context.register(ADD_TREE_LIVE_OAK, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_FOREST),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.LIVE_OAK_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        context.register(ADD_TREE_BROADLEAF_JUNGLE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_JUNGLE),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.BROADLEAF_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
         context.register(ADD_KYANITE_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(

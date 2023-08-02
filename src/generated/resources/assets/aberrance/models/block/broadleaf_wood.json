@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "aberrance:block/broadleaf_log",
+    "side": "aberrance:block/broadleaf_log"
+  }
+}

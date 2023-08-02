@@ -101,10 +101,42 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.LIVE_OAK_FENCE_GATE.get());
         this.dropSelf(ModBlocks.LIVE_OAK_FENCE.get());
 
+        this.dropSelf(ModBlocks.BROADLEAF_STAIRS.get());
+        this.dropSelf(ModBlocks.BROADLEAF_LOG.get());
+        this.dropSelf(ModBlocks.BROADLEAF_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_BROADLEAF_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_BROADLEAF_WOOD.get());
+        this.dropSelf(ModBlocks.BROADLEAF_PLANKS.get());
+        this.dropSelf(ModBlocks.BROADLEAF_SAPLING.get());
+        this.add(ModBlocks.BROADLEAF_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.BROADLEAF_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.add(ModBlocks.BROADLEAF_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.BROADLEAF_SLAB.get()));
+        this.dropSelf(ModBlocks.BROADLEAF_TRAPDOOR.get());
+        this.add(ModBlocks.BROADLEAF_DOOR.get(), block ->
+                createDoorTable(ModBlocks.BROADLEAF_DOOR.get()));
+        this.dropSelf(ModBlocks.BROADLEAF_BUTTON.get());
+        this.dropSelf(ModBlocks.BROADLEAF_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.BROADLEAF_FENCE_GATE.get());
+        this.dropSelf(ModBlocks.BROADLEAF_FENCE.get());
+
+        this.dropSelf(ModBlocks.BROADLEAF_PLANKS.get());
+
         this.dropSelf(ModBlocks.WHITE_COBBLESTONE.get());
         this.dropSelf(ModBlocks.WHITE_COBBLESTONE_WALL.get());
         this.dropSelf(ModBlocks.WHITE_STONE_BRICK_WALL.get());
         this.dropSelf(ModBlocks.WHITE_STONE_BRICKS.get());
+        this.dropSelf(ModBlocks.WHITE_STONE.get());
+        this.dropSelf(ModBlocks.WHITE_STONE_WALL.get());
+        this.dropSelf(ModBlocks.WHITE_STONE_STAIRS.get());
+        this.add(ModBlocks.WHITE_STONE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.WHITE_STONE_SLAB.get()));
+        this.dropSelf(ModBlocks.WHITE_COBBLESTONE_STAIRS.get());
+        this.add(ModBlocks.WHITE_COBBLESTONE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.WHITE_COBBLESTONE_SLAB.get()));
+        this.dropSelf(ModBlocks.WHITE_STONE_BRICK_STAIRS.get());
+        this.add(ModBlocks.WHITE_STONE_BRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.WHITE_STONE_BRICK_SLAB.get()));
 
         this.dropSelf(ModBlocks.COBBLESTONE_CASE.get());
         this.dropSelf(ModBlocks.ACACIA_MESQUITE_SAPLING.get());

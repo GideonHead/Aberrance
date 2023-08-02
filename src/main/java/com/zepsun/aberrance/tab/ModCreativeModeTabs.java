@@ -107,10 +107,34 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.LIVE_OAK_FENCE.get());
                         output.accept(ModBlocks.LIVE_OAK_FENCE_GATE.get());
 
+                        output.accept(ModBlocks.BROADLEAF_LEAVES.get());
+                        output.accept(ModBlocks.BROADLEAF_LOG.get());
+                        output.accept(ModBlocks.BROADLEAF_PLANKS.get());
+                        output.accept(ModBlocks.BROADLEAF_WOOD.get());
+                        output.accept(ModBlocks.BROADLEAF_SAPLING.get());
+                        output.accept(ModBlocks.STRIPPED_BROADLEAF_LOG.get());
+                        output.accept(ModBlocks.STRIPPED_BROADLEAF_WOOD.get());
+                        output.accept(ModBlocks.BROADLEAF_STAIRS.get());
+                        output.accept(ModBlocks.BROADLEAF_SLAB.get());
+                        output.accept(ModBlocks.BROADLEAF_DOOR.get());
+                        output.accept(ModBlocks.BROADLEAF_TRAPDOOR.get());
+                        output.accept(ModBlocks.BROADLEAF_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.BROADLEAF_BUTTON.get());
+                        output.accept(ModBlocks.BROADLEAF_FENCE.get());
+                        output.accept(ModBlocks.BROADLEAF_FENCE_GATE.get());
+
                         output.accept(ModBlocks.WHITE_COBBLESTONE.get());
-                        output.accept(ModBlocks.WHITE_STONE_BRICKS.get());
                         output.accept(ModBlocks.WHITE_COBBLESTONE_WALL.get());
+                        output.accept(ModBlocks.WHITE_COBBLESTONE_STAIRS.get());
+                        output.accept(ModBlocks.WHITE_COBBLESTONE_SLAB.get());
+                        output.accept(ModBlocks.WHITE_STONE_BRICKS.get());
                         output.accept(ModBlocks.WHITE_STONE_BRICK_WALL.get());
+                        output.accept(ModBlocks.WHITE_STONE_BRICK_STAIRS.get());
+                        output.accept(ModBlocks.WHITE_STONE_BRICK_SLAB.get());
+                        output.accept(ModBlocks.WHITE_STONE.get());
+                        output.accept(ModBlocks.WHITE_STONE_WALL.get());
+                        output.accept(ModBlocks.WHITE_STONE_STAIRS.get());
+                        output.accept(ModBlocks.WHITE_STONE_SLAB.get());
 
                     }).build());
 

@@ -18,6 +18,7 @@ import net.minecraft.world.level.levelgen.feature.configurations.*;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FancyFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.MegaJungleFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.BendingTrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.FancyTrunkPlacer;
@@ -33,6 +34,7 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> ACACIA_MESQUITE_KEY = registerKey("acacia_mesquite");
     public static final ResourceKey<ConfiguredFeature<?, ?>> CREPE_MYRTLE_KEY = registerKey("crepe_myrtle");
     public static final ResourceKey<ConfiguredFeature<?, ?>> LIVE_OAK_KEY = registerKey("live_oak");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BROADLEAF_KEY = registerKey("broadleaf");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_KYANITE_ORE_KEY = registerKey("kyanite_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_KYANITE_ORE_KEY = registerKey("nether_kyanite_ore");
@@ -80,6 +82,13 @@ public class ModConfiguredFeatures {
                 new FancyTrunkPlacer(3, 11, 0),
                 BlockStateProvider.simple(ModBlocks.LIVE_OAK_LEAVES.get()),
                 new FancyFoliagePlacer(ConstantInt.of(2),ConstantInt.of(4),4),
+                new TwoLayersFeatureSize(3, 0, 2)).build());
+
+        register(context, BROADLEAF_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.BROADLEAF_LOG.get()),
+                new StraightTrunkPlacer(2, 4, 1),
+                BlockStateProvider.simple(ModBlocks.BROADLEAF_LEAVES.get()),
+                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 2),
                 new TwoLayersFeatureSize(3, 0, 2)).build());
 
         register(context, OVERWORLD_KYANITE_ORE_KEY, Feature.ORE, new OreConfiguration(overWorldKyaniteOres, 7));

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "aberrance:block/white_stone_slab"
+    },
+    "type=double": {
+      "model": "aberrance:block/white_stone"
+    },
+    "type=top": {
+      "model": "aberrance:block/white_stone_slab_top"
+    }
+  }
+}

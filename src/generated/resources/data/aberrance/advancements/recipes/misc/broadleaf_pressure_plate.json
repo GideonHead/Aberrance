@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_broadleaf": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "aberrance:broadleaf_log"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "aberrance:broadleaf_pressure_plate"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_broadleaf",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "aberrance:broadleaf_pressure_plate"
+    ]
+  },
+  "sends_telemetry_event": false
+}

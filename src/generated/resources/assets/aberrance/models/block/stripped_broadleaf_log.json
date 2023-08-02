@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "aberrance:block/stripped_broadleaf_log_top",
+    "side": "aberrance:block/stripped_broadleaf_log"
+  }
+}

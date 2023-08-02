@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_top_left_open",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "aberrance:block/broadleaf_door_bottom",
+    "top": "aberrance:block/broadleaf_door_top"
+  }
+}

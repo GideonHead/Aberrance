@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "aberrance:broadleaf_planks"
+    }
+  },
+  "pattern": [
+    "AA"
+  ],
+  "result": {
+    "count": 4,
+    "item": "aberrance:broadleaf_pressure_plate"
+  },
+  "show_notification": true
+}

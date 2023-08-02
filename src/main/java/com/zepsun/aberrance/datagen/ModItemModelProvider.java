@@ -72,6 +72,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         fenceItem(ModBlocks.CREPE_MYRTLE_FENCE, ModBlocks.CREPE_MYRTLE_PLANKS);
         wallItem(ModBlocks.WHITE_COBBLESTONE_WALL, ModBlocks.WHITE_COBBLESTONE);
         wallItem(ModBlocks.WHITE_STONE_BRICK_WALL, ModBlocks.WHITE_STONE_BRICKS);
+        wallItem(ModBlocks.WHITE_STONE_WALL, ModBlocks.WHITE_STONE);
+
+        fenceItem(ModBlocks.BROADLEAF_FENCE, ModBlocks.BROADLEAF_PLANKS);
+        buttonItem(ModBlocks.BROADLEAF_BUTTON, ModBlocks.BROADLEAF_PLANKS);
+        simpleBlockItem(ModBlocks.BROADLEAF_DOOR);
+        simpleBlockItem(ModBlocks.BROADLEAF_SAPLING);
 
     }
 

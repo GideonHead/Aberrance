@@ -30,7 +30,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.LIVE_OAK_LOG.get())
                 .add(ModBlocks.LIVE_OAK_WOOD.get())
                 .add(ModBlocks.STRIPPED_LIVE_OAK_LOG.get())
-                .add(ModBlocks.STRIPPED_LIVE_OAK_WOOD.get());
+                .add(ModBlocks.STRIPPED_LIVE_OAK_WOOD.get())
+                .add(ModBlocks.BROADLEAF_LOG.get())
+                .add(ModBlocks.BROADLEAF_WOOD.get())
+                .add(ModBlocks.STRIPPED_BROADLEAF_LOG.get())
+                .add(ModBlocks.STRIPPED_BROADLEAF_WOOD.get());
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.WHITE_COBBLESTONE.get())
@@ -58,15 +62,49 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.LIVE_OAK_WOOD.get())
                 .add(ModBlocks.STRIPPED_LIVE_OAK_WOOD.get())
                 .add(ModBlocks.LIVE_OAK_PLANKS.get())
+                .add(ModBlocks.LIVE_OAK_BUTTON.get())
+                .add(ModBlocks.LIVE_OAK_PRESSURE_PLATE.get())
+                .add(ModBlocks.LIVE_OAK_FENCE.get())
+                .add(ModBlocks.LIVE_OAK_FENCE_GATE.get())
+                .add(ModBlocks.LIVE_OAK_DOOR.get())
+                .add(ModBlocks.LIVE_OAK_TRAPDOOR.get())
                 .add(ModBlocks.LIVE_OAK_STAIRS.get())
                 .add(ModBlocks.LIVE_OAK_SLAB.get())
+
+                .add(ModBlocks.BROADLEAF_LOG.get())
+                .add(ModBlocks.STRIPPED_BROADLEAF_LOG.get())
+                .add(ModBlocks.BROADLEAF_WOOD.get())
+                .add(ModBlocks.STRIPPED_BROADLEAF_WOOD.get())
+                .add(ModBlocks.BROADLEAF_PLANKS.get())
+                .add(ModBlocks.BROADLEAF_BUTTON.get())
+                .add(ModBlocks.BROADLEAF_PRESSURE_PLATE.get())
+                .add(ModBlocks.BROADLEAF_FENCE.get())
+                .add(ModBlocks.BROADLEAF_FENCE_GATE.get())
+                .add(ModBlocks.BROADLEAF_DOOR.get())
+                .add(ModBlocks.BROADLEAF_TRAPDOOR.get())
+                .add(ModBlocks.BROADLEAF_STAIRS.get())
+                .add(ModBlocks.BROADLEAF_SLAB.get())
+
                 .add(ModBlocks.CREPE_MYRTLE_LOG.get())
                 .add(ModBlocks.STRIPPED_CREPE_MYRTLE_LOG.get())
                 .add(ModBlocks.CREPE_MYRTLE_WOOD.get())
                 .add(ModBlocks.STRIPPED_CREPE_MYRTLE_WOOD.get())
                 .add(ModBlocks.CREPE_MYRTLE_PLANKS.get())
+                .add(ModBlocks.CREPE_MYRTLE_BUTTON.get())
+                .add(ModBlocks.CREPE_MYRTLE_PRESSURE_PLATE.get())
+                .add(ModBlocks.CREPE_MYRTLE_FENCE.get())
+                .add(ModBlocks.CREPE_MYRTLE_FENCE_GATE.get())
+                .add(ModBlocks.CREPE_MYRTLE_DOOR.get())
+                .add(ModBlocks.CREPE_MYRTLE_TRAPDOOR.get())
                 .add(ModBlocks.CREPE_MYRTLE_STAIRS.get())
                 .add(ModBlocks.CREPE_MYRTLE_SLAB.get());
+
+        this.tag(BlockTags.MINEABLE_WITH_HOE)
+                .add(ModBlocks.LIVE_OAK_LEAVES.get())
+                .add(ModBlocks.ACACIA_MESQUITE_LEAVES.get())
+                .add(ModBlocks.CREPE_MYRTLE_LEAVES.get())
+                .add(ModBlocks.BROADLEAF_LEAVES.get());
+
 
         this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
                 .add(ModBlocks.KYANITE_BLOCK.get())
@@ -108,13 +146,16 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         this.tag(BlockTags.FENCES)
                 .add(ModBlocks.CREPE_MYRTLE_FENCE.get())
-                .add(ModBlocks.LIVE_OAK_FENCE.get());
+                .add(ModBlocks.LIVE_OAK_FENCE.get())
+                .add(ModBlocks.BROADLEAF_FENCE.get());
         this.tag(BlockTags.WALLS)
                 .add(ModBlocks.WHITE_COBBLESTONE_WALL.get())
+                .add(ModBlocks.WHITE_STONE_WALL.get())
                 .add(ModBlocks.WHITE_STONE_BRICK_WALL.get());
         this.tag(BlockTags.FENCE_GATES)
                 .add(ModBlocks.CREPE_MYRTLE_FENCE_GATE.get())
-                .add(ModBlocks.LIVE_OAK_FENCE_GATE.get());
+                .add(ModBlocks.LIVE_OAK_FENCE_GATE.get())
+                .add(ModBlocks.BROADLEAF_FENCE_GATE.get());
 
     }
 

@@ -7,7 +7,9 @@ import com.zepsun.aberrance.item.ModItems;
 import com.zepsun.aberrance.recipe.ModRecipes;
 import com.zepsun.aberrance.screen.ModMenuTypes;
 import com.zepsun.aberrance.screen.SeedMakerScreen;
+import com.zepsun.aberrance.sound.ModSounds;
 import com.zepsun.aberrance.tab.ModCreativeModeTabs;
+import com.zepsun.aberrance.worldgen.biome.ModTerraBlenderApi;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -20,6 +22,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import terrablender.api.SurfaceRuleManager;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(Aberrance.MOD_ID)
@@ -41,6 +44,10 @@ public class Aberrance
         ModBlocks.register(modEventBus);
         ModBlockEntities.register(modEventBus);
 
+        ModSounds.register(modEventBus);
+
+        ModTerraBlenderApi.registerRegions();
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -49,7 +56,9 @@ public class Aberrance
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
+        event.enqueueWork(() -> {
 
+        });
     }
 
     // Add the example block item to the building blocks tab

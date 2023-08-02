@@ -2,6 +2,7 @@ package com.zepsun.aberrance.worldgen;
 
 import com.zepsun.aberrance.Aberrance;
 import com.zepsun.aberrance.block.ModBlocks;
+import com.zepsun.aberrance.worldgen.tree.ModVegetationPlacements;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
@@ -19,7 +20,10 @@ import java.util.List;
 public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> ACACIA_MESQUITE_PLACED_KEY = registerKey("acacia_mesquite_placed");
     public static final ResourceKey<PlacedFeature> CREPE_MYRTLE_PLACED_KEY = registerKey("crepe_myrtle_placed");
+    public static final ResourceKey<PlacedFeature> CREPE_MYRTLE_EXTRA_PLACED_KEY = registerKey("crepe_myrtle_extra_placed");
     public static final ResourceKey<PlacedFeature> LIVE_OAK_PLACED_KEY = registerKey("live_oak_placed");
+    public static final ResourceKey<PlacedFeature> LIVE_OAK_RARE_PLACED_KEY = registerKey("live_oak_rare_placed");
+    public static final ResourceKey<PlacedFeature> BROADLEAF_PLACED_KEY = registerKey("broadleaf_placed");
 
     public static final ResourceKey<PlacedFeature> KYANITE_ORE_PLACED_KEY = registerKey("kyanite_ore_placed");
     public static final ResourceKey<PlacedFeature> NETHER_KYANITE_ORE_PLACED_KEY = registerKey("nether_kyanite_ore_placed");
@@ -44,9 +48,21 @@ public class ModPlacedFeatures {
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(1/2, 0.1f, 2),
                         ModBlocks.CREPE_MYRTLE_SAPLING.get()));
 
+        register(context, CREPE_MYRTLE_EXTRA_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CREPE_MYRTLE_KEY),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(12, 0.1f, 2),
+                        ModBlocks.CREPE_MYRTLE_SAPLING.get()));
+
         register(context, LIVE_OAK_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.LIVE_OAK_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(1, 0.1f, 2),
                         ModBlocks.LIVE_OAK_SAPLING.get()));
+
+        register(context, LIVE_OAK_RARE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.LIVE_OAK_KEY),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(1/2, 0.1f, 2),
+                        ModBlocks.LIVE_OAK_SAPLING.get()));
+
+        register(context, BROADLEAF_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BROADLEAF_KEY),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(2, 0.1f, 2),
+                        ModBlocks.BROADLEAF_SAPLING.get()));
 
         register(context, KYANITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_KYANITE_ORE_KEY),
                 WorldGenUtil.commonOrePlacement(1, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(0))));

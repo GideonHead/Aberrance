@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "aberrance:block/broadleaf_planks",
+    "side": "aberrance:block/broadleaf_planks",
+    "top": "aberrance:block/broadleaf_planks"
+  }
+}

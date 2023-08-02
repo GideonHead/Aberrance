@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "aberrance:block/broadleaf_slab"
+    },
+    "type=double": {
+      "model": "aberrance:block/broadleaf_planks"
+    },
+    "type=top": {
+      "model": "aberrance:block/broadleaf_slab_top"
+    }
+  }
+}

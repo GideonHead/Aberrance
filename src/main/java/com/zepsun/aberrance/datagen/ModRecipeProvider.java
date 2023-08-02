@@ -71,6 +71,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         treeGroupRecipes(pWriter, "has_crepe_myrtle", ModItemGroups.CREPE_MYRTLE_TREE_GROUP);
         treeGroupRecipes(pWriter, "has_live_oak", ModItemGroups.LIVE_OAK_TREE_GROUP);
+        treeGroupRecipes(pWriter, "has_broadleaf", ModItemGroups.BROADLEAF_TREE_GROUP);
 
 
         armorToolsSmithingRecipes(pWriter, "has_kyanite_ingot", ModItemGroups.NETHERITE_ARMOR_TOOLS_GROUP, ModItemGroups.KYANITE_ARMOR_TOOLS_GROUP);
