@@ -91,18 +91,17 @@ public class ModBiomes {
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
         globalOverworldGeneration(biomeBuilder);
-        BiomeDefaultFeatures.addJungleVines(biomeBuilder);
-        BiomeDefaultFeatures.addJungleGrass(biomeBuilder);
-        BiomeDefaultFeatures.addJungleMelons(biomeBuilder);
-        BiomeDefaultFeatures.addForestFlowers(biomeBuilder);
-        BiomeDefaultFeatures.addFerns(biomeBuilder);
         BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
         BiomeDefaultFeatures.addExtraGold(biomeBuilder);
 
-        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.BROADLEAF_EXTRA_PLACED_KEY);
-
+        BiomeDefaultFeatures.addJungleGrass(biomeBuilder);
+        BiomeDefaultFeatures.addForestFlowers(biomeBuilder);
+        BiomeDefaultFeatures.addFerns(biomeBuilder);
         BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
         BiomeDefaultFeatures.addDefaultExtraVegetation(biomeBuilder);
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.BROADLEAF_EXTRA_PLACED_KEY);
+        BiomeDefaultFeatures.addJungleVines(biomeBuilder);
+        BiomeDefaultFeatures.addJungleMelons(biomeBuilder);
 
         return new Biome.BiomeBuilder()
                 .hasPrecipitation(true)
