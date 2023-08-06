@@ -2,15 +2,12 @@ package com.zepsun.aberrance.datagen;
 
 import com.zepsun.aberrance.Aberrance;
 import com.zepsun.aberrance.block.ModBlocks;
-import com.zepsun.aberrance.tag.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.TagKey;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.common.data.ForgeBlockTagsProvider;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -156,6 +153,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.CREPE_MYRTLE_FENCE_GATE.get())
                 .add(ModBlocks.LIVE_OAK_FENCE_GATE.get())
                 .add(ModBlocks.BROADLEAF_FENCE_GATE.get());
+
+        this.tag(BlockTags.SOUL_SPEED_BLOCKS)
+                .add(ModBlocks.STARVED_SOUL_SOIL.get())
+                .add(ModBlocks.MURDEROUS_SOUL_SOIL.get())
+                .add(ModBlocks.SOUL_SEDIMENT.get());
 
     }
 

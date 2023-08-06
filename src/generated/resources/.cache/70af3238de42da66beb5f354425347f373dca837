@@ -1,4 +1,4 @@
-// 1.20.1	2023-08-01T14:46:41.2861838	Block Tags
+// 1.20.1	2023-08-05T22:12:23.4596031	Block Tags
 477ed93b15027c861323b5a320606f216e54031d data/forge/tags/blocks/needs_netherite_tool.json
 1fefc33aec3ffe8394cec9ed6a229f70e4ce94d2 data/minecraft/tags/blocks/fences.json
 fb5dfe64fede05bc6c8b5d787c038a342d283400 data/minecraft/tags/blocks/fence_gates.json
@@ -7,6 +7,7 @@ fb5dfe64fede05bc6c8b5d787c038a342d283400 data/minecraft/tags/blocks/fence_gates.
 1c938b06ac352ef6463d1feb119264d0f9bca512 data/minecraft/tags/blocks/mineable/hoe.json
 7370fd3556641e04b15d0f4abdc554733dcd4c79 data/minecraft/tags/blocks/mineable/pickaxe.json
 a5ad9666e7fd1eea1e8935776c14d721ca820172 data/minecraft/tags/blocks/needs_stone_tool.json
+4db5aebc6fcefe3f13d0ebca5b3131f34b0e8eca data/minecraft/tags/blocks/soul_speed_blocks.json
 82b158c90344c0f36b90978802eb9c2ce9707b8d data/minecraft/tags/blocks/walls.json
 760e53f06b0af234c91baf53cc7669802e6b7bfe data/minecraft/tags/blocks/wooden_buttons.json
 104b08afa23c9ad82325aaf6c5be745d59464307 data/minecraft/tags/blocks/wooden_doors.json

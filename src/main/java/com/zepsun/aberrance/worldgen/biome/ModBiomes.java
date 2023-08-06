@@ -2,9 +2,7 @@ package com.zepsun.aberrance.worldgen.biome;
 
 import com.zepsun.aberrance.Aberrance;
 import com.zepsun.aberrance.sound.ModSounds;
-import com.zepsun.aberrance.worldgen.ModBiomeModifiers;
 import com.zepsun.aberrance.worldgen.ModPlacedFeatures;
-import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BiomeDefaultFeatures;
 import net.minecraft.data.worldgen.BootstapContext;
@@ -12,20 +10,22 @@ import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.Musics;
-import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.biome.*;
 import net.minecraft.world.level.levelgen.GenerationStep;
-import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
 public class ModBiomes {
 
     public static final ResourceKey<Biome> BROADLEAF_HILLS = register("broadleaf_hills");
     public static final ResourceKey<Biome> CREPE_MYRTLE_FOREST = register("crepe_myrtle_forest");
+    public static final ResourceKey<Biome> STARVED_SOUL_PLAINS = register("starved_soul_plains");
+    public static final ResourceKey<Biome> MURDEROUS_SOUL_PLAINS = register("murderous_soul_plains");
 
     public static void bootstrap(BootstapContext<Biome> context) {
-        context.register(CREPE_MYRTLE_FOREST, broadleafHills(context));
+        context.register(CREPE_MYRTLE_FOREST, crepeMyrtleHills(context));
+        context.register(STARVED_SOUL_PLAINS, evilSoulPlains(context));
+        context.register(MURDEROUS_SOUL_PLAINS, murderousSoulPlains(context));
         //context.register(CREPE_MYRTLE_FOREST, );
     }
 
@@ -38,7 +38,7 @@ public class ModBiomes {
         BiomeDefaultFeatures.addSurfaceFreezing(builder);
     }
 
-    public static Biome broadleafHills(BootstapContext<Biome> context) {
+    public static Biome crepeMyrtleHills(BootstapContext<Biome> context) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
 
         spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.WOLF, 5, 4, 4));
@@ -77,6 +77,52 @@ public class ModBiomes {
                         .fogColor(12638463)
                         .ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS)
                         .backgroundMusic(Musics.createGameMusic(ModSounds.WALTZ_ENRICHED.getHolder().get())).build())
+                .build();
+    }
+
+    public static Biome evilSoulPlains(BootstapContext<Biome> context) {
+        MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
+
+        BiomeGenerationSettings.Builder biomeBuilder =
+                new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
+
+        return new Biome.BiomeBuilder()
+                .hasPrecipitation(true)
+                .downfall(0.8f)
+                .temperature(0.7f)
+                .generationSettings(biomeBuilder.build())
+                .mobSpawnSettings(spawnBuilder.build())
+                .specialEffects((new BiomeSpecialEffects.Builder())
+                        .waterColor(0x595959)
+                        .waterFogColor(0x595959)
+                        .skyColor(0x595959)
+                        .fogColor(0x595959)
+                        .ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS)
+                        .backgroundMusic(Musics.createGameMusic(ModSounds.WALTZ_ENRICHED.getHolder().get())).build())
+
+                .build();
+    }
+
+    public static Biome murderousSoulPlains(BootstapContext<Biome> context) {
+        MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
+
+        BiomeGenerationSettings.Builder biomeBuilder =
+                new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
+
+        return new Biome.BiomeBuilder()
+                .hasPrecipitation(true)
+                .downfall(0.8f)
+                .temperature(0.7f)
+                .generationSettings(biomeBuilder.build())
+                .mobSpawnSettings(spawnBuilder.build())
+                .specialEffects((new BiomeSpecialEffects.Builder())
+                        .waterColor(0x4d0601)
+                        .waterFogColor(0x4d0601)
+                        .skyColor(0x4d0601)
+                        .fogColor(0x4d0601)
+                        .ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS)
+                        .backgroundMusic(Musics.createGameMusic(ModSounds.WALTZ_ENRICHED.getHolder().get())).build())
+
                 .build();
     }
 

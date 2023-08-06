@@ -1,6 +1,8 @@
 package com.zepsun.aberrance.datagen;
 
 import com.zepsun.aberrance.Aberrance;
+import com.zepsun.aberrance.dimensiongen.ModDimensions;
+import com.zepsun.aberrance.dimensiongen.ModLevelGen;
 import com.zepsun.aberrance.worldgen.ModBiomeModifiers;
 import com.zepsun.aberrance.worldgen.ModConfiguredFeatures;
 import com.zepsun.aberrance.worldgen.ModPlacedFeatures;
@@ -20,6 +22,9 @@ public class ModWorldGenProvider extends DatapackBuiltinEntriesProvider {
             .add(Registries.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap)
             .add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap)
             .add(Registries.BIOME, ModBiomes::bootstrap)
+            .add(Registries.NOISE_SETTINGS, ModLevelGen::bootstrap)
+            .add(Registries.LEVEL_STEM, ModDimensions::bootstrapStem)
+            .add(Registries.DIMENSION_TYPE, ModDimensions::bootstrapType)
             .add(ForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap);
 
     public ModWorldGenProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {

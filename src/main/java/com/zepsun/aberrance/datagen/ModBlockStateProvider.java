@@ -8,7 +8,6 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -168,6 +167,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.WHITE_COBBLESTONE_SLAB);
         blockItem(ModBlocks.WHITE_STONE_BRICK_STAIRS);
         blockItem(ModBlocks.WHITE_STONE_BRICK_SLAB);
+
+
+        //soul
+        blockWithItem(ModBlocks.STARVED_SOUL_SOIL);
+        blockWithItem(ModBlocks.MURDEROUS_SOUL_SOIL);
+        blockWithItem(ModBlocks.SOUL_SEDIMENT);
     }
 
     public void makeCrossCrop(CropBlock block, String modelName, String textureName) {

@@ -136,6 +136,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.WHITE_STONE_STAIRS.get());
                         output.accept(ModBlocks.WHITE_STONE_SLAB.get());
 
+                        output.accept(ModBlocks.SOUL_SEDIMENT.get());
+                        output.accept(ModBlocks.STARVED_SOUL_SOIL.get());
+                        output.accept(ModBlocks.MURDEROUS_SOUL_SOIL.get());
+
                     }).build());
 
     public static void register(IEventBus eventBus) {

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "aberrance:block/murderous_soul_soil"
+  }
+}

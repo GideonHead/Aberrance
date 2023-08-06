@@ -241,6 +241,15 @@ public class ModBlocks {
             () -> new SlabBlock(BlockBehaviour.Properties.of().copy(Blocks.STONE_SLAB)));
 
 
+    //Soul
+    public static final RegistryObject<Block> SOUL_SEDIMENT = registerBlock("soul_sediment",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
+    public static final RegistryObject<Block> STARVED_SOUL_SOIL = registerBlock("starved_soul_soil",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SOUL_SOIL)));
+    public static final RegistryObject<Block> MURDEROUS_SOUL_SOIL = registerBlock("murderous_soul_soil",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SOUL_SOIL)));
+
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
