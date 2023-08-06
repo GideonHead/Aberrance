@@ -24,6 +24,7 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> LIVE_OAK_PLACED_KEY = registerKey("live_oak_placed");
     public static final ResourceKey<PlacedFeature> LIVE_OAK_RARE_PLACED_KEY = registerKey("live_oak_rare_placed");
     public static final ResourceKey<PlacedFeature> BROADLEAF_PLACED_KEY = registerKey("broadleaf_placed");
+    public static final ResourceKey<PlacedFeature> BROADLEAF_EXTRA_PLACED_KEY = registerKey("broadleaf_extra_placed");
 
     public static final ResourceKey<PlacedFeature> KYANITE_ORE_PLACED_KEY = registerKey("kyanite_ore_placed");
     public static final ResourceKey<PlacedFeature> NETHER_KYANITE_ORE_PLACED_KEY = registerKey("nether_kyanite_ore_placed");
@@ -62,6 +63,10 @@ public class ModPlacedFeatures {
 
         register(context, BROADLEAF_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BROADLEAF_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(2, 0.1f, 2),
+                        ModBlocks.BROADLEAF_SAPLING.get()));
+
+        register(context, BROADLEAF_EXTRA_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BROADLEAF_KEY),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(12, 0.1f, 2),
                         ModBlocks.BROADLEAF_SAPLING.get()));
 
         register(context, KYANITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_KYANITE_ORE_KEY),
