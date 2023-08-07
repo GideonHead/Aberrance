@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.9.1-1.20.1
+
+### Changed
+
+- Changed White Stone Generation
+
 ## 0.9.0-1.20.1
 
 ### Added
