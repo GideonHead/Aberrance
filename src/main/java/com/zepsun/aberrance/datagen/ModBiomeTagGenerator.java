@@ -8,10 +8,13 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.BiomeTagsProvider;
 import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.MultiNoiseBiomeSourceParameterList;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -28,13 +31,14 @@ public class ModBiomeTagGenerator extends BiomeTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
-        TagsProvider.TagAppender<Biome> tagappender = this.tag(ModTags.Biomes.IS_ABYSS);
+        TagsProvider.TagAppender<Biome> tagappender = tag(ModTags.Biomes.IS_ABYSS);
         abyssBiomes.forEach(tagappender::add);
 
-        TagsProvider.TagAppender<Biome> tagappender1 = this.tag(BiomeTags.IS_FOREST);
+        TagsProvider.TagAppender<Biome> tagappender1 = tag(BiomeTags.IS_FOREST);
         modForestBiomes.forEach(tagappender1::add);
-        TagsProvider.TagAppender<Biome> tagappender2 = this.tag(BiomeTags.IS_JUNGLE);
+        TagsProvider.TagAppender<Biome> tagappender2 = tag(BiomeTags.IS_JUNGLE);
         modJungleBiomes.forEach(tagappender2::add);
+
     }
 
     @Override
