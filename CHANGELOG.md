@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.9.2-1.20.1
+
+### Changed
+
+- Added Biome Tags
+
 ## 0.9.1-1.20.1
 
 ### Changed

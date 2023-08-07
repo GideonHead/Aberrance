@@ -1,6 +1,7 @@
 package com.zepsun.aberrance.datagen;
 
 import com.zepsun.aberrance.Aberrance;
+import com.zepsun.aberrance.block.ModBlocks;
 import com.zepsun.aberrance.tag.ModTags;
 import com.zepsun.aberrance.worldgen.biome.ModBiomes;
 import net.minecraft.core.HolderLookup;
@@ -31,14 +32,17 @@ public class ModBiomeTagGenerator extends BiomeTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
-        TagsProvider.TagAppender<Biome> tagappender = tag(ModTags.Biomes.IS_ABYSS);
-        abyssBiomes.forEach(tagappender::add);
+        this.tag(ModTags.Biomes.IS_ABYSS)
+                .add(ModBiomes.MURDEROUS_SOUL_PLAINS)
+                .add(ModBiomes.STARVED_SOUL_PLAINS);
+        this.tag(BiomeTags.IS_OVERWORLD)
+                .add(ModBiomes.CREPE_MYRTLE_FOREST)
+                .add(ModBiomes.BROADLEAF_HILLS);
 
-        TagsProvider.TagAppender<Biome> tagappender1 = tag(BiomeTags.IS_FOREST);
-        modForestBiomes.forEach(tagappender1::add);
-        TagsProvider.TagAppender<Biome> tagappender2 = tag(BiomeTags.IS_JUNGLE);
-        modJungleBiomes.forEach(tagappender2::add);
-
+        this.tag(BiomeTags.IS_FOREST)
+                .add(ModBiomes.CREPE_MYRTLE_FOREST);
+        this.tag(BiomeTags.IS_JUNGLE)
+                .add(ModBiomes.BROADLEAF_HILLS);
     }
 
     @Override
