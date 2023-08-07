@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.9.0-1.20.1
+
+### Added
+
+- Broadleaf Hills Biome
+- Music Disc Enriched
+- Abyss Dimension(Only Accessible with /tpabyss for now)
+- Murderous Soul Soil
+- Starved Soul Soil
+- Soul Sediment
+- Other Minor Features/Adjustments
+
 ## 0.8.0-1.20.1
 
 ### Added

@@ -1,8 +1,10 @@
 {
   "waltz_enriched": {
-    "subtitle": "Waltz of the Enriched",
     "sounds": [
-      "aberrance:waltz_enriched"
+      {
+        "name": "aberrance:waltz_enriched",
+        "stream": true
+      }
     ]
   }
 }

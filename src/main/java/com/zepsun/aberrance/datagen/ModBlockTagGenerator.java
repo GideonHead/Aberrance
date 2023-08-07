@@ -159,6 +159,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.MURDEROUS_SOUL_SOIL.get())
                 .add(ModBlocks.SOUL_SEDIMENT.get());
 
+        this.tag(BlockTags.DIRT)
+                .add(ModBlocks.MURDEROUS_SOUL_SOIL.get())
+                .add(ModBlocks.STARVED_SOUL_SOIL.get());
+
     }
 
     @Override

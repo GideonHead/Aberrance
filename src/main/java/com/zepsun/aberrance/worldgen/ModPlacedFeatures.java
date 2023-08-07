@@ -2,7 +2,6 @@ package com.zepsun.aberrance.worldgen;
 
 import com.zepsun.aberrance.Aberrance;
 import com.zepsun.aberrance.block.ModBlocks;
-import com.zepsun.aberrance.worldgen.tree.ModVegetationPlacements;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
@@ -34,7 +33,7 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> NETHER_RUDANIUM_ORE_PLACED_KEY = registerKey("nether_rudanium_ore_placed");
     public static final ResourceKey<PlacedFeature> END_RUDANIUM_ORE_PLACED_KEY = registerKey("end_rudanium_ore_placed");
 
-    public static final ResourceKey<PlacedFeature> WHITE_COBBLESTONE_PLACED_KEY = registerKey("white_cobblestone_placed");
+    public static final ResourceKey<PlacedFeature> WHITE_STONE_PLACED_KEY = registerKey("white_stone_placed");
 
     public static final ResourceKey<PlacedFeature> WILD_ONION_PLANT_PLACED_KEY = registerKey("wild_onion_plant_placed");
 
@@ -83,8 +82,8 @@ public class ModPlacedFeatures {
         register(context, END_RUDANIUM_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.END_RUDANIUM_ORE_KEY),
                 WorldGenUtil.commonOrePlacement(12, HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(120))));
 
-        register(context, WHITE_COBBLESTONE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.WHITE_COBBLESTONE_KEY),
-                WorldGenUtil.commonOrePlacement(5, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(120))));
+        register(context, WHITE_STONE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.WHITE_STONE_KEY),
+                WorldGenUtil.commonOrePlacement(6, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(120))));
 
         register(context, WILD_ONION_PLANT_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.WILD_ONION_PLANT_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(16), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));

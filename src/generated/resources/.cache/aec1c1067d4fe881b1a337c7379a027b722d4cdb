@@ -1,4 +1,4 @@
-// 1.20.1	2023-07-30T16:35:36.407883	Item Models: aberrance
+// 1.20.1	2023-08-06T11:21:15.8549049	Item Models: aberrance
 3296f62ca044b5b0968b6455237c6946e781f85e assets/aberrance/models/item/acacia_mesquite_sapling.json
 2d43819b8a6035cd9f80b97639af8b2cc62c5c74 assets/aberrance/models/item/broadleaf_button.json
 328fdabb911180a655fd1ea4df844a680560c78e assets/aberrance/models/item/broadleaf_door.json
@@ -24,6 +24,7 @@ ff5db7b3c042ca3dfaee43396496ccd2fe37f9e3 assets/aberrance/models/item/kyanite_sw
 4963350003ffbb99bf923cbf9e67abf29cfeec90 assets/aberrance/models/item/live_oak_fence.json
 1f551c1ea3dd139e5b1e4ea817fa1f7edf61bbb9 assets/aberrance/models/item/live_oak_sapling.json
 9f50ff5a19db7eba58acd63c1df2416b821c61a1 assets/aberrance/models/item/mesquite.json
+8140b2720ef76ede6e60d33f09570e57853b8899 assets/aberrance/models/item/music_disc_enriched.json
 2329e0f376366ebb6e2560464471a03b78650653 assets/aberrance/models/item/onion.json
 1bfb63768847afc2782cd4ecf2641233114c0b41 assets/aberrance/models/item/parsnip.json
 592a96eb2de687afe686e7f49379ec37f525d0db assets/aberrance/models/item/parsnip_seeds.json

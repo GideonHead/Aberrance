@@ -1,6 +1,5 @@
 package com.zepsun.aberrance.worldgen;
 
-import com.mojang.datafixers.kinds.Const;
 import com.zepsun.aberrance.Aberrance;
 import com.zepsun.aberrance.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
@@ -10,7 +9,6 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.valueproviders.ConstantInt;
-import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
@@ -18,9 +16,7 @@ import net.minecraft.world.level.levelgen.feature.configurations.*;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FancyFoliagePlacer;
-import net.minecraft.world.level.levelgen.feature.foliageplacers.MegaJungleFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
-import net.minecraft.world.level.levelgen.feature.trunkplacers.BendingTrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.FancyTrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
@@ -28,7 +24,6 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 
 import java.util.List;
-import java.util.Random;
 
 public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> ACACIA_MESQUITE_KEY = registerKey("acacia_mesquite");
@@ -44,7 +39,7 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_RUDANIUM_ORE_KEY = registerKey("nether_rudanium_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> END_RUDANIUM_ORE_KEY = registerKey("end_rudanium_ore");
 
-    public static final ResourceKey<ConfiguredFeature<?, ?>>  WHITE_COBBLESTONE_KEY = registerKey("white_cobblestone");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> WHITE_STONE_KEY = registerKey("white_stone");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>>  WILD_ONION_PLANT_KEY = registerKey("wild_onion_plant");
 
@@ -103,8 +98,8 @@ public class ModConfiguredFeatures {
         register(context, END_RUDANIUM_ORE_KEY, Feature.ORE, new OreConfiguration(endStoneReplaceables,
                 ModBlocks.RUDANIUM_ORE_END.get().defaultBlockState(), 9));
 
-        register(context, WHITE_COBBLESTONE_KEY, Feature.ORE, new OreConfiguration(stoneReplaceables,
-                ModBlocks.WHITE_COBBLESTONE.get().defaultBlockState(), 64));
+        register(context, WHITE_STONE_KEY, Feature.ORE, new OreConfiguration(stoneReplaceables,
+                ModBlocks.WHITE_STONE.get().defaultBlockState(), 64));
 
         register(context, WILD_ONION_PLANT_KEY, Feature.FLOWER,
                 new RandomPatchConfiguration(32, 6,2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,

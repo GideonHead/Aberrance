@@ -1,5 +1,6 @@
-// 1.20.1	2023-08-05T22:12:23.4596031	Block Tags
+// 1.20.1	2023-08-07T10:32:39.8122242	Block Tags
 477ed93b15027c861323b5a320606f216e54031d data/forge/tags/blocks/needs_netherite_tool.json
+012babcdcadaee98c0f76fd28f0676a30fdd7ce0 data/minecraft/tags/blocks/dirt.json
 1fefc33aec3ffe8394cec9ed6a229f70e4ce94d2 data/minecraft/tags/blocks/fences.json
 fb5dfe64fede05bc6c8b5d787c038a342d283400 data/minecraft/tags/blocks/fence_gates.json
 2e06ad28764f26b2a1374996123759ae97bc3a50 data/minecraft/tags/blocks/logs.json

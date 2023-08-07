@@ -31,7 +31,7 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_NETHER_RUDANIUM_ORE = registerKey("add_nether_rudanium_ore");
     public static final ResourceKey<BiomeModifier> ADD_END_RUDANIUM_ORE = registerKey("add_end_rudanium_ore");
 
-    public static final ResourceKey<BiomeModifier> ADD_WHITE_COBBLESTONE = registerKey("add_white_cobblestone");
+    public static final ResourceKey<BiomeModifier> ADD_WHITE_STONE = registerKey("add_white_stone");
 
     public static final ResourceKey<BiomeModifier> ADD_WILD_ONION_PLANT_FOREST = registerKey("add_wild_onion_plant_forest");
     public static final ResourceKey<BiomeModifier> ADD_WILD_ONION_PLANT_PLAINS = registerKey("add_wild_onion_plant_plains");
@@ -90,9 +90,9 @@ public class ModBiomeModifiers {
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.END_RUDANIUM_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
-        context.register(ADD_WHITE_COBBLESTONE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADD_WHITE_STONE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.WHITE_COBBLESTONE_PLACED_KEY)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.WHITE_STONE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
         context.register(ADD_WILD_ONION_PLANT_FOREST, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(

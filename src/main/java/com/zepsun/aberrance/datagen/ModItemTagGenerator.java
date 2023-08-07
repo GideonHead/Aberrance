@@ -38,6 +38,9 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModBlocks.CREPE_MYRTLE_PLANKS.get().asItem())
                 .add(ModBlocks.LIVE_OAK_PLANKS.get().asItem());
 
+        this.tag(ItemTags.MUSIC_DISCS)
+                .add(ModItems.MUSIC_DISC_ENRICHED.get());
+
 
 
     }

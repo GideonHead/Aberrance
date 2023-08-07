@@ -59,6 +59,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.RUDANIUM_LEGGINGS);
         simpleItem(ModItems.RUDANIUM_BOOTS);
 
+        simpleItem(ModItems.MUSIC_DISC_ENRICHED);
+
         simpleBlockItem(ModBlocks.CREPE_MYRTLE_SAPLING);
 
         simpleBlockItem(ModBlocks.LIVE_OAK_SAPLING);

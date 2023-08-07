@@ -2,6 +2,7 @@ package com.zepsun.aberrance.item;
 
 import com.zepsun.aberrance.Aberrance;
 import com.zepsun.aberrance.block.ModBlocks;
+import com.zepsun.aberrance.sound.ModSounds;
 import com.zepsun.aberrance.tier.ModArmorTiers;
 import com.zepsun.aberrance.tier.ModTiersGenerator;
 import net.minecraft.world.food.Foods;
@@ -98,6 +99,12 @@ public class ModItems {
             () -> new ArmorItem(ModArmorTiers.RUDANIUM, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> RUDANIUM_BOOTS = ITEMS.register("rudanium_boots",
             () -> new ArmorItem(ModArmorTiers.RUDANIUM, ArmorItem.Type.BOOTS, new Item.Properties()));
+
+
+    //Music Discs
+    public static final RegistryObject<Item> MUSIC_DISC_ENRICHED = ITEMS.register("music_disc_enriched",
+            () -> new RecordItem(4, ModSounds.WALTZ_ENRICHED, new Item.Properties().rarity(Rarity.RARE).stacksTo(1), 3600));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
