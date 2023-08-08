@@ -1,11 +1,13 @@
 package com.zepsun.aberrance.block;
 
 import com.zepsun.aberrance.Aberrance;
+import com.zepsun.aberrance.block.custom.CustomPlacementBushBlock;
 import com.zepsun.aberrance.block.custom.FlammableBlock;
 import com.zepsun.aberrance.block.custom.FlammableWoodLog;
 import com.zepsun.aberrance.block.custom.StrippableFlammableWoodLog;
 import com.zepsun.aberrance.block.custom.crop.ModCropBlock;
 import com.zepsun.aberrance.block.custom.station.SeedMakerBlock;
+import com.zepsun.aberrance.block.custom.station.WhiteStoneFurnaceBlock;
 import com.zepsun.aberrance.item.ModItems;
 import com.zepsun.aberrance.worldgen.tree.AcaciaMesquiteTreeGrower;
 import com.zepsun.aberrance.worldgen.tree.BroadleafTreeGrower;
@@ -13,6 +15,7 @@ import com.zepsun.aberrance.worldgen.tree.CrepeMyrtleTreeGrower;
 import com.zepsun.aberrance.worldgen.tree.LiveOakTreeGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
@@ -29,6 +32,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.List;
 import java.util.function.Supplier;
 
 public class ModBlocks {
@@ -39,18 +43,25 @@ public class ModBlocks {
     //Parsnip
     public static final RegistryObject<Block> PARSNIP_CROP = BLOCKS.register("parsnip_crop",
             () -> new ModCropBlock(ModItems.PARSNIP_SEEDS::get, BlockBehaviour.Properties.copy(Blocks.WHEAT)));
+    public static final RegistryObject<Block> WILD_PARSNIP_PLANT = registerBlock("wild_parsnip_plant",
+            () -> new CustomPlacementBushBlock(List.of(BlockTags.DIRT, Blocks.FARMLAND, Blocks.SAND, Blocks.GRAVEL),
+                    BlockBehaviour.Properties.copy(Blocks.ALLIUM)));
 
 
     //Winter Wheat
     public static final RegistryObject<Block> WINTER_WHEAT_CROP = BLOCKS.register("winter_wheat_crop",
             () -> new ModCropBlock(ModItems.WINTER_WHEAT_SEEDS::get, BlockBehaviour.Properties.copy(Blocks.WHEAT)));
+    public static final RegistryObject<Block> WILD_WINTER_WHEAT_PLANT = registerBlock("wild_winter_wheat_plant",
+            () -> new CustomPlacementBushBlock(List.of(BlockTags.DIRT, Blocks.FARMLAND, Blocks.SAND, Blocks.GRAVEL),
+                    BlockBehaviour.Properties.copy(Blocks.ALLIUM)));
 
 
     //Onion
     public static final RegistryObject<Block> ONION_CROP = BLOCKS.register("onion_crop",
             () -> new ModCropBlock(ModItems.ONION::get, BlockBehaviour.Properties.copy(Blocks.WHEAT)));
     public static final RegistryObject<Block> WILD_ONION_PLANT = registerBlock("wild_onion_plant",
-            () -> new FlowerBlock(() -> MobEffects.WITHER, 4, BlockBehaviour.Properties.copy(Blocks.ALLIUM)));
+            () -> new CustomPlacementBushBlock(List.of(BlockTags.DIRT, Blocks.FARMLAND, Blocks.SAND, Blocks.GRAVEL),
+                    BlockBehaviour.Properties.copy(Blocks.ALLIUM)));
 
 
     //Mesquite
@@ -239,6 +250,8 @@ public class ModBlocks {
             () -> new StairBlock(() -> ModBlocks.WHITE_STONE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.of().copy(Blocks.STONE_STAIRS)));
     public static final RegistryObject<Block> WHITE_STONE_BRICK_SLAB = registerBlock("white_stone_brick_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.of().copy(Blocks.STONE_SLAB)));
+    //public static final RegistryObject<Block> WHITE_STONE_FURNACE = registerBlock("white_stone_furnace",
+    //        () -> new WhiteStoneFurnaceBlock(BlockBehaviour.Properties.copy(Blocks.FURNACE).requiresCorrectToolForDrops()));
 
 
     //Soul

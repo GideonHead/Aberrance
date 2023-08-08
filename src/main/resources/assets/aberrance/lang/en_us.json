@@ -113,10 +113,14 @@
   "block.aberrance.starved_soul_soil": "Starved Soul Soil",
   "block.aberrance.murderous_soul_soil": "Murderous Soul Soil",
   "block.aberrance.soul_sediment": "Soul Sediment",
+  "block.aberrance.wild_winter_wheat_plant": "Wild Winter Wheat Plant",
+  "block.aberrance.wild_parsnip_plant": "Wild Parsnip Plant",
+
 
 
   "creativetab.aberrance": "Aberrance",
 
   "aberrance.tooltip.liquid.amount.with.capacity": "%s / %s mB",
-  "aberrance.tooltip.liquid.amount": "%s mB"
+  "aberrance.tooltip.liquid.amount": "%s mB",
+  "container.white_stone_furnace": "White Stone Furnace"
 }

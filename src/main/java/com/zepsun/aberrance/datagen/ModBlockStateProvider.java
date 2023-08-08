@@ -26,15 +26,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
 
         //Parsnip
-        makeCrossCrop(((ModCropBlock) ModBlocks.PARSNIP_CROP.get()), "parsnip_stage", "parsnip_stage");
+        makeCropCrop(((ModCropBlock) ModBlocks.PARSNIP_CROP.get()), "parsnip_stage", "parsnip_stage");
+        flowerBlock(ModBlocks.WILD_WINTER_WHEAT_PLANT);
 
         //Winter Wheat
         makeCropCrop(((ModCropBlock) ModBlocks.WINTER_WHEAT_CROP.get()), "winter_wheat_stage", "winter_wheat_stage");
+        flowerBlock(ModBlocks.WILD_PARSNIP_PLANT);
 
         //Onion
         makeCropCrop(((ModCropBlock) ModBlocks.ONION_CROP.get()), "onion_stage", "onion_stage");
         flowerBlock(ModBlocks.WILD_ONION_PLANT);
-
 
         //Machines and Machine Parts
         orientableBlockWithItem(ModBlocks.SEED_MAKER, "seed_maker_side", "seed_maker_side", "cobblestone_case");

@@ -1,8 +1,14 @@
 # Changelog
 
+## 0.9.3-1.20.1
+
+### Added
+
+- Parsnip and Winter Wheat spawns in the wild
+
 ## 0.9.2-1.20.1
 
-### Changed
+### Added
 
 - Added Biome Tags
 

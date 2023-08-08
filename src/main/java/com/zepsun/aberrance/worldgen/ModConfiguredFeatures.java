@@ -42,6 +42,8 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> WHITE_STONE_KEY = registerKey("white_stone");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>>  WILD_ONION_PLANT_KEY = registerKey("wild_onion_plant");
+    public static final ResourceKey<ConfiguredFeature<?, ?>>  WILD_PARSNIP_PLANT_KEY = registerKey("wild_parsnip_plant");
+    public static final ResourceKey<ConfiguredFeature<?, ?>>  WILD_WINTER_WHEAT_PLANT_KEY = registerKey("wild_winter_wheat_plant");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
 
@@ -104,6 +106,12 @@ public class ModConfiguredFeatures {
         register(context, WILD_ONION_PLANT_KEY, Feature.FLOWER,
                 new RandomPatchConfiguration(32, 6,2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.WILD_ONION_PLANT.get())))));
+        register(context, WILD_PARSNIP_PLANT_KEY, Feature.FLOWER,
+                new RandomPatchConfiguration(32, 6,2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.WILD_PARSNIP_PLANT.get())))));
+        register(context, WILD_WINTER_WHEAT_PLANT_KEY, Feature.FLOWER,
+                new RandomPatchConfiguration(32, 6,2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.WILD_WINTER_WHEAT_PLANT.get())))));
     }
 
 

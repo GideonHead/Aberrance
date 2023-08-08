@@ -22,10 +22,12 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         simpleItem(ModItems.PARSNIP);
         simpleItem(ModItems.PARSNIP_SEEDS);
+        simpleBlockItem(ModBlocks.WILD_WINTER_WHEAT_PLANT);
 
         simpleItem(ModItems.WINTER_WHEAT);
         simpleItem(ModItems.WINTER_WHEAT_SEEDS);
         simpleItem(ModItems.WINTER_WHEAT_BREAD);
+        simpleBlockItem(ModBlocks.WILD_PARSNIP_PLANT);
 
         simpleItem(ModItems.ONION);
         simpleBlockItem(ModBlocks.WILD_ONION_PLANT);

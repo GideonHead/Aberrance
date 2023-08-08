@@ -1,4 +1,4 @@
-// 1.20.1	2023-08-05T22:12:23.4646066	Loot Tables
+// 1.20.1	2023-08-07T17:20:24.9783301	Loot Tables
 7c42149e07b56d27d06c1f2f65b090398a446faa data/aberrance/loot_tables/blocks/acacia_mesquite_leaves.json
 ebd8840a8bd2767cad8e5a40a1b2ca8074a5f2f9 data/aberrance/loot_tables/blocks/acacia_mesquite_sapling.json
 c1423ae166710bc9b0c94105735f67aa528159e1 data/aberrance/loot_tables/blocks/broadleaf_button.json
@@ -79,4 +79,6 @@ b44e5cd2e70b67b18829b532d2ffb23ef196caa1 data/aberrance/loot_tables/blocks/white
 cafcf180ea3bed0777609cb526edf9c2abc8f90c data/aberrance/loot_tables/blocks/white_stone_stairs.json
 588c17448556afccc73f42e54785eeffc48f3933 data/aberrance/loot_tables/blocks/white_stone_wall.json
 189f4ee7961ca8af64688a331da8b9344fa0c3f7 data/aberrance/loot_tables/blocks/wild_onion_plant.json
+8015a63f3e699d19d66ec9eae13cca370216bc45 data/aberrance/loot_tables/blocks/wild_parsnip_plant.json
+496c3a8ddae82f7d0c33246f0ba391cb6a5b768b data/aberrance/loot_tables/blocks/wild_winter_wheat_plant.json
 9ef3d3b65bc65d0865afe053b3f04936862a32ff data/aberrance/loot_tables/blocks/winter_wheat_crop.json

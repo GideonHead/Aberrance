@@ -17,6 +17,11 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(SeedMakerBlockEntity::new,
                             ModBlocks.SEED_MAKER.get()).build(null));
 
+    //public static final RegistryObject<BlockEntityType<SeedMakerBlockEntity>> WHITE_STONE_FURNACE_BE =
+    //        BLOCK_ENTITIES.register("white_stone_furnace_block_entity", () ->
+    //                BlockEntityType.Builder.of(SeedMakerBlockEntity::new,
+    //                        ModBlocks.WHITE_STONE_FURNACE.get()).build(null));
+
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);
     }

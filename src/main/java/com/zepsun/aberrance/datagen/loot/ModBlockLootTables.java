@@ -60,6 +60,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.WILD_ONION_PLANT.get(), block ->
                 createSingleItemTable(ModItems.ONION.get()));
+        this.add(ModBlocks.WILD_WINTER_WHEAT_PLANT.get(), block ->
+                createSingleItemTable(ModItems.WINTER_WHEAT.get()));
+        this.add(ModBlocks.WILD_PARSNIP_PLANT.get(), block ->
+                createSingleItemTable(ModItems.PARSNIP.get()));
 
 
         this.dropSelf(ModBlocks.CREPE_MYRTLE_STAIRS.get());

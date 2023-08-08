@@ -1,7 +1,7 @@
 {
-  "parent": "minecraft:block/cross",
+  "parent": "minecraft:block/crop",
   "render_type": "minecraft:cutout",
   "textures": {
-    "cross": "aberrance:block/parsnip_stage6"
+    "crop": "aberrance:block/parsnip_stage6"
   }
 }

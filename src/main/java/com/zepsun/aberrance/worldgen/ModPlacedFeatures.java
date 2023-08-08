@@ -36,6 +36,8 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> WHITE_STONE_PLACED_KEY = registerKey("white_stone_placed");
 
     public static final ResourceKey<PlacedFeature> WILD_ONION_PLANT_PLACED_KEY = registerKey("wild_onion_plant_placed");
+    public static final ResourceKey<PlacedFeature> WILD_PARSNIP_PLANT_PLACED_KEY = registerKey("wild_parsnip_plant_placed_key");
+    public static final ResourceKey<PlacedFeature> WILD_WINTER_WHEAT_PLANT_PLACED_KEY = registerKey("wild_winter_wheat_placed_key");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -86,7 +88,11 @@ public class ModPlacedFeatures {
                 WorldGenUtil.commonOrePlacement(6, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(120))));
 
         register(context, WILD_ONION_PLANT_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.WILD_ONION_PLANT_KEY),
-                List.of(RarityFilter.onAverageOnceEvery(16), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+                List.of(RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+        register(context, WILD_PARSNIP_PLANT_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.WILD_PARSNIP_PLANT_KEY),
+                List.of(RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+        register(context, WILD_WINTER_WHEAT_PLANT_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.WILD_WINTER_WHEAT_PLANT_KEY),
+                List.of(RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
     }
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {

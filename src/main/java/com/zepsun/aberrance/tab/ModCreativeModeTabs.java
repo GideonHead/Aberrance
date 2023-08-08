@@ -21,10 +21,12 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.PARSNIP.get());
                         output.accept(ModItems.PARSNIP_SEEDS.get());
+                        output.accept(ModBlocks.WILD_PARSNIP_PLANT.get());
 
                         output.accept(ModItems.WINTER_WHEAT.get());
                         output.accept(ModItems.WINTER_WHEAT_SEEDS.get());
                         output.accept(ModItems.WINTER_WHEAT_BREAD.get());
+                        output.accept(ModBlocks.WILD_WINTER_WHEAT_PLANT.get());
 
                         output.accept(ModItems.ONION.get());
                         output.accept(ModBlocks.WILD_ONION_PLANT.get());
@@ -135,6 +137,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.WHITE_STONE_WALL.get());
                         output.accept(ModBlocks.WHITE_STONE_STAIRS.get());
                         output.accept(ModBlocks.WHITE_STONE_SLAB.get());
+                        //output.accept(ModBlocks.WHITE_STONE_FURNACE.get());
 
                         output.accept(ModBlocks.SOUL_SEDIMENT.get());
                         output.accept(ModBlocks.STARVED_SOUL_SOIL.get());

@@ -35,6 +35,10 @@ public class ModBiomeModifiers {
 
     public static final ResourceKey<BiomeModifier> ADD_WILD_ONION_PLANT_FOREST = registerKey("add_wild_onion_plant_forest");
     public static final ResourceKey<BiomeModifier> ADD_WILD_ONION_PLANT_PLAINS = registerKey("add_wild_onion_plant_plains");
+    public static final ResourceKey<BiomeModifier> ADD_WILD_PARSNIP_PLANT_FOREST = registerKey("add_wild_parsnip_pland_forest");
+    public static final ResourceKey<BiomeModifier> ADD_WILD_PARSNIP_PLANT_PLAINS = registerKey("add_wild_parsnip_pland_plains");
+    public static final ResourceKey<BiomeModifier> ADD_WILD_PARSNIP_PLANT_SAVANNA = registerKey("add_wild_parsnip_pland_savanna");
+    public static final ResourceKey<BiomeModifier> ADD_WILD_WINTER_WHEAT_PLANT_TAIGA = registerKey("add_wild_winter_wheat_plant_taiga");
 
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
@@ -102,6 +106,24 @@ public class ModBiomeModifiers {
         context.register(ADD_WILD_ONION_PLANT_PLAINS, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(Tags.Biomes.IS_PLAINS),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.WILD_ONION_PLANT_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        context.register(ADD_WILD_PARSNIP_PLANT_FOREST, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_FOREST),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.WILD_PARSNIP_PLANT_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+        context.register(ADD_WILD_PARSNIP_PLANT_PLAINS, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(Tags.Biomes.IS_PLAINS),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.WILD_PARSNIP_PLANT_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+        context.register(ADD_WILD_PARSNIP_PLANT_SAVANNA, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_SAVANNA),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.WILD_PARSNIP_PLANT_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        context.register(ADD_WILD_WINTER_WHEAT_PLANT_TAIGA, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_TAIGA),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.WILD_WINTER_WHEAT_PLANT_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
     }
