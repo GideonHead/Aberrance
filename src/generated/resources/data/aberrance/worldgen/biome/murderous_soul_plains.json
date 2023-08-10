@@ -19,7 +19,11 @@
     "water_color": 5047809,
     "water_fog_color": 5047809
   },
-  "features": [],
+  "features": [
+    [
+      "aberrance:murderous_soul_grass_placed"
+    ]
+  ],
   "has_precipitation": true,
   "spawn_costs": {},
   "spawners": {

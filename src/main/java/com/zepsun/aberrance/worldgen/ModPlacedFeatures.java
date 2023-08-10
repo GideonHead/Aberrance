@@ -39,6 +39,9 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> WILD_PARSNIP_PLANT_PLACED_KEY = registerKey("wild_parsnip_plant_placed_key");
     public static final ResourceKey<PlacedFeature> WILD_WINTER_WHEAT_PLANT_PLACED_KEY = registerKey("wild_winter_wheat_placed_key");
 
+    public static final ResourceKey<PlacedFeature> MURDEROUS_SOUL_GRASS_PLACED_KEY = registerKey("murderous_soul_grass_placed");
+    public static final ResourceKey<PlacedFeature> STARVED_SOUL_GRASS_PLACED_KEY = registerKey("starved_soul_grass_placed");
+
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
@@ -92,6 +95,11 @@ public class ModPlacedFeatures {
         register(context, WILD_PARSNIP_PLANT_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.WILD_PARSNIP_PLANT_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
         register(context, WILD_WINTER_WHEAT_PLANT_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.WILD_WINTER_WHEAT_PLANT_KEY),
+                List.of(RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+
+        register(context, MURDEROUS_SOUL_GRASS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MURDEROUS_SOUL_GRASS_KEY),
+                List.of(RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+        register(context, STARVED_SOUL_GRASS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STARVED_SOUL_GRASS_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
     }
 

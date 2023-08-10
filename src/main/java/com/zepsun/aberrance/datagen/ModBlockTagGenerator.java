@@ -2,9 +2,11 @@ package com.zepsun.aberrance.datagen;
 
 import com.zepsun.aberrance.Aberrance;
 import com.zepsun.aberrance.block.ModBlocks;
+import com.zepsun.aberrance.tag.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -19,6 +21,12 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
+        this.tag(ModTags.Blocks.SOUL_DIRT)
+                .add(ModBlocks.STARVED_SOUL_SOIL.get())
+                .add(ModBlocks.MURDEROUS_SOUL_SOIL.get())
+                .add(Blocks.SOUL_SAND)
+                .add(Blocks.SOUL_SOIL);
+
         this.tag(BlockTags.LOGS)
                 .add(ModBlocks.CREPE_MYRTLE_LOG.get())
                 .add(ModBlocks.CREPE_MYRTLE_WOOD.get())
@@ -159,9 +167,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.MURDEROUS_SOUL_SOIL.get())
                 .add(ModBlocks.SOUL_SEDIMENT.get());
 
-        this.tag(BlockTags.DIRT)
-                .add(ModBlocks.MURDEROUS_SOUL_SOIL.get())
-                .add(ModBlocks.STARVED_SOUL_SOIL.get());
+        this.tag(BlockTags.DIRT);
+
+
 
     }
 

@@ -27,6 +27,7 @@ public class ModTags {
     public static class Blocks {
 
         public static final TagKey<Block> NEEDS_KYANITE_TOOL = tag("needs_kyanite_tool");
+        public static final TagKey<Block> SOUL_DIRT = tag("soul_dirt");
 
         private static TagKey<Block> tag(String name) {
             return BlockTags.create(new ResourceLocation(Aberrance.MOD_ID, name));
@@ -39,8 +40,8 @@ public class ModTags {
     public static class Biomes {
 
         public static final TagKey<Biome> IS_ABYSS = tag("is_abyss");
-        public static final TagKey<Biome> IS_MODDED_FOREST = tag("is_modded_forest");
-        public static final TagKey<Biome> IS_MODDED_JUNGLE = tag("is_modded_jungle");
+        public static final TagKey<Biome> IS_MURDEROUS = tag("is_murderous");
+        public static final TagKey<Biome> IS_STARVED = tag("is_starved");
 
         private static TagKey<Biome> tag(String name) {
             return biomeTagCreate(new ResourceLocation(Aberrance.MOD_ID, name));

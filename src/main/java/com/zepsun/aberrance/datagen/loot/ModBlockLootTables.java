@@ -152,6 +152,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.STARVED_SOUL_SOIL.get());
         this.dropSelf(ModBlocks.MURDEROUS_SOUL_SOIL.get());
         this.dropSelf(ModBlocks.SOUL_SEDIMENT.get());
+        this.dropSelf(ModBlocks.MURDEROUS_SOUL_GRASS.get());
+        this.dropSelf(ModBlocks.STARVED_SOUL_GRASS.get());
 
 
 

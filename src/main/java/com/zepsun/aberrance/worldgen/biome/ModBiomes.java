@@ -25,7 +25,7 @@ public class ModBiomes {
     public static void bootstrap(BootstapContext<Biome> context) {
         context.register(CREPE_MYRTLE_FOREST, crepeMyrtleHills(context));
         context.register(BROADLEAF_HILLS, broadLeafHills(context));
-        context.register(STARVED_SOUL_PLAINS, evilSoulPlains(context));
+        context.register(STARVED_SOUL_PLAINS, starvedSoulPlains(context));
         context.register(MURDEROUS_SOUL_PLAINS, murderousSoulPlains(context));
     }
 
@@ -119,11 +119,13 @@ public class ModBiomes {
                 .build();
     }
 
-    public static Biome evilSoulPlains(BootstapContext<Biome> context) {
+    public static Biome starvedSoulPlains(BootstapContext<Biome> context) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
 
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.RAW_GENERATION, ModPlacedFeatures.STARVED_SOUL_GRASS_PLACED_KEY);
 
         return new Biome.BiomeBuilder()
                 .hasPrecipitation(true)
@@ -147,6 +149,8 @@ public class ModBiomes {
 
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.RAW_GENERATION, ModPlacedFeatures.MURDEROUS_SOUL_GRASS_PLACED_KEY);
 
         return new Biome.BiomeBuilder()
                 .hasPrecipitation(true)

@@ -9,6 +9,7 @@ import com.zepsun.aberrance.block.custom.crop.ModCropBlock;
 import com.zepsun.aberrance.block.custom.station.SeedMakerBlock;
 import com.zepsun.aberrance.block.custom.station.WhiteStoneFurnaceBlock;
 import com.zepsun.aberrance.item.ModItems;
+import com.zepsun.aberrance.tag.ModTags;
 import com.zepsun.aberrance.worldgen.tree.AcaciaMesquiteTreeGrower;
 import com.zepsun.aberrance.worldgen.tree.BroadleafTreeGrower;
 import com.zepsun.aberrance.worldgen.tree.CrepeMyrtleTreeGrower;
@@ -259,8 +260,12 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
     public static final RegistryObject<Block> STARVED_SOUL_SOIL = registerBlock("starved_soul_soil",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.SOUL_SOIL)));
+    public static final RegistryObject<Block> STARVED_SOUL_GRASS = registerBlock("starved_soul_grass",
+            () -> new CustomPlacementBushBlock(List.of(ModTags.Blocks.SOUL_DIRT), BlockBehaviour.Properties.copy(Blocks.GRASS).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> MURDEROUS_SOUL_SOIL = registerBlock("murderous_soul_soil",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.SOUL_SOIL)));
+    public static final RegistryObject<Block> MURDEROUS_SOUL_GRASS = registerBlock("murderous_soul_grass",
+            () -> new CustomPlacementBushBlock(List.of(ModTags.Blocks.SOUL_DIRT), BlockBehaviour.Properties.copy(Blocks.GRASS).requiresCorrectToolForDrops()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

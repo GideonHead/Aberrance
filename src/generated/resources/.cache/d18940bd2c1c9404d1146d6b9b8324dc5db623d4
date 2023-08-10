@@ -1,5 +1,7 @@
-// 1.20.1	2023-08-07T15:33:34.3335889	Biome Tags
+// 1.20.1	2023-08-09T18:58:48.5428266	Biome Tags
 6daed1234bd29cd3dada63f98b992d385ce7ea12 data/aberrance/tags/worldgen/biome/is_abyss.json
+cd2a4b7052b6c94e1a4ad94b285bedcc76032e4c data/aberrance/tags/worldgen/biome/is_murderous.json
+8ef7a4bd2970859cc36469bf690756349b3ce620 data/aberrance/tags/worldgen/biome/is_starved.json
 9471bc1b1a26bda47e97d7b6a4efa4ef0b53cce3 data/minecraft/tags/worldgen/biome/is_forest.json
 a2e6d56b626ed2d35a0b01b48f186718b2002af1 data/minecraft/tags/worldgen/biome/is_jungle.json
 680f007c60614ea9c7b950b7c2384a918a771109 data/minecraft/tags/worldgen/biome/is_overworld.json

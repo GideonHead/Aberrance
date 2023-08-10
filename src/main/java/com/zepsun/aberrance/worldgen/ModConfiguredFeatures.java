@@ -45,6 +45,8 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>>  WILD_PARSNIP_PLANT_KEY = registerKey("wild_parsnip_plant");
     public static final ResourceKey<ConfiguredFeature<?, ?>>  WILD_WINTER_WHEAT_PLANT_KEY = registerKey("wild_winter_wheat_plant");
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>>  MURDEROUS_SOUL_GRASS_KEY = registerKey("murderous_soul_grass");
+    public static final ResourceKey<ConfiguredFeature<?, ?>>  STARVED_SOUL_GRASS_KEY = registerKey("starved_soul_grass");
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
 
         RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -112,6 +114,13 @@ public class ModConfiguredFeatures {
         register(context, WILD_WINTER_WHEAT_PLANT_KEY, Feature.FLOWER,
                 new RandomPatchConfiguration(32, 6,2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.WILD_WINTER_WHEAT_PLANT.get())))));
+
+        register(context, MURDEROUS_SOUL_GRASS_KEY, Feature.FLOWER,
+                new RandomPatchConfiguration(78, 6,2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.MURDEROUS_SOUL_GRASS.get())))));
+        register(context, STARVED_SOUL_GRASS_KEY, Feature.FLOWER,
+                new RandomPatchConfiguration(78, 6,2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.STARVED_SOUL_GRASS.get())))));
     }
 
 

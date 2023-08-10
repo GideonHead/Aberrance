@@ -1,6 +1,8 @@
 package com.zepsun.aberrance.worldgen;
 
 import com.zepsun.aberrance.Aberrance;
+import com.zepsun.aberrance.tag.ModTags;
+import com.zepsun.aberrance.worldgen.biome.ModBiomes;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
@@ -39,6 +41,7 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_WILD_PARSNIP_PLANT_PLAINS = registerKey("add_wild_parsnip_pland_plains");
     public static final ResourceKey<BiomeModifier> ADD_WILD_PARSNIP_PLANT_SAVANNA = registerKey("add_wild_parsnip_pland_savanna");
     public static final ResourceKey<BiomeModifier> ADD_WILD_WINTER_WHEAT_PLANT_TAIGA = registerKey("add_wild_winter_wheat_plant_taiga");
+
 
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);

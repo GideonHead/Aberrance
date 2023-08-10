@@ -174,6 +174,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.STARVED_SOUL_SOIL);
         blockWithItem(ModBlocks.MURDEROUS_SOUL_SOIL);
         blockWithItem(ModBlocks.SOUL_SEDIMENT);
+        flowerBlock(ModBlocks.STARVED_SOUL_GRASS);
+        flowerBlock(ModBlocks.MURDEROUS_SOUL_GRASS);
     }
 
     public void makeCrossCrop(CropBlock block, String modelName, String textureName) {

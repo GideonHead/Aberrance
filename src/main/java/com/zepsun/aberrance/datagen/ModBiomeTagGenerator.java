@@ -39,10 +39,17 @@ public class ModBiomeTagGenerator extends BiomeTagsProvider {
                 .add(ModBiomes.CREPE_MYRTLE_FOREST)
                 .add(ModBiomes.BROADLEAF_HILLS);
 
+
         this.tag(BiomeTags.IS_FOREST)
                 .add(ModBiomes.CREPE_MYRTLE_FOREST);
         this.tag(BiomeTags.IS_JUNGLE)
                 .add(ModBiomes.BROADLEAF_HILLS);
+
+
+        this.tag(ModTags.Biomes.IS_MURDEROUS)
+                .add(ModBiomes.MURDEROUS_SOUL_PLAINS);
+        this.tag(ModTags.Biomes.IS_STARVED)
+                .add(ModBiomes.STARVED_SOUL_PLAINS);
     }
 
     @Override
