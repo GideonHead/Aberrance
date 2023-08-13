@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.10.0-1.20.1
+
+### Added
+
+- Cutlass
+- Recipes for Kyanite Ore Set
+
 ## 0.9.3-1.20.1
 
 ### Added
