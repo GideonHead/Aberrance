@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "kyanite",
+  "ingredients": [
+    {
+      "item": "aberrance:raw_kyanite_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "aberrance:raw_kyanite"
+  }
+}

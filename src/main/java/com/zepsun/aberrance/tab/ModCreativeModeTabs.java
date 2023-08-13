@@ -149,6 +149,14 @@ public class ModCreativeModeTabs {
 
                     }).build());
 
+    public static final RegistryObject<CreativeModeTab> ABERRANCE_WEAPONS = CREATIVE_MODE_TABS.register("aberrance_weapons_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.CUTLASS.get()))
+                    .title(Component.translatable("creativetab.aberrance_weapons")).displayItems((displayParameters, output) -> {
+
+                        output.accept(ModItems.CUTLASS.get());
+
+                    }).build());
+
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);
     }

@@ -29,6 +29,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             ModBlocks.RUDANIUM_ORE.get(), ModBlocks.RUDANIUM_ORE_DEEPSLATE.get(), ModBlocks.RUDANIUM_ORE_NETHER.get(),
             ModBlocks.RUDANIUM_ORE_END.get());
 
+    private static final List<ItemLike> KYANITE_SMELTABLES = List.of(ModItems.RAW_KYANITE.get(),
+            ModBlocks.KYANITE_ORE.get(), ModBlocks.KYANITE_ORE_DEEPSLATE.get(), ModBlocks.KYANITE_ORE_NETHER.get(),
+            ModBlocks.KYANITE_ORE_END.get());
+
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
     }
@@ -102,6 +106,26 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 "aberrance:rudanium_ingot_from_block", "rudanium","aberrance:rudanium_block", "rudanium");
         nineBlockStorageRecipes(pWriter, RecipeCategory.MISC, ModItems.RUDANIUM_NUGGET.get(), RecipeCategory.MISC, ModItems.RUDANIUM_INGOT.get(),
                 "aberrance:rudanium_nugget", "rudanium","aberrance:rudanium_ingot_from_nuggets", "rudanium");
+
+        oreSmelting(pWriter, KYANITE_SMELTABLES, RecipeCategory.MISC, ModItems.KYANITE_INGOT.get(), 0.25f, 200, "kyanite");
+        oreBlasting(pWriter, KYANITE_SMELTABLES, RecipeCategory.MISC, ModItems.KYANITE_INGOT.get(), 0.25f, 100, "kyanite");
+
+        nineBlockStorageRecipes(pWriter, RecipeCategory.MISC, ModItems.RAW_KYANITE.get(), RecipeCategory.MISC, ModBlocks.RAW_KYANITE_BLOCK.get(),
+                "aberrance:raw_kyanite", "kyanite","aberrance:raw_kyanite_block", "kyanite");
+        nineBlockStorageRecipes(pWriter, RecipeCategory.MISC, ModItems.KYANITE_INGOT.get(), RecipeCategory.MISC, ModBlocks.KYANITE_BLOCK.get(),
+                "aberrance:kyanite_ingot_from_block", "kyanite","aberrance:kyanite_block", "kyanite");
+        nineBlockStorageRecipes(pWriter, RecipeCategory.MISC, ModItems.KYANITE_NUGGET.get(), RecipeCategory.MISC, ModItems.KYANITE_INGOT.get(),
+                "aberrance:kyanite_nugget", "kyanite","aberrance:kyanite_ingot_from_nuggets", "kyanite");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CUTLASS.get())
+                .pattern("  I")
+                .pattern(" I ")
+                .pattern("C  ")
+                .define('I', Items.IRON_INGOT)
+                .define('C', Items.COPPER_INGOT)
+                .unlockedBy("has_iron_ingot", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.IRON_INGOT).build()))
+                .save(pWriter);
 
     }
 

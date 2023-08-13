@@ -32,6 +32,7 @@
   "item.aberrance.rudanium_boots": "Rudanium Boots",
   "item.aberrance.music_disc_enriched": "Music Disc",
   "item.aberrance.music_disc_enriched.desc": "zepsun - Waltz of the Enriched",
+  "item.aberrance.cutlass": "Cutlass",
 
   "block.aberrance.parsnip_crop": "Parsnip Crop",
   "block.aberrance.winter_wheat_crop": "Winter Wheat Crop",
@@ -116,11 +117,10 @@
   "block.aberrance.wild_winter_wheat_plant": "Wild Winter Wheat Plant",
   "block.aberrance.wild_parsnip_plant": "Wild Parsnip Plant",
 
-
-
   "creativetab.aberrance": "Aberrance",
 
   "aberrance.tooltip.liquid.amount.with.capacity": "%s / %s mB",
   "aberrance.tooltip.liquid.amount": "%s mB",
-  "container.white_stone_furnace": "White Stone Furnace"
+  "container.white_stone_furnace": "White Stone Furnace",
+  "creativetab.aberrance_weapons": "Aberrance Weapons"
 }

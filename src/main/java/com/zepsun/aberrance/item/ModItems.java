@@ -101,6 +101,11 @@ public class ModItems {
             () -> new ArmorItem(ModArmorTiers.RUDANIUM, ArmorItem.Type.BOOTS, new Item.Properties()));
 
 
+    //Cutlasses
+    public static final RegistryObject<Item> CUTLASS = ITEMS.register("cutlass",
+            () -> new SwordItem(Tiers.IRON, 2, -1F, new Item.Properties()));
+
+
     //Music Discs
     public static final RegistryObject<Item> MUSIC_DISC_ENRICHED = ITEMS.register("music_disc_enriched",
             () -> new RecordItem(4, ModSounds.WALTZ_ENRICHED, new Item.Properties().rarity(Rarity.RARE).stacksTo(1), 3600));

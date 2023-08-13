@@ -86,6 +86,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItem(ModBlocks.MURDEROUS_SOUL_GRASS);
         simpleBlockItem(ModBlocks.STARVED_SOUL_GRASS);
 
+        simpleHandheldItem(ModItems.CUTLASS);
+
     }
 
     private <T> ItemModelBuilder simpleItem(RegistryObject<T> item) {

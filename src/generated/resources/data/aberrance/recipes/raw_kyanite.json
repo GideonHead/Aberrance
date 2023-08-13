@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "kyanite",
+  "key": {
+    "#": {
+      "item": "aberrance:raw_kyanite"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "aberrance:raw_kyanite_block"
+  },
+  "show_notification": true
+}

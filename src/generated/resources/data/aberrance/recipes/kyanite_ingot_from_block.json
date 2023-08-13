@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "kyanite",
+  "key": {
+    "#": {
+      "item": "aberrance:kyanite_ingot"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "aberrance:kyanite_block"
+  },
+  "show_notification": true
+}
