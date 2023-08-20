@@ -176,6 +176,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.SOUL_SEDIMENT);
         flowerBlock(ModBlocks.STARVED_SOUL_GRASS);
         flowerBlock(ModBlocks.MURDEROUS_SOUL_GRASS);
+        topSideBlockWithItem(ModBlocks.STARVED_SOUL_GRASS_BLOCK, "starved_soul_grass_block_side", "starved_soul_soil", "starved_soul_grass_block_top");
     }
 
     public void makeCrossCrop(CropBlock block, String modelName, String textureName) {
@@ -224,6 +225,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(blockRegistryObject.get(), models().orientable(name(blockRegistryObject.get()),
                 new ResourceLocation(Aberrance.MOD_ID, blockTexturePath(side)),
                 new ResourceLocation(Aberrance.MOD_ID, blockTexturePath(front)),
+                new ResourceLocation(Aberrance.MOD_ID, blockTexturePath(top))));
+    }
+
+    private void topSideBlockWithItem(RegistryObject<Block> blockRegistryObject, String side, String bottom, String top) {
+        simpleBlockWithItem(blockRegistryObject.get(), models().orientableWithBottom(name(blockRegistryObject.get()),
+                new ResourceLocation(Aberrance.MOD_ID, blockTexturePath(side)),
+                new ResourceLocation(Aberrance.MOD_ID, blockTexturePath(side)),
+                new ResourceLocation(Aberrance.MOD_ID, blockTexturePath(bottom)),
                 new ResourceLocation(Aberrance.MOD_ID, blockTexturePath(top))));
     }
 

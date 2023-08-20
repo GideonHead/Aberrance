@@ -98,9 +98,9 @@ public class ModPlacedFeatures {
                 List.of(RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
 
         register(context, MURDEROUS_SOUL_GRASS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MURDEROUS_SOUL_GRASS_KEY),
-                List.of(RarityFilter.onAverageOnceEvery(128), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+                List.of(RarityFilter.onAverageOnceEvery(4), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
         register(context, STARVED_SOUL_GRASS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STARVED_SOUL_GRASS_KEY),
-                List.of(RarityFilter.onAverageOnceEvery(128), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+                List.of(RarityFilter.onAverageOnceEvery(4), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
     }
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {

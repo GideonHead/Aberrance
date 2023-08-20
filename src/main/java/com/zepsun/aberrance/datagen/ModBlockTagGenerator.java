@@ -21,6 +21,13 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
+
+        this.tag(ModTags.Blocks.ABERRANCE_PLANT_PLACEABLES)
+                .addTag(BlockTags.DIRT)
+                .add(Blocks.FARMLAND)
+                .add(Blocks.SAND)
+                .add(Blocks.GRAVEL);
+
         this.tag(ModTags.Blocks.SOUL_DIRT)
                 .add(ModBlocks.STARVED_SOUL_SOIL.get())
                 .add(ModBlocks.MURDEROUS_SOUL_SOIL.get())
@@ -167,7 +174,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.MURDEROUS_SOUL_SOIL.get())
                 .add(ModBlocks.SOUL_SEDIMENT.get());
 
-        this.tag(BlockTags.DIRT);
+        this.tag(BlockTags.DIRT)
+                .add(ModBlocks.STARVED_SOUL_SOIL.get())
+                .add(ModBlocks.MURDEROUS_SOUL_SOIL.get())
+                .add(ModBlocks.CREPE_MYRTLE_COMPOST.get());
 
 
 

@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "bottom": "aberrance:block/starved_soul_soil",
+    "front": "aberrance:block/starved_soul_grass_block_side",
+    "side": "aberrance:block/starved_soul_grass_block_side",
+    "top": "aberrance:block/starved_soul_grass_block_top"
+  }
+}

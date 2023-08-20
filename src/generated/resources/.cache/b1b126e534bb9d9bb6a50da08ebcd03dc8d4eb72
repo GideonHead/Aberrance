@@ -1,4 +1,4 @@
-// 1.20.1	2023-08-09T18:39:48.4905044	Block States: aberrance
+// 1.20.1	2023-08-19T18:59:27.3227367	Block States: aberrance
 882f4f17e290af235fe9f2bd4581886057155598 assets/aberrance/blockstates/acacia_mesquite_leaves.json
 7d232479a18ba9f80db6916c4cb753d0eb9d2e03 assets/aberrance/blockstates/acacia_mesquite_sapling.json
 725ebcaaa7207e4ef80018266a01fa244f1004bc assets/aberrance/blockstates/broadleaf_button.json
@@ -61,6 +61,7 @@ df07d25bdc38ce95cca3b7c2080244bef7722482 assets/aberrance/blockstates/rudanium_o
 0c06e59c2b7ca371087ffd674d98eb4468db9acf assets/aberrance/blockstates/seed_maker.json
 53af07fb13de02667bf795c2653f6002ba185d18 assets/aberrance/blockstates/soul_sediment.json
 22eab5370a7a757170c455aebb5265de64bc2c26 assets/aberrance/blockstates/starved_soul_grass.json
+ec52e0dadde5e504421e0fafae8d074a920cb103 assets/aberrance/blockstates/starved_soul_grass_block.json
 0e4fc2e4b822ae231fe143a5fe905af9bd4ccb61 assets/aberrance/blockstates/starved_soul_soil.json
 b7a82a2ac04e613c515bf81ce671bfd2e2371b53 assets/aberrance/blockstates/stripped_broadleaf_log.json
 a2e856cf6bae0fba44b6c97e49778bfa6eb8a12f assets/aberrance/blockstates/stripped_broadleaf_wood.json
@@ -218,6 +219,7 @@ e51c6d9e6b15ff2fe7e86d5eba28fbd4d6886e2d assets/aberrance/models/block/rudanium_
 8bd6582a85c36b7a4017e9e12d488cb038594ad2 assets/aberrance/models/block/seed_maker.json
 b1c9ef5725c40b30673ed40bb1267435222fb169 assets/aberrance/models/block/soul_sediment.json
 55680bbf2818710f9468dafc88238c24bcec1a7d assets/aberrance/models/block/starved_soul_grass.json
+6242c5a644443df39fc57fe4adbd7988c4dd4b1a assets/aberrance/models/block/starved_soul_grass_block.json
 7c9b3d9f026e9d29548a79d3128f55dcd427cbc1 assets/aberrance/models/block/starved_soul_soil.json
 779c896a75c8f599637e409c5684170861beea26 assets/aberrance/models/block/stripped_broadleaf_log.json
 a1fdccd22da124d6f54cef1de6e3af58c40a81dc assets/aberrance/models/block/stripped_broadleaf_log_horizontal.json
@@ -313,6 +315,7 @@ d3618757d5390d1ea96669affedf0e7cde090c70 assets/aberrance/models/item/rudanium_o
 955ceb3a941b583fed8431d8d04a0b4a4c2b4332 assets/aberrance/models/item/rudanium_ore_nether.json
 17854f7360a0ad588b1813b4fea760da22184fe7 assets/aberrance/models/item/seed_maker.json
 3eb0c84e8bc374538437327686342a08fd0b7938 assets/aberrance/models/item/soul_sediment.json
+280d7709480788d482230baccf098787cc990d05 assets/aberrance/models/item/starved_soul_grass_block.json
 443d9ccf282639d5a917ef8819d894eb7855a596 assets/aberrance/models/item/starved_soul_soil.json
 a9198f7dde87ca48f554133143849737584df092 assets/aberrance/models/item/stripped_broadleaf_log.json
 5b62a7a363a5d4a249f8a545ccb80438af12d242 assets/aberrance/models/item/stripped_broadleaf_wood.json

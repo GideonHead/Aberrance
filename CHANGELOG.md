@@ -1,5 +1,29 @@
 # Changelog
 
+## 0.10.2-1.20.1
+
+### Added
+
+- Starved Soul Grass Block
+
+### Changed
+
+- Completely Redone Abyss Noise Gen
+
+## 0.10.2-1.20.1
+
+### Added
+
+- Violin Bow Weapon
+
+### Changed
+
+- Moved Lang to Datagen
+
+### Fixed
+
+- Soul Sediment Lang Issue
+
 ## 0.10.1-1.20.1
 
 ### Changed

@@ -1,4 +1,4 @@
-package com.zepsun.aberrance.dimensiongen.portal;
+package com.zepsun.aberrance.dimension.portal;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;

@@ -1,4 +1,4 @@
-// 1.20.1	2023-08-13T18:48:57.3323429	Recipes
+// 1.20.1	2023-08-15T18:52:08.5538589	Recipes
 e8a86a6674d3c84f90c42830567bfd0aca2219c8 data/aberrance/advancements/recipes/misc/broadleaf_button.json
 a5d317fe0efa31b5814ed7d3aaaeadbb301e2691 data/aberrance/advancements/recipes/misc/broadleaf_door.json
 1f9ced8848b80d1aa664ecad60e7fd92fcb33120 data/aberrance/advancements/recipes/misc/broadleaf_fence.json
@@ -85,6 +85,7 @@ c0e69ca135ed0085b7b81f6369b492ed1b7881f1 data/aberrance/advancements/recipes/mis
 0a6b02440f5a5f277a5b823d5af2b1f7bd13a227 data/aberrance/advancements/recipes/misc/stripped_broadleaf_wood.json
 b39b66a4b6144563a37c3619299504eb0ccf9e84 data/aberrance/advancements/recipes/misc/stripped_crepe_myrtle_wood.json
 331673126200ac9d2644f9cf9cd4b4397ef48a13 data/aberrance/advancements/recipes/misc/stripped_live_oak_wood.json
+61d1b842aef65d66f09f651585f497b3718eabff data/aberrance/advancements/recipes/misc/violin_bow.json
 6c3d3a2e2040e2e49f257c8b4ce600ce79f94f54 data/aberrance/advancements/recipes/misc/winter_wheat_bread.json
 4e87739c6735b875f18b8b675bfa9c6f0d94dc7a data/aberrance/advancements/recipes/parsnip_seeds.json
 fa74ddbe7805d3321a14b0287bc0d074b648d08f data/aberrance/advancements/recipes/winter_wheat_seeds.json
@@ -176,6 +177,7 @@ d55d4184866827e27b1c4f8c4bd0bc6f07c2eb25 data/aberrance/recipes/seed_maker.json
 019b43f3b0d39933df3a9b1c1477c3c7579a35a3 data/aberrance/recipes/stripped_broadleaf_wood.json
 1720be5953c6db1ea47055f5dee9b0cf1a700b02 data/aberrance/recipes/stripped_crepe_myrtle_wood.json
 289ebb6f141da81ad8d9f5b2ffb7d0eaeb58b799 data/aberrance/recipes/stripped_live_oak_wood.json
+80cefa505e2eefdb81901451ced677c7a7f96b0d data/aberrance/recipes/violin_bow.json
 305f63b9163980b876147106286961f741d9b8ee data/aberrance/recipes/wheat_seeds_seed_making.json
 026f8a561a44500f35f34d62329c82d20c65d214 data/aberrance/recipes/winter_wheat_bread.json
 ec09e56e47a23092231b324a8ead74fc3739933e data/aberrance/recipes/winter_wheat_seeds_seed_making.json

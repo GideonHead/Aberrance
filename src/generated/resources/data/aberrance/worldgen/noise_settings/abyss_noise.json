@@ -12,8 +12,8 @@
   "disable_mob_generation": false,
   "legacy_random_source": false,
   "noise": {
-    "height": 384,
-    "min_y": -64,
+    "height": 128,
+    "min_y": 0,
     "size_horizontal": 1,
     "size_vertical": 2
   },
@@ -281,8 +281,8 @@
             "argument": {
               "type": "minecraft:range_choice",
               "input": "minecraft:y",
-              "max_exclusive": 1.0,
-              "min_inclusive": 0.0,
+              "max_exclusive": 51.0,
+              "min_inclusive": -60.0,
               "when_in_range": {
                 "type": "minecraft:noise",
                 "noise": "minecraft:ore_vein_a",
@@ -300,8 +300,8 @@
             "argument": {
               "type": "minecraft:range_choice",
               "input": "minecraft:y",
-              "max_exclusive": 1.0,
-              "min_inclusive": 0.0,
+              "max_exclusive": 51.0,
+              "min_inclusive": -60.0,
               "when_in_range": {
                 "type": "minecraft:noise",
                 "noise": "minecraft:ore_vein_b",
@@ -319,8 +319,8 @@
       "argument": {
         "type": "minecraft:range_choice",
         "input": "minecraft:y",
-        "max_exclusive": 1.0,
-        "min_inclusive": 0.0,
+        "max_exclusive": 51.0,
+        "min_inclusive": -60.0,
         "when_in_range": {
           "type": "minecraft:noise",
           "noise": "minecraft:ore_veininess",
@@ -331,7 +331,7 @@
       }
     }
   },
-  "ore_veins_enabled": true,
+  "ore_veins_enabled": false,
   "sea_level": 63,
   "spawn_target": [
     {
@@ -418,6 +418,28 @@
                 "type": "minecraft:block",
                 "result_state": {
                   "Name": "aberrance:starved_soul_soil"
+                }
+              }
+            },
+            {
+              "type": "minecraft:condition",
+              "if_true": {
+                "type": "minecraft:above_preliminary_surface"
+              },
+              "then_run": {
+                "type": "minecraft:condition",
+                "if_true": {
+                  "type": "minecraft:stone_depth",
+                  "add_surface_depth": false,
+                  "offset": 0,
+                  "secondary_depth_range": 0,
+                  "surface_type": "floor"
+                },
+                "then_run": {
+                  "type": "minecraft:block",
+                  "result_state": {
+                    "Name": "aberrance:starved_soul_grass_block"
+                  }
                 }
               }
             }

@@ -10,6 +10,7 @@ import com.zepsun.aberrance.screen.SeedMakerScreen;
 import com.zepsun.aberrance.sound.ModSounds;
 import com.zepsun.aberrance.tab.ModCreativeModeTabs;
 import com.zepsun.aberrance.worldgen.biome.ModTerraBlenderApi;
+import com.zepsun.aberrance.worldgen.biome.surface.ModSurfaceRules;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -57,7 +58,7 @@ public class Aberrance
     private void commonSetup(final FMLCommonSetupEvent event)
     {
         event.enqueueWork(() -> {
-
+            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRules.makeRules());
         });
     }
 

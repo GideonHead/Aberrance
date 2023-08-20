@@ -7,7 +7,6 @@ import com.zepsun.aberrance.block.custom.FlammableWoodLog;
 import com.zepsun.aberrance.block.custom.StrippableFlammableWoodLog;
 import com.zepsun.aberrance.block.custom.crop.ModCropBlock;
 import com.zepsun.aberrance.block.custom.station.SeedMakerBlock;
-import com.zepsun.aberrance.block.custom.station.WhiteStoneFurnaceBlock;
 import com.zepsun.aberrance.item.ModItems;
 import com.zepsun.aberrance.tag.ModTags;
 import com.zepsun.aberrance.worldgen.tree.AcaciaMesquiteTreeGrower;
@@ -16,9 +15,7 @@ import com.zepsun.aberrance.worldgen.tree.CrepeMyrtleTreeGrower;
 import com.zepsun.aberrance.worldgen.tree.LiveOakTreeGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.util.valueproviders.UniformInt;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
@@ -45,7 +42,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> PARSNIP_CROP = BLOCKS.register("parsnip_crop",
             () -> new ModCropBlock(ModItems.PARSNIP_SEEDS::get, BlockBehaviour.Properties.copy(Blocks.WHEAT)));
     public static final RegistryObject<Block> WILD_PARSNIP_PLANT = registerBlock("wild_parsnip_plant",
-            () -> new CustomPlacementBushBlock(List.of(BlockTags.DIRT, Blocks.FARMLAND, Blocks.SAND, Blocks.GRAVEL),
+            () -> new CustomPlacementBushBlock(ModTags.Blocks.ABERRANCE_PLANT_PLACEABLES,
                     BlockBehaviour.Properties.copy(Blocks.ALLIUM)));
 
 
@@ -53,7 +50,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> WINTER_WHEAT_CROP = BLOCKS.register("winter_wheat_crop",
             () -> new ModCropBlock(ModItems.WINTER_WHEAT_SEEDS::get, BlockBehaviour.Properties.copy(Blocks.WHEAT)));
     public static final RegistryObject<Block> WILD_WINTER_WHEAT_PLANT = registerBlock("wild_winter_wheat_plant",
-            () -> new CustomPlacementBushBlock(List.of(BlockTags.DIRT, Blocks.FARMLAND, Blocks.SAND, Blocks.GRAVEL),
+            () -> new CustomPlacementBushBlock(ModTags.Blocks.ABERRANCE_PLANT_PLACEABLES,
                     BlockBehaviour.Properties.copy(Blocks.ALLIUM)));
 
 
@@ -61,7 +58,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> ONION_CROP = BLOCKS.register("onion_crop",
             () -> new ModCropBlock(ModItems.ONION::get, BlockBehaviour.Properties.copy(Blocks.WHEAT)));
     public static final RegistryObject<Block> WILD_ONION_PLANT = registerBlock("wild_onion_plant",
-            () -> new CustomPlacementBushBlock(List.of(BlockTags.DIRT, Blocks.FARMLAND, Blocks.SAND, Blocks.GRAVEL),
+            () -> new CustomPlacementBushBlock(ModTags.Blocks.ABERRANCE_PLANT_PLACEABLES,
                     BlockBehaviour.Properties.copy(Blocks.ALLIUM)));
 
 
@@ -261,11 +258,16 @@ public class ModBlocks {
     public static final RegistryObject<Block> STARVED_SOUL_SOIL = registerBlock("starved_soul_soil",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.SOUL_SOIL)));
     public static final RegistryObject<Block> STARVED_SOUL_GRASS = registerBlock("starved_soul_grass",
-            () -> new CustomPlacementBushBlock(List.of(ModTags.Blocks.SOUL_DIRT), BlockBehaviour.Properties.copy(Blocks.GRASS).requiresCorrectToolForDrops()));
+            () -> new CustomPlacementBushBlock(ModTags.Blocks.SOUL_DIRT
+                    , BlockBehaviour.Properties.copy(Blocks.GRASS).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> STARVED_SOUL_GRASS_BLOCK = registerBlock("starved_soul_grass_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SOUL_SOIL)));
+
     public static final RegistryObject<Block> MURDEROUS_SOUL_SOIL = registerBlock("murderous_soul_soil",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.SOUL_SOIL)));
     public static final RegistryObject<Block> MURDEROUS_SOUL_GRASS = registerBlock("murderous_soul_grass",
-            () -> new CustomPlacementBushBlock(List.of(ModTags.Blocks.SOUL_DIRT), BlockBehaviour.Properties.copy(Blocks.GRASS).requiresCorrectToolForDrops()));
+            () -> new CustomPlacementBushBlock(ModTags.Blocks.SOUL_DIRT
+                    , BlockBehaviour.Properties.copy(Blocks.GRASS).requiresCorrectToolForDrops()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

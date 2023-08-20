@@ -127,6 +127,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         of(Items.IRON_INGOT).build()))
                 .save(pWriter);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.VIOLIN_BOW.get())
+                .pattern(" CI")
+                .pattern("CI ")
+                .pattern("I  ")
+                .define('I', Items.STICK)
+                .define('C', Items.STRING)
+                .unlockedBy("has_iron_ingot", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.IRON_INGOT).build()))
+                .save(pWriter);
+
     }
 
     protected static void treeGroupRecipes(Consumer<FinishedRecipe> finishedRecipeConsumer, String requirementName, TreeGroup itemGroup) {

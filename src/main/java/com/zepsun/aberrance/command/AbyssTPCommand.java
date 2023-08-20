@@ -2,8 +2,8 @@ package com.zepsun.aberrance.command;
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.context.CommandContext;
-import com.zepsun.aberrance.dimensiongen.ModDimensions;
-import com.zepsun.aberrance.dimensiongen.portal.AbyssTeleporter;
+import com.zepsun.aberrance.dimension.ModDimensions;
+import com.zepsun.aberrance.dimension.portal.AbyssTeleporter;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraft.core.BlockPos;
@@ -12,8 +12,6 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.level.Level;
-
-import javax.swing.text.html.parser.Entity;
 
 public class AbyssTPCommand {
     public AbyssTPCommand(CommandDispatcher<CommandSourceStack> dispatcher) {

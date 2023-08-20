@@ -13,19 +13,28 @@ import static net.minecraft.world.level.levelgen.SurfaceRules.stoneDepthCheck;
 
 public class ModSurfaceRules {
     public static final SurfaceRules.ConditionSource NEW_DEFAULT_BLOCK = stoneDepthCheck(0, true, 1000, CaveSurface.FLOOR);
+    public static final SurfaceRules.ConditionSource TOP_LAYER_BLOCK = stoneDepthCheck(0, true, 1, CaveSurface.FLOOR);
+
 
     public static final SurfaceRules.RuleSource STARVED_SOUL_SOIL = makeStateRule(ModBlocks.STARVED_SOUL_SOIL.get());
     public static final SurfaceRules.RuleSource MURDEROUS_SOUL_SOIL = makeStateRule(ModBlocks.MURDEROUS_SOUL_SOIL.get());
     private static final SurfaceRules.RuleSource DIRT = makeStateRule(Blocks.DIRT);
     private static final SurfaceRules.RuleSource GRASS_BLOCK = makeStateRule(Blocks.GRASS_BLOCK);
+    private static final SurfaceRules.RuleSource STARVED_SOUL_GRASS_BLOCK = makeStateRule(ModBlocks.STARVED_SOUL_GRASS_BLOCK.get());
 
     public static SurfaceRules.RuleSource makeRules() {
         SurfaceRules.ConditionSource isAtOrAboveWaterLevel = SurfaceRules.waterBlockCheck(-1, 0);
 
         SurfaceRules.RuleSource grassSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(abovePreliminarySurface(), GRASS_BLOCK), SurfaceRules.ifTrue(abovePreliminarySurface(), DIRT));
 
-        SurfaceRules.RuleSource starvedSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(abovePreliminarySurface(), STARVED_SOUL_SOIL), SurfaceRules.ifTrue(abovePreliminarySurface(), STARVED_SOUL_SOIL));
-        SurfaceRules.RuleSource murderousSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(abovePreliminarySurface(), MURDEROUS_SOUL_SOIL), SurfaceRules.ifTrue(abovePreliminarySurface(), MURDEROUS_SOUL_SOIL));
+        SurfaceRules.RuleSource starvedSurface =
+                SurfaceRules.sequence(SurfaceRules.ifTrue(abovePreliminarySurface(), STARVED_SOUL_SOIL),
+                SurfaceRules.ifTrue(abovePreliminarySurface(), STARVED_SOUL_SOIL),
+                SurfaceRules.ifTrue(abovePreliminarySurface(), SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, STARVED_SOUL_GRASS_BLOCK)));
+
+        SurfaceRules.RuleSource murderousSurface =
+                SurfaceRules.sequence(SurfaceRules.ifTrue(abovePreliminarySurface(), MURDEROUS_SOUL_SOIL),
+                SurfaceRules.ifTrue(abovePreliminarySurface(), MURDEROUS_SOUL_SOIL));
 
 
         return SurfaceRules.sequence(

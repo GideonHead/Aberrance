@@ -1,4 +1,4 @@
-package com.zepsun.aberrance.dimensiongen;
+package com.zepsun.aberrance.dimension;
 
 import com.mojang.datafixers.util.Pair;
 import com.zepsun.aberrance.Aberrance;
@@ -61,6 +61,7 @@ public class ModDimensions {
                                         Climate.parameters(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.STARVED_SOUL_PLAINS)),
                                 Pair.of(Climate.parameters(0.1F, 0.2F, 0.0F, 0.2F, 0.0F, 0.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.MURDEROUS_SOUL_PLAINS))
                         ))),
+                //noiseGenSettings.getOrThrow(NoiseGeneratorSettings.NETHER));
                 noiseGenSettings.getOrThrow(ModLevelGen.ABYSS));
 
         LevelStem stem = new LevelStem(dimTypes.getOrThrow(ModDimensions.ABYSS_DIM_TYPE), noiseBasedChunkGenerator);

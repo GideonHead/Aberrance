@@ -1,4 +1,4 @@
-// 1.20.1	2023-08-09T18:39:48.4960302	Loot Tables
+// 1.20.1	2023-08-19T18:59:27.3277403	Loot Tables
 7c42149e07b56d27d06c1f2f65b090398a446faa data/aberrance/loot_tables/blocks/acacia_mesquite_leaves.json
 ebd8840a8bd2767cad8e5a40a1b2ca8074a5f2f9 data/aberrance/loot_tables/blocks/acacia_mesquite_sapling.json
 c1423ae166710bc9b0c94105735f67aa528159e1 data/aberrance/loot_tables/blocks/broadleaf_button.json
@@ -61,6 +61,7 @@ cbdda2a510b4c7e6819b98f319f0feb0d69a0cf9 data/aberrance/loot_tables/blocks/raw_r
 2313573847173a8ccc2cc2ae43f756ea7a72c9fb data/aberrance/loot_tables/blocks/seed_maker.json
 5e6d3888375a7894bfce132996fef7155aba289e data/aberrance/loot_tables/blocks/soul_sediment.json
 46c1cc79304c9b42dfa4206c18dbfe2c67c341fb data/aberrance/loot_tables/blocks/starved_soul_grass.json
+2bcbbf31b9966f5a1d67444001670d3c71a7eced data/aberrance/loot_tables/blocks/starved_soul_grass_block.json
 0e55a97d9f489c94a4cd29a86365e89dd4c4e77d data/aberrance/loot_tables/blocks/starved_soul_soil.json
 fe6d99e30602aaddf92ffe27919bdcd69ce120bc data/aberrance/loot_tables/blocks/stripped_broadleaf_log.json
 cca46700de81703f9f33614d0af31a54c3b17848 data/aberrance/loot_tables/blocks/stripped_broadleaf_wood.json

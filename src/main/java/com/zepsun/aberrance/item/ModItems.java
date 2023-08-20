@@ -101,9 +101,11 @@ public class ModItems {
             () -> new ArmorItem(ModArmorTiers.RUDANIUM, ArmorItem.Type.BOOTS, new Item.Properties()));
 
 
-    //Cutlasses
+    //Weapons
     public static final RegistryObject<Item> CUTLASS = ITEMS.register("cutlass",
             () -> new SwordItem(Tiers.IRON, 2, -1F, new Item.Properties()));
+    public static final RegistryObject<Item> VIOLIN_BOW = ITEMS.register("violin_bow",
+            () -> new SwordItem(Tiers.WOOD, 3, -1F, new Item.Properties()));
 
 
     //Music Discs

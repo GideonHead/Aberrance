@@ -142,6 +142,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SOUL_SEDIMENT.get());
                         output.accept(ModBlocks.STARVED_SOUL_SOIL.get());
                         output.accept(ModBlocks.STARVED_SOUL_GRASS.get());
+                        output.accept(ModBlocks.STARVED_SOUL_GRASS_BLOCK.get());
                         output.accept(ModBlocks.MURDEROUS_SOUL_SOIL.get());
                         output.accept(ModBlocks.MURDEROUS_SOUL_GRASS.get());
 
@@ -154,6 +155,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.aberrance_weapons")).displayItems((displayParameters, output) -> {
 
                         output.accept(ModItems.CUTLASS.get());
+                        output.accept(ModItems.VIOLIN_BOW.get());
 
                     }).build());
 

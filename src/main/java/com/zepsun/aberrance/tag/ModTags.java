@@ -3,7 +3,6 @@ package com.zepsun.aberrance.tag;
 import com.zepsun.aberrance.Aberrance;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.BiomeTags;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
@@ -28,6 +27,7 @@ public class ModTags {
 
         public static final TagKey<Block> NEEDS_KYANITE_TOOL = tag("needs_kyanite_tool");
         public static final TagKey<Block> SOUL_DIRT = tag("soul_dirt");
+        public static final TagKey<Block> ABERRANCE_PLANT_PLACEABLES = tag("aberrance_plant_placeables");
 
         private static TagKey<Block> tag(String name) {
             return BlockTags.create(new ResourceLocation(Aberrance.MOD_ID, name));

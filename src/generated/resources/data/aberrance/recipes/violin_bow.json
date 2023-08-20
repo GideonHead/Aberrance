@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:string"
+    },
+    "I": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " CI",
+    "CI ",
+    "I  "
+  ],
+  "result": {
+    "item": "aberrance:violin_bow"
+  },
+  "show_notification": true
+}
