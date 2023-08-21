@@ -2,6 +2,10 @@ package com.zepsun.aberrance.worldgen;
 
 import com.zepsun.aberrance.Aberrance;
 import com.zepsun.aberrance.block.ModBlocks;
+import com.zepsun.aberrance.tag.ModTags;
+import com.zepsun.aberrance.worldgen.placer.CrepeMyrtleTrunkPlacer;
+import com.zepsun.aberrance.worldgen.placer.FancySoulTrunkPlacer;
+import com.zepsun.aberrance.worldgen.placer.SoulTrunkPlacer;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
@@ -47,6 +51,9 @@ public class ModConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>>  MURDEROUS_SOUL_GRASS_KEY = registerKey("murderous_soul_grass");
     public static final ResourceKey<ConfiguredFeature<?, ?>>  STARVED_SOUL_GRASS_KEY = registerKey("starved_soul_grass");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>>  FANCY_STARVED_FUNGUS_KEY = registerKey("fancy_starved_fungus");
+    public static final ResourceKey<ConfiguredFeature<?, ?>>  STARVED_FUNGUS_KEY = registerKey("starved_fungus");
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
 
         RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -64,14 +71,15 @@ public class ModConfiguredFeatures {
 
         register(context, ACACIA_MESQUITE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(Blocks.ACACIA_LOG),
-                new FancyTrunkPlacer(3,11,0),
+                //new FancyTrunkPlacer(3,11,0),
+                new FancySoulTrunkPlacer(3,2,1),
                 BlockStateProvider.simple(ModBlocks.ACACIA_MESQUITE_LEAVES.get()),
                 new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(2), 3),
                 new TwoLayersFeatureSize(1, 0, 2)).build());
 
         register(context, CREPE_MYRTLE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.CREPE_MYRTLE_LOG.get()),
-                new StraightTrunkPlacer(2, 4, 1),
+                new CrepeMyrtleTrunkPlacer(3, 2, 1),
                 BlockStateProvider.simple(ModBlocks.CREPE_MYRTLE_LEAVES.get()),
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 2),
                 new TwoLayersFeatureSize(3, 0, 2)).build());
@@ -121,6 +129,19 @@ public class ModConfiguredFeatures {
         register(context, STARVED_SOUL_GRASS_KEY, Feature.FLOWER,
                 new RandomPatchConfiguration(78, 6,2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.STARVED_SOUL_GRASS.get())))));
+
+        register(context, FANCY_STARVED_FUNGUS_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.STARVED_STEM.get()),
+                new FancySoulTrunkPlacer(3, 4, 2),
+                BlockStateProvider.simple(ModBlocks.STARVED_SPORE.get()),
+                new FancyFoliagePlacer(ConstantInt.of(2),ConstantInt.of(4),4),
+                new TwoLayersFeatureSize(3, 0, 2)).dirt(BlockStateProvider.simple(ModBlocks.STARVED_SOUL_SOIL.get())).build());
+        register(context, STARVED_FUNGUS_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.STARVED_STEM.get()),
+                new SoulTrunkPlacer(2, 3, 2),
+                BlockStateProvider.simple(ModBlocks.STARVED_SPORE.get()),
+                new FancyFoliagePlacer(ConstantInt.of(2),ConstantInt.of(4),4),
+                new TwoLayersFeatureSize(3, 0, 2)).dirt(BlockStateProvider.simple(ModBlocks.STARVED_SOUL_SOIL.get())).build());
     }
 
 

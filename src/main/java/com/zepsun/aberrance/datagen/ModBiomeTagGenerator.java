@@ -34,7 +34,8 @@ public class ModBiomeTagGenerator extends BiomeTagsProvider {
     protected void addTags(HolderLookup.Provider pProvider) {
         this.tag(ModTags.Biomes.IS_ABYSS)
                 .add(ModBiomes.MURDEROUS_SOUL_PLAINS)
-                .add(ModBiomes.STARVED_SOUL_PLAINS);
+                .add(ModBiomes.STARVED_SOUL_PLAINS)
+                .add(ModBiomes.STARVED_SOUL_FOREST);
         this.tag(BiomeTags.IS_OVERWORLD)
                 .add(ModBiomes.CREPE_MYRTLE_FOREST)
                 .add(ModBiomes.BROADLEAF_HILLS);

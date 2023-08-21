@@ -30,6 +30,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         this.tag(ModTags.Blocks.SOUL_DIRT)
                 .add(ModBlocks.STARVED_SOUL_SOIL.get())
+                .add(ModBlocks.STARVED_SOUL_GRASS_BLOCK.get())
                 .add(ModBlocks.MURDEROUS_SOUL_SOIL.get())
                 .add(Blocks.SOUL_SAND)
                 .add(Blocks.SOUL_SOIL);
@@ -46,7 +47,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.BROADLEAF_LOG.get())
                 .add(ModBlocks.BROADLEAF_WOOD.get())
                 .add(ModBlocks.STRIPPED_BROADLEAF_LOG.get())
-                .add(ModBlocks.STRIPPED_BROADLEAF_WOOD.get());
+                .add(ModBlocks.STRIPPED_BROADLEAF_WOOD.get())
+                .add(ModBlocks.STARVED_STEM.get())
+                .add(ModBlocks.STARVED_HYPHAE.get());
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.WHITE_COBBLESTONE.get())
@@ -175,8 +178,6 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.SOUL_SEDIMENT.get());
 
         this.tag(BlockTags.DIRT)
-                .add(ModBlocks.STARVED_SOUL_SOIL.get())
-                .add(ModBlocks.MURDEROUS_SOUL_SOIL.get())
                 .add(ModBlocks.CREPE_MYRTLE_COMPOST.get());
 
 

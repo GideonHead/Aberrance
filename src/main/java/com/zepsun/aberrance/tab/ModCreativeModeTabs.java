@@ -140,9 +140,15 @@ public class ModCreativeModeTabs {
                         //output.accept(ModBlocks.WHITE_STONE_FURNACE.get());
 
                         output.accept(ModBlocks.SOUL_SEDIMENT.get());
+
                         output.accept(ModBlocks.STARVED_SOUL_SOIL.get());
                         output.accept(ModBlocks.STARVED_SOUL_GRASS.get());
                         output.accept(ModBlocks.STARVED_SOUL_GRASS_BLOCK.get());
+                        output.accept(ModBlocks.STARVED_STEM.get());
+                        output.accept(ModBlocks.STARVED_HYPHAE.get());
+                        output.accept(ModBlocks.STARVED_FUNGUS.get());
+                        output.accept(ModBlocks.STARVED_SPORE.get());
+
                         output.accept(ModBlocks.MURDEROUS_SOUL_SOIL.get());
                         output.accept(ModBlocks.MURDEROUS_SOUL_GRASS.get());
 

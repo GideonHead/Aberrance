@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "aberrance:block/starved_stem_top",
+    "side": "aberrance:block/starved_stem"
+  }
+}

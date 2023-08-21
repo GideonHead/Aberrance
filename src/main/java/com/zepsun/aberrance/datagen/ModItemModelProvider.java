@@ -85,9 +85,12 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleBlockItem(ModBlocks.MURDEROUS_SOUL_GRASS);
         simpleBlockItem(ModBlocks.STARVED_SOUL_GRASS);
+        simpleBlockItem(ModBlocks.STARVED_FUNGUS);
 
         simpleHandheldItem(ModItems.CUTLASS);
         simpleHandheldItem(ModItems.VIOLIN_BOW);
+
+
 
     }
 

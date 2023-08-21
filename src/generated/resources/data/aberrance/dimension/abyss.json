@@ -18,6 +18,18 @@
           }
         },
         {
+          "biome": "aberrance:starved_soul_forest",
+          "parameters": {
+            "continentalness": 0.0,
+            "depth": 0.0,
+            "erosion": 0.2,
+            "humidity": 0.2,
+            "offset": 0.0,
+            "temperature": 0.1,
+            "weirdness": 0.0
+          }
+        },
+        {
           "biome": "aberrance:murderous_soul_plains",
           "parameters": {
             "continentalness": 0.0,

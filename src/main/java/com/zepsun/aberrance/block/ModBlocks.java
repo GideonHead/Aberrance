@@ -1,18 +1,12 @@
 package com.zepsun.aberrance.block;
 
 import com.zepsun.aberrance.Aberrance;
-import com.zepsun.aberrance.block.custom.CustomPlacementBushBlock;
-import com.zepsun.aberrance.block.custom.FlammableBlock;
-import com.zepsun.aberrance.block.custom.FlammableWoodLog;
-import com.zepsun.aberrance.block.custom.StrippableFlammableWoodLog;
+import com.zepsun.aberrance.block.custom.*;
 import com.zepsun.aberrance.block.custom.crop.ModCropBlock;
 import com.zepsun.aberrance.block.custom.station.SeedMakerBlock;
 import com.zepsun.aberrance.item.ModItems;
 import com.zepsun.aberrance.tag.ModTags;
-import com.zepsun.aberrance.worldgen.tree.AcaciaMesquiteTreeGrower;
-import com.zepsun.aberrance.worldgen.tree.BroadleafTreeGrower;
-import com.zepsun.aberrance.worldgen.tree.CrepeMyrtleTreeGrower;
-import com.zepsun.aberrance.worldgen.tree.LiveOakTreeGrower;
+import com.zepsun.aberrance.worldgen.tree.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -237,22 +231,22 @@ public class ModBlocks {
     public static final RegistryObject<Block> WHITE_STONE_WALL = registerBlock("white_stone_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> WHITE_STONE_STAIRS = registerBlock("white_stone_stairs",
-            () -> new StairBlock(() -> ModBlocks.WHITE_STONE.get().defaultBlockState(), BlockBehaviour.Properties.of().copy(Blocks.STONE_STAIRS)));
+            () -> new StairBlock(() -> ModBlocks.WHITE_STONE.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS)));
     public static final RegistryObject<Block> WHITE_STONE_SLAB = registerBlock("white_stone_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.of().copy(Blocks.STONE_SLAB)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB)));
     public static final RegistryObject<Block> WHITE_COBBLESTONE_STAIRS = registerBlock("white_cobblestone_stairs",
-            () -> new StairBlock(() -> ModBlocks.WHITE_COBBLESTONE.get().defaultBlockState(), BlockBehaviour.Properties.of().copy(Blocks.STONE_STAIRS)));
+            () -> new StairBlock(() -> ModBlocks.WHITE_COBBLESTONE.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS)));
     public static final RegistryObject<Block> WHITE_COBBLESTONE_SLAB = registerBlock("white_cobblestone_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.of().copy(Blocks.STONE_SLAB)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB)));
     public static final RegistryObject<Block> WHITE_STONE_BRICK_STAIRS = registerBlock("white_stone_brick_stairs",
-            () -> new StairBlock(() -> ModBlocks.WHITE_STONE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.of().copy(Blocks.STONE_STAIRS)));
+            () -> new StairBlock(() -> ModBlocks.WHITE_STONE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS)));
     public static final RegistryObject<Block> WHITE_STONE_BRICK_SLAB = registerBlock("white_stone_brick_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.of().copy(Blocks.STONE_SLAB)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB)));
     //public static final RegistryObject<Block> WHITE_STONE_FURNACE = registerBlock("white_stone_furnace",
     //        () -> new WhiteStoneFurnaceBlock(BlockBehaviour.Properties.copy(Blocks.FURNACE).requiresCorrectToolForDrops()));
 
 
-    //Soul
+    //Starved Soul
     public static final RegistryObject<Block> SOUL_SEDIMENT = registerBlock("soul_sediment",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
     public static final RegistryObject<Block> STARVED_SOUL_SOIL = registerBlock("starved_soul_soil",
@@ -263,6 +257,17 @@ public class ModBlocks {
     public static final RegistryObject<Block> STARVED_SOUL_GRASS_BLOCK = registerBlock("starved_soul_grass_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.SOUL_SOIL)));
 
+    public static final RegistryObject<Block> STARVED_STEM = registerBlock("starved_stem",
+            () -> new StrippableFlammableWoodLog(STRIPPED_BROADLEAF_LOG, BlockBehaviour.Properties.of().copy(Blocks.CRIMSON_STEM).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> STARVED_HYPHAE = registerBlock("starved_hyphae",
+            () -> new StrippableFlammableWoodLog(STRIPPED_BROADLEAF_WOOD, BlockBehaviour.Properties.of().copy(Blocks.CRIMSON_HYPHAE).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> STARVED_FUNGUS = registerBlock("starved_fungus",
+            () -> new CustomPlacementSaplingBlock(new StarvedTreeGrower(), ModTags.Blocks.SOUL_DIRT, BlockBehaviour.Properties.of().copy(Blocks.CRIMSON_FUNGUS)));
+    public static final RegistryObject<Block> STARVED_SPORE = registerBlock("starved_spore",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.NETHER_WART_BLOCK)));
+
+
+    //Murderous Soul
     public static final RegistryObject<Block> MURDEROUS_SOUL_SOIL = registerBlock("murderous_soul_soil",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.SOUL_SOIL)));
     public static final RegistryObject<Block> MURDEROUS_SOUL_GRASS = registerBlock("murderous_soul_grass",

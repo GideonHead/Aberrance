@@ -142,6 +142,10 @@ public class ModEnUsGenerator extends LanguageProvider {
         addBlock(ModBlocks.STARVED_SOUL_SOIL, "Starved Soul Soil");
         addBlock(ModBlocks.STARVED_SOUL_GRASS, "Starved Soul Grass");
         addBlock(ModBlocks.STARVED_SOUL_GRASS_BLOCK, "Starved Soul Grass Block");
+        addBlock(ModBlocks.STARVED_STEM, "Starved Stem");
+        addBlock(ModBlocks.STARVED_HYPHAE, "Starved Hyphae");
+        addBlock(ModBlocks.STARVED_FUNGUS, "Starved Fungus");
+        addBlock(ModBlocks.STARVED_SPORE, "Starved Spore");
 
         addBlock(ModBlocks.MURDEROUS_SOUL_SOIL, "Murderous Soul Soil");
         addBlock(ModBlocks.MURDEROUS_SOUL_GRASS, "Murderous Soul Grass");

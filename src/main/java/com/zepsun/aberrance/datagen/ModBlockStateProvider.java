@@ -170,13 +170,25 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.WHITE_STONE_BRICK_SLAB);
 
 
-        //soul
-        blockWithItem(ModBlocks.STARVED_SOUL_SOIL);
-        blockWithItem(ModBlocks.MURDEROUS_SOUL_SOIL);
+        //Misc Soul
         blockWithItem(ModBlocks.SOUL_SEDIMENT);
+
+
+        //starved soul
+        blockWithItem(ModBlocks.STARVED_SOUL_SOIL);
         flowerBlock(ModBlocks.STARVED_SOUL_GRASS);
-        flowerBlock(ModBlocks.MURDEROUS_SOUL_GRASS);
         topSideBlockWithItem(ModBlocks.STARVED_SOUL_GRASS_BLOCK, "starved_soul_grass_block_side", "starved_soul_soil", "starved_soul_grass_block_top");
+        blockWithItem(ModBlocks.STARVED_SPORE);
+        saplingBlock(ModBlocks.STARVED_FUNGUS);
+        logBlock((RotatedPillarBlock) ModBlocks.STARVED_STEM.get());
+        axisBlock(((RotatedPillarBlock) ModBlocks.STARVED_HYPHAE.get()), blockTexture(ModBlocks.STARVED_STEM.get()), blockTexture(ModBlocks.STARVED_STEM.get()));
+        blockItem(ModBlocks.STARVED_STEM);
+        blockItem(ModBlocks.STARVED_HYPHAE);
+
+
+        //Murderous Soul
+        blockWithItem(ModBlocks.MURDEROUS_SOUL_SOIL);
+        flowerBlock(ModBlocks.MURDEROUS_SOUL_GRASS);
     }
 
     public void makeCrossCrop(CropBlock block, String modelName, String textureName) {

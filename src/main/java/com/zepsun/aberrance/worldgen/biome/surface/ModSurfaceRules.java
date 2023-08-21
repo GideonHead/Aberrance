@@ -13,8 +13,6 @@ import static net.minecraft.world.level.levelgen.SurfaceRules.stoneDepthCheck;
 
 public class ModSurfaceRules {
     public static final SurfaceRules.ConditionSource NEW_DEFAULT_BLOCK = stoneDepthCheck(0, true, 1000, CaveSurface.FLOOR);
-    public static final SurfaceRules.ConditionSource TOP_LAYER_BLOCK = stoneDepthCheck(0, true, 1, CaveSurface.FLOOR);
-
 
     public static final SurfaceRules.RuleSource STARVED_SOUL_SOIL = makeStateRule(ModBlocks.STARVED_SOUL_SOIL.get());
     public static final SurfaceRules.RuleSource MURDEROUS_SOUL_SOIL = makeStateRule(ModBlocks.MURDEROUS_SOUL_SOIL.get());
@@ -28,18 +26,17 @@ public class ModSurfaceRules {
         SurfaceRules.RuleSource grassSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(abovePreliminarySurface(), GRASS_BLOCK), SurfaceRules.ifTrue(abovePreliminarySurface(), DIRT));
 
         SurfaceRules.RuleSource starvedSurface =
-                SurfaceRules.sequence(SurfaceRules.ifTrue(abovePreliminarySurface(), STARVED_SOUL_SOIL),
-                SurfaceRules.ifTrue(abovePreliminarySurface(), STARVED_SOUL_SOIL),
-                SurfaceRules.ifTrue(abovePreliminarySurface(), SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, STARVED_SOUL_GRASS_BLOCK)));
+                SurfaceRules.sequence(SurfaceRules.ifTrue(abovePreliminarySurface(), STARVED_SOUL_SOIL));
 
         SurfaceRules.RuleSource murderousSurface =
-                SurfaceRules.sequence(SurfaceRules.ifTrue(abovePreliminarySurface(), MURDEROUS_SOUL_SOIL),
-                SurfaceRules.ifTrue(abovePreliminarySurface(), MURDEROUS_SOUL_SOIL));
+                SurfaceRules.sequence(SurfaceRules.ifTrue(abovePreliminarySurface(), MURDEROUS_SOUL_SOIL));
 
 
         return SurfaceRules.sequence(
 
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.STARVED_SOUL_PLAINS), starvedSurface),
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.STARVED_SOUL_FOREST), starvedSurface),
+
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.MURDEROUS_SOUL_PLAINS), murderousSurface)
         );
     }

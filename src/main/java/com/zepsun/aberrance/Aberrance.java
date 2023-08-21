@@ -9,6 +9,7 @@ import com.zepsun.aberrance.screen.ModMenuTypes;
 import com.zepsun.aberrance.screen.SeedMakerScreen;
 import com.zepsun.aberrance.sound.ModSounds;
 import com.zepsun.aberrance.tab.ModCreativeModeTabs;
+import com.zepsun.aberrance.worldgen.ModTrunkPlacerTypes;
 import com.zepsun.aberrance.worldgen.biome.ModTerraBlenderApi;
 import com.zepsun.aberrance.worldgen.biome.surface.ModSurfaceRules;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -46,6 +47,8 @@ public class Aberrance
         ModBlockEntities.register(modEventBus);
 
         ModSounds.register(modEventBus);
+
+        ModTrunkPlacerTypes.register(modEventBus);
 
         ModTerraBlenderApi.registerRegions();
 

@@ -1,4 +1,4 @@
-package com.zepsun.aberrance.worldgen.tree;
+package com.zepsun.aberrance.worldgen;
 
 import com.google.common.collect.ImmutableList;
 import net.minecraft.data.worldgen.placement.PlacementUtils;

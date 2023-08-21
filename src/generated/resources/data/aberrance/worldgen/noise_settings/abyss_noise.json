@@ -12,10 +12,10 @@
   "disable_mob_generation": false,
   "legacy_random_source": false,
   "noise": {
-    "height": 128,
+    "height": 448,
     "min_y": 0,
     "size_horizontal": 1,
-    "size_vertical": 2
+    "size_vertical": 3
   },
   "noise_router": {
     "barrier": {
@@ -408,7 +408,21 @@
                   "Name": "aberrance:starved_soul_soil"
                 }
               }
-            },
+            }
+          ]
+        }
+      },
+      {
+        "type": "minecraft:condition",
+        "if_true": {
+          "type": "minecraft:biome",
+          "biome_is": [
+            "aberrance:starved_soul_forest"
+          ]
+        },
+        "then_run": {
+          "type": "minecraft:sequence",
+          "sequence": [
             {
               "type": "minecraft:condition",
               "if_true": {
@@ -417,29 +431,7 @@
               "then_run": {
                 "type": "minecraft:block",
                 "result_state": {
-                  "Name": "aberrance:starved_soul_soil"
-                }
-              }
-            },
-            {
-              "type": "minecraft:condition",
-              "if_true": {
-                "type": "minecraft:above_preliminary_surface"
-              },
-              "then_run": {
-                "type": "minecraft:condition",
-                "if_true": {
-                  "type": "minecraft:stone_depth",
-                  "add_surface_depth": false,
-                  "offset": 0,
-                  "secondary_depth_range": 0,
-                  "surface_type": "floor"
-                },
-                "then_run": {
-                  "type": "minecraft:block",
-                  "result_state": {
-                    "Name": "aberrance:starved_soul_grass_block"
-                  }
+                  "Name": "aberrance:murderous_soul_soil"
                 }
               }
             }
@@ -457,18 +449,6 @@
         "then_run": {
           "type": "minecraft:sequence",
           "sequence": [
-            {
-              "type": "minecraft:condition",
-              "if_true": {
-                "type": "minecraft:above_preliminary_surface"
-              },
-              "then_run": {
-                "type": "minecraft:block",
-                "result_state": {
-                  "Name": "aberrance:murderous_soul_soil"
-                }
-              }
-            },
             {
               "type": "minecraft:condition",
               "if_true": {

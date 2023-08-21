@@ -40,7 +40,14 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> WILD_WINTER_WHEAT_PLANT_PLACED_KEY = registerKey("wild_winter_wheat_placed_key");
 
     public static final ResourceKey<PlacedFeature> MURDEROUS_SOUL_GRASS_PLACED_KEY = registerKey("murderous_soul_grass_placed");
+
     public static final ResourceKey<PlacedFeature> STARVED_SOUL_GRASS_PLACED_KEY = registerKey("starved_soul_grass_placed");
+    public static final ResourceKey<PlacedFeature> EXTRA_STARVED_SOUL_GRASS_PLACED_KEY = registerKey("extra_starved_soul_grass_placed");
+
+    public static final ResourceKey<PlacedFeature> STARVED_FUNGUS_PLACED_KEY = registerKey("starved_stem_fungus_key");
+    public static final ResourceKey<PlacedFeature> FANCY_STARVED_FUNGUS_PLACED_KEY = registerKey("fancy_starved_fungus_placed_key");
+    public static final ResourceKey<PlacedFeature> EXTRA_STARVED_FUNGUS_PLACED_KEY = registerKey("extra_starved_fungus_placed_key");
+    public static final ResourceKey<PlacedFeature> EXTRA_FANCY_STARVED_FUNGUS_PLACED_KEY = registerKey("extra_fancy_starved_fungus_placed_key");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -101,6 +108,21 @@ public class ModPlacedFeatures {
                 List.of(RarityFilter.onAverageOnceEvery(4), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
         register(context, STARVED_SOUL_GRASS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STARVED_SOUL_GRASS_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(4), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+        register(context, EXTRA_STARVED_SOUL_GRASS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STARVED_SOUL_GRASS_KEY),
+                List.of(RarityFilter.onAverageOnceEvery(1), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+
+        register(context, STARVED_FUNGUS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STARVED_FUNGUS_KEY),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(1/2, 0.1f, 2),
+                        ModBlocks.STARVED_FUNGUS.get()));
+        register(context, EXTRA_STARVED_FUNGUS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STARVED_FUNGUS_KEY),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(16, 0.1f, 2),
+                        ModBlocks.STARVED_FUNGUS.get()));
+        register(context, FANCY_STARVED_FUNGUS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.FANCY_STARVED_FUNGUS_KEY),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(1/2, 0.1f, 2),
+                        ModBlocks.STARVED_FUNGUS.get()));
+        register(context, EXTRA_FANCY_STARVED_FUNGUS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.FANCY_STARVED_FUNGUS_KEY),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(8, 0.1f, 2),
+                        ModBlocks.STARVED_FUNGUS.get()));
     }
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {
