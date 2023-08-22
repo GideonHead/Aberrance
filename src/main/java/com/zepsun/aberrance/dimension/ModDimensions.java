@@ -60,7 +60,7 @@ public class ModDimensions {
                         new Climate.ParameterList<>(List.of(Pair.of(
                                         Climate.parameters(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.STARVED_SOUL_PLAINS)),
                                 Pair.of(Climate.parameters(0.1F, 0.2F, 0.0F, 0.2F, 0.0F, 0.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.STARVED_SOUL_FOREST)),
-                                Pair.of(Climate.parameters(0.1F, 0.2F, 0.0F, 0.2F, 0.0F, 0.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.MURDEROUS_SOUL_PLAINS))
+                                Pair.of(Climate.parameters(0.2F, 0.2F, 0.0F, 0.2F, 0.0F, 0.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.MURDEROUS_SOUL_PLAINS))
                         ))),
                 //noiseGenSettings.getOrThrow(NoiseGeneratorSettings.NETHER));
                 noiseGenSettings.getOrThrow(ModLevelGen.ABYSS));

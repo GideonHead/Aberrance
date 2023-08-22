@@ -37,7 +37,7 @@
             "erosion": 0.2,
             "humidity": 0.2,
             "offset": 0.0,
-            "temperature": 0.1,
+            "temperature": 0.2,
             "weirdness": 0.0
           }
         }

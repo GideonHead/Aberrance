@@ -144,10 +144,21 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.STARVED_SOUL_SOIL.get());
                         output.accept(ModBlocks.STARVED_SOUL_GRASS.get());
                         output.accept(ModBlocks.STARVED_SOUL_GRASS_BLOCK.get());
+                        output.accept(ModBlocks.STARVED_SPORE.get());
                         output.accept(ModBlocks.STARVED_STEM.get());
+                        output.accept(ModBlocks.STARVED_PLANKS.get());
                         output.accept(ModBlocks.STARVED_HYPHAE.get());
                         output.accept(ModBlocks.STARVED_FUNGUS.get());
-                        output.accept(ModBlocks.STARVED_SPORE.get());
+                        output.accept(ModBlocks.STRIPPED_STARVED_STEM.get());
+                        output.accept(ModBlocks.STRIPPED_STARVED_HYPHAE.get());
+                        output.accept(ModBlocks.STARVED_STAIRS.get());
+                        output.accept(ModBlocks.STARVED_SLAB.get());
+                        output.accept(ModBlocks.STARVED_DOOR.get());
+                        output.accept(ModBlocks.STARVED_TRAPDOOR.get());
+                        output.accept(ModBlocks.STARVED_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.STARVED_BUTTON.get());
+                        output.accept(ModBlocks.STARVED_FENCE.get());
+                        output.accept(ModBlocks.STARVED_FENCE_GATE.get());
 
                         output.accept(ModBlocks.MURDEROUS_SOUL_SOIL.get());
                         output.accept(ModBlocks.MURDEROUS_SOUL_GRASS.get());

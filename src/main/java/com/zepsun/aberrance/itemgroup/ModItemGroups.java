@@ -112,6 +112,24 @@ public class ModItemGroups {
             ModBlocks.BROADLEAF_STAIRS.get()
     );
 
+    public static final TreeGroup STARVED_TREE_GROUP = new TreeGroup(
+            ModBlocks.STARVED_STEM.get(),
+            ModBlocks.STARVED_HYPHAE.get(),
+            ModBlocks.STRIPPED_STARVED_STEM.get(),
+            ModBlocks.STRIPPED_STARVED_HYPHAE.get(),
+            ModBlocks.STARVED_PLANKS.get(),
+            ModBlocks.STARVED_SPORE.get(),
+            ModBlocks.STARVED_FUNGUS.get(),
+            ModBlocks.STARVED_DOOR.get(),
+            ModBlocks.STARVED_TRAPDOOR.get(),
+            ModBlocks.STARVED_BUTTON.get(),
+            ModBlocks.STARVED_PRESSURE_PLATE.get(),
+            ModBlocks.STARVED_FENCE.get(),
+            ModBlocks.STARVED_FENCE_GATE.get(),
+            ModBlocks.STARVED_SLAB.get(),
+            ModBlocks.STARVED_STAIRS.get()
+    );
+
     public static final TreeGroup ACACIA_MESQUITE_TREE_GROUP = new TreeGroup(
             null,
             null,

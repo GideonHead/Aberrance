@@ -1,5 +1,22 @@
 # Changelog
 
+# Changelog
+
+## 0.11.0-1.20.1
+
+### Added
+
+- Starved Fungus Wood/Tree Type
+- Custom Trunk Placers
+- Starved Soul Forest
+- Soul Grass Generation
+- Starved Soul Tree Generation in Starved Soul Forest and Plains
+- Very Fancy Live Oak Tree (Only Command Accessible)
+
+### Changed
+
+ - Acacia Mesquite Trees now use Fancy Soul Trunk Placers
+
 ## 0.10.2-1.20.1
 
 ### Added

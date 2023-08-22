@@ -257,14 +257,36 @@ public class ModBlocks {
     public static final RegistryObject<Block> STARVED_SOUL_GRASS_BLOCK = registerBlock("starved_soul_grass_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.SOUL_SOIL)));
 
+    public static final RegistryObject<Block> STRIPPED_STARVED_STEM = registerBlock("stripped_starved_stem",
+            () -> new FlammableWoodLog(BlockBehaviour.Properties.of().copy(Blocks.OAK_LOG).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> STRIPPED_STARVED_HYPHAE = registerBlock("stripped_starved_hyphae",
+            () -> new FlammableWoodLog(BlockBehaviour.Properties.of().copy(Blocks.OAK_LOG).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> STARVED_STEM = registerBlock("starved_stem",
-            () -> new StrippableFlammableWoodLog(STRIPPED_BROADLEAF_LOG, BlockBehaviour.Properties.of().copy(Blocks.CRIMSON_STEM).sound(SoundType.WOOD)));
+            () -> new StrippableFlammableWoodLog(STRIPPED_STARVED_STEM, BlockBehaviour.Properties.of().copy(Blocks.CRIMSON_STEM).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> STARVED_HYPHAE = registerBlock("starved_hyphae",
-            () -> new StrippableFlammableWoodLog(STRIPPED_BROADLEAF_WOOD, BlockBehaviour.Properties.of().copy(Blocks.CRIMSON_HYPHAE).sound(SoundType.WOOD)));
+            () -> new StrippableFlammableWoodLog(STRIPPED_STARVED_HYPHAE, BlockBehaviour.Properties.of().copy(Blocks.CRIMSON_HYPHAE).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> STARVED_FUNGUS = registerBlock("starved_fungus",
-            () -> new CustomPlacementSaplingBlock(new StarvedTreeGrower(), ModTags.Blocks.SOUL_DIRT, BlockBehaviour.Properties.of().copy(Blocks.CRIMSON_FUNGUS)));
+            () -> new CustomPlacementNoGrowSaplingBlock(new StarvedTreeGrower(), ModTags.Blocks.SOUL_DIRT, BlockBehaviour.Properties.of().copy(Blocks.CRIMSON_FUNGUS)));
     public static final RegistryObject<Block> STARVED_SPORE = registerBlock("starved_spore",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.NETHER_WART_BLOCK)));
+    public static final RegistryObject<Block> STARVED_PLANKS = registerBlock("starved_planks",
+            () -> new FlammableBlock(BlockBehaviour.Properties.of().copy(Blocks.OAK_PLANKS).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> STARVED_STAIRS = registerBlock("starved_stairs",
+            () -> new StairBlock(() -> ModBlocks.BROADLEAF_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.of().copy(Blocks.OAK_STAIRS)));
+    public static final RegistryObject<Block> STARVED_SLAB = registerBlock("starved_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of().copy(Blocks.OAK_SLAB)));
+    public static final RegistryObject<Block> STARVED_DOOR = registerBlock("starved_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.of().copy(Blocks.OAK_DOOR).sound(SoundType.WOOD), BlockSetType.OAK));
+    public static final RegistryObject<Block> STARVED_TRAPDOOR = registerBlock("starved_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.of().copy(Blocks.OAK_TRAPDOOR).sound(SoundType.WOOD), BlockSetType.OAK));
+    public static final RegistryObject<Block> STARVED_PRESSURE_PLATE = registerBlock("starved_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of().copy(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> STARVED_BUTTON = registerBlock("starved_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.of().copy(Blocks.OAK_TRAPDOOR), BlockSetType.OAK, 20, true));
+    public static final RegistryObject<Block> STARVED_FENCE = registerBlock("starved_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of().copy(Blocks.OAK_FENCE).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> STARVED_FENCE_GATE = registerBlock("starved_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.of().copy(Blocks.OAK_FENCE_GATE).sound(SoundType.WOOD), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
 
 
     //Murderous Soul

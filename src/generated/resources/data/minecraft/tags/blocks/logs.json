@@ -13,6 +13,8 @@
     "aberrance:stripped_broadleaf_log",
     "aberrance:stripped_broadleaf_wood",
     "aberrance:starved_stem",
-    "aberrance:starved_hyphae"
+    "aberrance:starved_hyphae",
+    "aberrance:stripped_starved_stem",
+    "aberrance:stripped_starved_hyphae"
   ]
 }

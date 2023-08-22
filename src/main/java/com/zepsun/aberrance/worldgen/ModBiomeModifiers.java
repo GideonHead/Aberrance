@@ -19,6 +19,7 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_TREE_ACACIA_MESQUITE = registerKey("add_tree_acacia_mesquite");
 
     public static final ResourceKey<BiomeModifier> ADD_TREE_LIVE_OAK = registerKey("add_tree_live_oak");
+    public static final ResourceKey<BiomeModifier> ADD_TREE_FANCY_LIVE_OAK = registerKey("add_tree_fancy_live_oak");
 
     public static final ResourceKey<BiomeModifier> ADD_TREE_CREPE_MYRTLE_FOREST = registerKey("add_tree_crepe_myrtle_forest");
     public static final ResourceKey<BiomeModifier> ADD_TREE_CREPE_MYRTLE_PLAINS = registerKey("add_tree_crepe_myrtle_plains");
@@ -65,6 +66,10 @@ public class ModBiomeModifiers {
                 biomes.getOrThrow(BiomeTags.IS_FOREST),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.LIVE_OAK_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
+        //context.register(ADD_TREE_FANCY_LIVE_OAK, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+        //        biomes.getOrThrow(BiomeTags.IS_FOREST),
+        //        HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.FANCY_LIVE_OAK_PLACED_KEY)),
+        //        GenerationStep.Decoration.VEGETAL_DECORATION));
 
         context.register(ADD_TREE_BROADLEAF_JUNGLE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_JUNGLE),

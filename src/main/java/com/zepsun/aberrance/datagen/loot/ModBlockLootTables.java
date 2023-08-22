@@ -149,18 +149,34 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.RUDANIUM_BLOCK.get());
         this.dropSelf(ModBlocks.RAW_RUDANIUM_BLOCK.get());
 
-        this.dropSelf(ModBlocks.STARVED_SOUL_SOIL.get());
-
         this.dropSelf(ModBlocks.SOUL_SEDIMENT.get());
+
+        this.dropSelf(ModBlocks.STARVED_SOUL_SOIL.get());
         this.dropSelf(ModBlocks.STARVED_SOUL_GRASS.get());
         this.dropSelf(ModBlocks.STARVED_SOUL_GRASS_BLOCK.get());
+        this.dropSelf(ModBlocks.STARVED_STAIRS.get());
         this.dropSelf(ModBlocks.STARVED_STEM.get());
         this.dropSelf(ModBlocks.STARVED_HYPHAE.get());
+        this.dropSelf(ModBlocks.STRIPPED_STARVED_STEM.get());
+        this.dropSelf(ModBlocks.STRIPPED_STARVED_HYPHAE.get());
+        this.dropSelf(ModBlocks.STARVED_PLANKS.get());
         this.dropSelf(ModBlocks.STARVED_FUNGUS.get());
-        this.dropSelf(ModBlocks.STARVED_SPORE.get());
+        this.add(ModBlocks.STARVED_SPORE.get(), block ->
+                createLeavesDrops(block, ModBlocks.STARVED_FUNGUS.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.add(ModBlocks.STARVED_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.STARVED_SLAB.get()));
+        this.dropSelf(ModBlocks.STARVED_TRAPDOOR.get());
+        this.add(ModBlocks.STARVED_DOOR.get(), block ->
+                createDoorTable(ModBlocks.STARVED_DOOR.get()));
+        this.dropSelf(ModBlocks.STARVED_BUTTON.get());
+        this.dropSelf(ModBlocks.STARVED_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.STARVED_FENCE_GATE.get());
+        this.dropSelf(ModBlocks.STARVED_FENCE.get());
 
         this.dropSelf(ModBlocks.MURDEROUS_SOUL_GRASS.get());
         this.dropSelf(ModBlocks.MURDEROUS_SOUL_SOIL.get());
+
+
 
 
 

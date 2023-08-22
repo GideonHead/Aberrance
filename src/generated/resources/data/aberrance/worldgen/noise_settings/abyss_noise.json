@@ -431,7 +431,7 @@
               "then_run": {
                 "type": "minecraft:block",
                 "result_state": {
-                  "Name": "aberrance:murderous_soul_soil"
+                  "Name": "aberrance:starved_soul_soil"
                 }
               }
             }

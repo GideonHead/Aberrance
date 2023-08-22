@@ -1,4 +1,4 @@
-// 1.20.1	2023-08-20T15:31:53.2717778	Item Models: aberrance
+// 1.20.1	2023-08-21T16:58:20.9884131	Item Models: aberrance
 3296f62ca044b5b0968b6455237c6946e781f85e assets/aberrance/models/item/acacia_mesquite_sapling.json
 2d43819b8a6035cd9f80b97639af8b2cc62c5c74 assets/aberrance/models/item/broadleaf_button.json
 328fdabb911180a655fd1ea4df844a680560c78e assets/aberrance/models/item/broadleaf_door.json
@@ -43,6 +43,9 @@ f27ce1f3b365b793b044dec0c38575cf6fdff30e assets/aberrance/models/item/rudanium_h
 4c6bd1415fe5585b018a448b9d2ddb4e7f8fd517 assets/aberrance/models/item/rudanium_pickaxe.json
 e04abb6eebcd26d4af9d2daf81dfe00825b3e161 assets/aberrance/models/item/rudanium_shovel.json
 66b96b9daf33382f9658c36f42be862b626eb3d0 assets/aberrance/models/item/rudanium_sword.json
+b708b74b1d8f9f16da1fef58076d6b17cf666c32 assets/aberrance/models/item/starved_button.json
+c986cd2a9493d885cdbc480ff80b07ad0ba32a84 assets/aberrance/models/item/starved_door.json
+8990588a040243d85883b9d6cf7b9816589f0f68 assets/aberrance/models/item/starved_fence.json
 d45196ed9dc3a5f1151180ec78b49df1ccc65497 assets/aberrance/models/item/starved_fungus.json
 608112a4f91113f3846090edd54927d71c2b7aeb assets/aberrance/models/item/starved_soul_grass.json
 5270e6e9e9b772f40e744f052078fb0a497cd7f6 assets/aberrance/models/item/violin_bow.json

@@ -49,7 +49,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.STRIPPED_BROADLEAF_LOG.get())
                 .add(ModBlocks.STRIPPED_BROADLEAF_WOOD.get())
                 .add(ModBlocks.STARVED_STEM.get())
-                .add(ModBlocks.STARVED_HYPHAE.get());
+                .add(ModBlocks.STARVED_HYPHAE.get())
+                .add(ModBlocks.STRIPPED_STARVED_STEM.get())
+                .add(ModBlocks.STRIPPED_STARVED_HYPHAE.get());
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.WHITE_COBBLESTONE.get())
@@ -162,6 +164,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.FENCES)
                 .add(ModBlocks.CREPE_MYRTLE_FENCE.get())
                 .add(ModBlocks.LIVE_OAK_FENCE.get())
+                .add(ModBlocks.STARVED_FENCE.get())
                 .add(ModBlocks.BROADLEAF_FENCE.get());
         this.tag(BlockTags.WALLS)
                 .add(ModBlocks.WHITE_COBBLESTONE_WALL.get())
@@ -170,6 +173,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.FENCE_GATES)
                 .add(ModBlocks.CREPE_MYRTLE_FENCE_GATE.get())
                 .add(ModBlocks.LIVE_OAK_FENCE_GATE.get())
+                .add(ModBlocks.STARVED_FENCE_GATE.get())
                 .add(ModBlocks.BROADLEAF_FENCE_GATE.get());
 
         this.tag(BlockTags.SOUL_SPEED_BLOCKS)

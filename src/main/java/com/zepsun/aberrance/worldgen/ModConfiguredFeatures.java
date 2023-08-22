@@ -6,6 +6,7 @@ import com.zepsun.aberrance.tag.ModTags;
 import com.zepsun.aberrance.worldgen.placer.CrepeMyrtleTrunkPlacer;
 import com.zepsun.aberrance.worldgen.placer.FancySoulTrunkPlacer;
 import com.zepsun.aberrance.worldgen.placer.SoulTrunkPlacer;
+import com.zepsun.aberrance.worldgen.placer.VeryFancySoulTrunkPlacer;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
@@ -32,8 +33,10 @@ import java.util.List;
 public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> ACACIA_MESQUITE_KEY = registerKey("acacia_mesquite");
     public static final ResourceKey<ConfiguredFeature<?, ?>> CREPE_MYRTLE_KEY = registerKey("crepe_myrtle");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> LIVE_OAK_KEY = registerKey("live_oak");
     public static final ResourceKey<ConfiguredFeature<?, ?>> BROADLEAF_KEY = registerKey("broadleaf");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FANCY_LIVE_OAK_KEY = registerKey("fancy_live_oak");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> LIVE_OAK_KEY = registerKey("live_oak");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_KYANITE_ORE_KEY = registerKey("kyanite_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_KYANITE_ORE_KEY = registerKey("nether_kyanite_ore");
@@ -52,8 +55,11 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>>  MURDEROUS_SOUL_GRASS_KEY = registerKey("murderous_soul_grass");
     public static final ResourceKey<ConfiguredFeature<?, ?>>  STARVED_SOUL_GRASS_KEY = registerKey("starved_soul_grass");
 
-    public static final ResourceKey<ConfiguredFeature<?, ?>>  FANCY_STARVED_FUNGUS_KEY = registerKey("fancy_starved_fungus");
     public static final ResourceKey<ConfiguredFeature<?, ?>>  STARVED_FUNGUS_KEY = registerKey("starved_fungus");
+    public static final ResourceKey<ConfiguredFeature<?, ?>>  FANCY_STARVED_FUNGUS_KEY = registerKey("fancy_starved_fungus");
+    public static final ResourceKey<ConfiguredFeature<?, ?>>  VERY_FANCY_STARVED_FUNGUS_KEY = registerKey("very_fancy_starved_fungus");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>>  STARVED_FUNGUS_PLANT_KEY = registerKey("starved_fungus_plant");
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
 
         RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -87,6 +93,12 @@ public class ModConfiguredFeatures {
         register(context, LIVE_OAK_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.LIVE_OAK_LOG.get()),
                 new FancyTrunkPlacer(3, 11, 0),
+                BlockStateProvider.simple(ModBlocks.LIVE_OAK_LEAVES.get()),
+                new FancyFoliagePlacer(ConstantInt.of(2),ConstantInt.of(4),4),
+                new TwoLayersFeatureSize(3, 0, 2)).build());
+        register(context, FANCY_LIVE_OAK_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.LIVE_OAK_LOG.get()),
+                new VeryFancySoulTrunkPlacer(3, 4, 2),
                 BlockStateProvider.simple(ModBlocks.LIVE_OAK_LEAVES.get()),
                 new FancyFoliagePlacer(ConstantInt.of(2),ConstantInt.of(4),4),
                 new TwoLayersFeatureSize(3, 0, 2)).build());
@@ -130,15 +142,25 @@ public class ModConfiguredFeatures {
                 new RandomPatchConfiguration(78, 6,2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.STARVED_SOUL_GRASS.get())))));
 
+        register(context, STARVED_FUNGUS_PLANT_KEY, Feature.FLOWER,
+                new RandomPatchConfiguration(32, 6,2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.STARVED_SOUL_GRASS.get())))));
+
+        register(context, STARVED_FUNGUS_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.STARVED_STEM.get()),
+                new SoulTrunkPlacer(2, 3, 2),
+                BlockStateProvider.simple(ModBlocks.STARVED_SPORE.get()),
+                new FancyFoliagePlacer(ConstantInt.of(2),ConstantInt.of(4),4),
+                new TwoLayersFeatureSize(3, 0, 2)).dirt(BlockStateProvider.simple(ModBlocks.STARVED_SOUL_SOIL.get())).build());
         register(context, FANCY_STARVED_FUNGUS_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.STARVED_STEM.get()),
                 new FancySoulTrunkPlacer(3, 4, 2),
                 BlockStateProvider.simple(ModBlocks.STARVED_SPORE.get()),
                 new FancyFoliagePlacer(ConstantInt.of(2),ConstantInt.of(4),4),
                 new TwoLayersFeatureSize(3, 0, 2)).dirt(BlockStateProvider.simple(ModBlocks.STARVED_SOUL_SOIL.get())).build());
-        register(context, STARVED_FUNGUS_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+        register(context, VERY_FANCY_STARVED_FUNGUS_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.STARVED_STEM.get()),
-                new SoulTrunkPlacer(2, 3, 2),
+                new VeryFancySoulTrunkPlacer(3, 4, 2),
                 BlockStateProvider.simple(ModBlocks.STARVED_SPORE.get()),
                 new FancyFoliagePlacer(ConstantInt.of(2),ConstantInt.of(4),4),
                 new TwoLayersFeatureSize(3, 0, 2)).dirt(BlockStateProvider.simple(ModBlocks.STARVED_SOUL_SOIL.get())).build());

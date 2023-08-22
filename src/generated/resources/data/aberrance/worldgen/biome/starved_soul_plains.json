@@ -31,7 +31,8 @@
     [],
     [
       "aberrance:starved_soul_grass_placed",
-      "aberrance:starved_stem_fungus_key"
+      "aberrance:starved_stem_fungus",
+      "aberrance:starved_fungus_plant_placed"
     ]
   ],
   "has_precipitation": true,

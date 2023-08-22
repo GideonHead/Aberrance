@@ -178,12 +178,32 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.STARVED_SOUL_SOIL);
         flowerBlock(ModBlocks.STARVED_SOUL_GRASS);
         topSideBlockWithItem(ModBlocks.STARVED_SOUL_GRASS_BLOCK, "starved_soul_grass_block_side", "starved_soul_soil", "starved_soul_grass_block_top");
-        blockWithItem(ModBlocks.STARVED_SPORE);
-        saplingBlock(ModBlocks.STARVED_FUNGUS);
         logBlock((RotatedPillarBlock) ModBlocks.STARVED_STEM.get());
         axisBlock(((RotatedPillarBlock) ModBlocks.STARVED_HYPHAE.get()), blockTexture(ModBlocks.STARVED_STEM.get()), blockTexture(ModBlocks.STARVED_STEM.get()));
         blockItem(ModBlocks.STARVED_STEM);
         blockItem(ModBlocks.STARVED_HYPHAE);
+        logBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_STARVED_STEM.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_STARVED_HYPHAE.get()), blockTexture(ModBlocks.STRIPPED_STARVED_STEM.get()),
+                blockTexture(ModBlocks.STRIPPED_STARVED_STEM.get()));
+        blockWithItem(ModBlocks.STARVED_SPORE);
+        blockWithItem(ModBlocks.STARVED_PLANKS);
+        saplingBlock(ModBlocks.STARVED_FUNGUS);
+        blockItem(ModBlocks.STRIPPED_STARVED_STEM);
+        blockItem(ModBlocks.STRIPPED_STARVED_HYPHAE);
+        stairsBlock((StairBlock) ModBlocks.STARVED_STAIRS.get(), blockTexture(ModBlocks.STARVED_PLANKS.get()));
+        slabBlock((SlabBlock) ModBlocks.STARVED_SLAB.get(), blockTexture(ModBlocks.STARVED_PLANKS.get()), blockTexture(ModBlocks.STARVED_PLANKS.get()));
+        blockItem(ModBlocks.STARVED_STAIRS);
+        blockItem(ModBlocks.STARVED_SLAB);
+        trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.STARVED_TRAPDOOR.get(), modLoc("block/starved_trapdoor"), true, "cutout");
+        doorBlockWithRenderType((DoorBlock) ModBlocks.STARVED_DOOR.get(), modLoc("block/starved_door_bottom"), modLoc("block/starved_door_top"),
+                "cutout");
+        trapdoorBlockItem(ModBlocks.STARVED_TRAPDOOR);
+        buttonBlock((ButtonBlock) ModBlocks.STARVED_BUTTON.get(), blockTexture(ModBlocks.STARVED_PLANKS.get()));
+        pressurePlateBlock((PressurePlateBlock) ModBlocks.STARVED_PRESSURE_PLATE.get(), blockTexture(ModBlocks.STARVED_PLANKS.get()));
+        blockItem(ModBlocks.STARVED_PRESSURE_PLATE);
+        fenceBlock((FenceBlock) ModBlocks.STARVED_FENCE.get(), blockTexture(ModBlocks.STARVED_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.STARVED_FENCE_GATE.get(), blockTexture(ModBlocks.STARVED_PLANKS.get()));
+        blockItem(ModBlocks.STARVED_FENCE_GATE);
 
 
         //Murderous Soul
