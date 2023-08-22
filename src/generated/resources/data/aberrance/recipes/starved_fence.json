@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "aberrance:starved_planks"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "ASA",
+    "ASA"
+  ],
+  "result": {
+    "count": 4,
+    "item": "aberrance:starved_fence"
+  },
+  "show_notification": true
+}
