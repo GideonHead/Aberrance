@@ -3,10 +3,7 @@ package com.zepsun.aberrance.worldgen;
 import com.zepsun.aberrance.Aberrance;
 import com.zepsun.aberrance.block.ModBlocks;
 import com.zepsun.aberrance.tag.ModTags;
-import com.zepsun.aberrance.worldgen.placer.CrepeMyrtleTrunkPlacer;
-import com.zepsun.aberrance.worldgen.placer.FancySoulTrunkPlacer;
-import com.zepsun.aberrance.worldgen.placer.SoulTrunkPlacer;
-import com.zepsun.aberrance.worldgen.placer.VeryFancySoulTrunkPlacer;
+import com.zepsun.aberrance.worldgen.placer.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
@@ -60,6 +57,7 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>>  VERY_FANCY_STARVED_FUNGUS_KEY = registerKey("very_fancy_starved_fungus");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>>  STARVED_FUNGUS_PLANT_KEY = registerKey("starved_fungus_plant");
+    public static final ResourceKey<ConfiguredFeature<?, ?>>  PALM_KEY = registerKey("palm");
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
 
         RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -164,6 +162,13 @@ public class ModConfiguredFeatures {
                 BlockStateProvider.simple(ModBlocks.STARVED_SPORE.get()),
                 new FancyFoliagePlacer(ConstantInt.of(2),ConstantInt.of(4),4),
                 new TwoLayersFeatureSize(3, 0, 2)).dirt(BlockStateProvider.simple(ModBlocks.STARVED_SOUL_SOIL.get())).build());
+
+        register(context, PALM_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.CREPE_MYRTLE_LOG.get()),
+                new PalmTrunkPlacer(3, 2, 1),
+                BlockStateProvider.simple(ModBlocks.CREPE_MYRTLE_LEAVES.get()),
+                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 2),
+                new TwoLayersFeatureSize(3, 0, 2)).build());
     }
 
 

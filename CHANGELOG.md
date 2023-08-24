@@ -1,6 +1,10 @@
 # Changelog
 
-# Changelog
+## 0.11.1-1.20.1
+
+### Fixed
+
+ - Crashing in Abyss
 
 ## 0.11.0-1.20.1
 
