@@ -209,6 +209,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
         //Murderous Soul
         blockWithItem(ModBlocks.MURDEROUS_SOUL_SOIL);
         flowerBlock(ModBlocks.MURDEROUS_SOUL_GRASS);
+
+
+        //Palm
+        logBlock((RotatedPillarBlock) ModBlocks.PALM_LOG.get());
+        axisBlock(((RotatedPillarBlock) ModBlocks.PALM_WOOD.get()), blockTexture(ModBlocks.PALM_LOG.get()), blockTexture(ModBlocks.PALM_LOG.get()));
+        blockItem(ModBlocks.PALM_LOG);
+        blockItem(ModBlocks.PALM_WOOD);
     }
 
     public void makeCrossCrop(CropBlock block, String modelName, String textureName) {

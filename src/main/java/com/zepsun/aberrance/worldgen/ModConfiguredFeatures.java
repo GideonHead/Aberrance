@@ -164,9 +164,9 @@ public class ModConfiguredFeatures {
                 new TwoLayersFeatureSize(3, 0, 2)).dirt(BlockStateProvider.simple(ModBlocks.STARVED_SOUL_SOIL.get())).build());
 
         register(context, PALM_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
-                BlockStateProvider.simple(ModBlocks.CREPE_MYRTLE_LOG.get()),
+                BlockStateProvider.simple(ModBlocks.PALM_LOG.get()),
                 new PalmTrunkPlacer(3, 2, 1),
-                BlockStateProvider.simple(ModBlocks.CREPE_MYRTLE_LEAVES.get()),
+                BlockStateProvider.simple(Blocks.JUNGLE_LEAVES),
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 2),
                 new TwoLayersFeatureSize(3, 0, 2)).build());
     }

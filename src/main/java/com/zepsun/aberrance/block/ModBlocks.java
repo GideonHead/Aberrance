@@ -289,6 +289,41 @@ public class ModBlocks {
             () -> new FenceGateBlock(BlockBehaviour.Properties.of().copy(Blocks.OAK_FENCE_GATE).sound(SoundType.WOOD), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
 
 
+    //Palm
+    public static final RegistryObject<Block> PALM_LEAVES = registerBlock("palm_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).strength(0.2F)
+                    .randomTicks().sound(SoundType.GRASS).noOcclusion().isSuffocating(ModBlocks::never).isViewBlocking(ModBlocks::never)
+                    .ignitedByLava().pushReaction(PushReaction.DESTROY).isRedstoneConductor(ModBlocks::never)));
+    public static final RegistryObject<Block> PALM_SAPLING = registerBlock("palm_sapling",
+            () -> new SaplingBlock(new CrepeMyrtleTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<Block> STRIPPED_PALM_WOOD = registerBlock("stripped_palm_wood",
+            () -> new FlammableWoodLog(BlockBehaviour.Properties.of().copy(Blocks.OAK_LOG).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> PALM_WOOD = registerBlock("palm_wood",
+            () -> new StrippableFlammableWoodLog(STRIPPED_CREPE_MYRTLE_WOOD, BlockBehaviour.Properties.of().copy(Blocks.OAK_LOG).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> STRIPPED_PALM_LOG = registerBlock("stripped_palm_log",
+            () -> new FlammableWoodLog(BlockBehaviour.Properties.of().copy(Blocks.OAK_LOG).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> PALM_LOG = registerBlock("palm_log",
+            () -> new StrippableFlammableWoodLog(STRIPPED_CREPE_MYRTLE_LOG, BlockBehaviour.Properties.of().copy(Blocks.OAK_LOG).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> PALM_PLANKS = registerBlock("palm_planks",
+            () -> new FlammableBlock(BlockBehaviour.Properties.of().copy(Blocks.OAK_PLANKS).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> PALM_STAIRS = registerBlock("palm_stairs",
+            () -> new StairBlock(() -> ModBlocks.LIVE_OAK_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.of().copy(Blocks.OAK_STAIRS)));
+    public static final RegistryObject<Block> PALM_SLAB = registerBlock("palm_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of().copy(Blocks.OAK_SLAB)));
+    public static final RegistryObject<Block> PALM_DOOR = registerBlock("palm_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.of().copy(Blocks.OAK_DOOR).sound(SoundType.WOOD), BlockSetType.OAK));
+    public static final RegistryObject<Block> PALM_TRAPDOOR = registerBlock("palm_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.of().copy(Blocks.OAK_TRAPDOOR).sound(SoundType.WOOD), BlockSetType.OAK));
+    public static final RegistryObject<Block> PALM_PRESSURE_PLATE = registerBlock("palm_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of().copy(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> PALM_BUTTON = registerBlock("palm_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.of().copy(Blocks.OAK_TRAPDOOR), BlockSetType.OAK, 20, true));
+    public static final RegistryObject<Block> PALM_FENCE = registerBlock("palm_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of().copy(Blocks.OAK_FENCE).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> PALM_FENCE_GATE = registerBlock("palm_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.of().copy(Blocks.OAK_FENCE_GATE).sound(SoundType.WOOD), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+
+
     //Murderous Soul
     public static final RegistryObject<Block> MURDEROUS_SOUL_SOIL = registerBlock("murderous_soul_soil",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.SOUL_SOIL)));

@@ -1,4 +1,4 @@
-// 1.20.1	2023-08-21T17:06:44.3045367	Block States: aberrance
+// 1.20.1	2023-08-25T09:53:09.0084415	Block States: aberrance
 882f4f17e290af235fe9f2bd4581886057155598 assets/aberrance/blockstates/acacia_mesquite_leaves.json
 7d232479a18ba9f80db6916c4cb753d0eb9d2e03 assets/aberrance/blockstates/acacia_mesquite_sapling.json
 725ebcaaa7207e4ef80018266a01fa244f1004bc assets/aberrance/blockstates/broadleaf_button.json
@@ -50,6 +50,8 @@ dee5236f59817d211fda9602eaae6728770c1f4d assets/aberrance/blockstates/live_oak_w
 b22ec5fc7bb5dfbaf412d126f87c8ebe509ba8dc assets/aberrance/blockstates/murderous_soul_grass.json
 b3d03eb28c27ff9cb1c298d45ced8a4a6b65d4e8 assets/aberrance/blockstates/murderous_soul_soil.json
 ae5820dc6bc1a13e514c128bc5649137c5db8b9a assets/aberrance/blockstates/onion_crop.json
+33e6cf17a0ad4ee5f59243b28433de1f6c52d47c assets/aberrance/blockstates/palm_log.json
+cd2e72d686703dc6a6a117621135bf0e106aad79 assets/aberrance/blockstates/palm_wood.json
 41f438a98cc96c717099eb3cad4ae91766ca6948 assets/aberrance/blockstates/parsnip_crop.json
 7586b2c42243eae1c55e623886440a1589babeb2 assets/aberrance/blockstates/raw_kyanite_block.json
 eb293757012e1281345bc0d8d20875308c256902 assets/aberrance/blockstates/raw_rudanium_block.json
@@ -217,6 +219,10 @@ a3b55f7f66380ae06ef3e51a5ab060f8514e6244 assets/aberrance/models/block/onion_sta
 399ed3429479a671ca00cfb79dad18484df4899d assets/aberrance/models/block/onion_stage4.json
 957e5156a2573cac286589b09638fe01c586f876 assets/aberrance/models/block/onion_stage5.json
 8aa4ce499b52d0d38b18ebf90b667de9784aba68 assets/aberrance/models/block/onion_stage6.json
+8b42836e2787a6bb8ba6ccb8b7ea002ec0d56615 assets/aberrance/models/block/palm_log.json
+ece268df4f6b00c0f36fcf176f1dbe831c9219da assets/aberrance/models/block/palm_log_horizontal.json
+bfa53c652ac1f19157ce1e5146746c2e3e6ffeda assets/aberrance/models/block/palm_wood.json
+d96d5b8bfe693a988a2e52b9252b89f53df27cdc assets/aberrance/models/block/palm_wood_horizontal.json
 2ab047d07bc60de78819de6194a2d52852d7c83a assets/aberrance/models/block/parsnip_stage0.json
 cd1d3bf9bccd6bf9eb668d096a6867feb62ed76a assets/aberrance/models/block/parsnip_stage1.json
 5b50ea274decbd8fcf9bce77a5555e4f4a25f04b assets/aberrance/models/block/parsnip_stage2.json
@@ -358,6 +364,8 @@ cb8c8b51b8205796cd715349e3b36df726e4ae2d assets/aberrance/models/item/live_oak_s
 59dde07438db6a7b4bc6f31fccf4c76679b72225 assets/aberrance/models/item/live_oak_trapdoor.json
 0f13c9f89ca9abf266263c2702f800f535dac243 assets/aberrance/models/item/live_oak_wood.json
 c3af6b11d676d535d82218359afa020c05fd5895 assets/aberrance/models/item/murderous_soul_soil.json
+a9ec71c8cb9abd3b9ec2cf5fb395e7a2371d3382 assets/aberrance/models/item/palm_log.json
+ce600bdae3fd50319d9da1d2864e4e8b1ccd8688 assets/aberrance/models/item/palm_wood.json
 acc18aa320d0bfb59f20898931c7e82a455d2fc9 assets/aberrance/models/item/raw_kyanite_block.json
 abd65411f3bd069b7e5a451e4f7780f846791556 assets/aberrance/models/item/raw_rudanium_block.json
 21365ce54fa35fdea6d427cee8b5d0f7f79f272b assets/aberrance/models/item/rudanium_block.json

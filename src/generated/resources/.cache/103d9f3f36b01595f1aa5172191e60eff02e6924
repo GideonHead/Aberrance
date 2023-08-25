@@ -1,4 +1,4 @@
-// 1.20.1	2023-08-24T12:09:16.2167037	Registries
+// 1.20.1	2023-08-25T09:54:45.0989761	Registries
 ab3f245f92931f3f78e6ddf16dbb2ce62c1aecf0 data/aberrance/dimension/abyss.json
 b73ab2a0123ea89139655481ac9585612c260113 data/aberrance/dimension_type/abyss_type.json
 d0d97d7a178e14e85e79490070b1d8346d6f3438 data/aberrance/forge/biome_modifier/add_end_kyanite_ore.json
@@ -36,7 +36,7 @@ cba1a973fea0e230719d0f3f4022352a06348b73 data/aberrance/worldgen/configured_feat
 8199b4bbffebe039296b6151494ecb8bb6118b93 data/aberrance/worldgen/configured_feature/murderous_soul_grass.json
 985570bd0854bac9899af5b142c1858bcf7c5167 data/aberrance/worldgen/configured_feature/nether_kyanite_ore.json
 482e56cb80d154e526b19b327b2940f97fb5a0b3 data/aberrance/worldgen/configured_feature/nether_rudanium_ore.json
-4efac73dbea76fbc27e71b8843e0aec0ce929618 data/aberrance/worldgen/configured_feature/palm.json
+05525336984d85db2b04c1e89a9202cfa6ab4f07 data/aberrance/worldgen/configured_feature/palm.json
 e85e0b16b3d8ba5adc58a0c34a7c61e6929d6491 data/aberrance/worldgen/configured_feature/rudanium_ore.json
 a6b04aa92a4d89c6faf02ae0cfa5e4265e74aa8c data/aberrance/worldgen/configured_feature/starved_fungus.json
 d17525b8cc19d1d1974ead2659886af6671eb254 data/aberrance/worldgen/configured_feature/starved_fungus_plant.json
