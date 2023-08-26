@@ -124,6 +124,24 @@ public class ModEnUsGenerator extends LanguageProvider {
         addBlock(ModBlocks.BROADLEAF_FENCE_GATE, "Broadleaf Fence Gate");
         addBlock(ModBlocks.BROADLEAF_LEAVES, "Broadleaf Leaves");
 
+        addBlock(ModBlocks.PALM_LOG, "Palm Log");
+        addBlock(ModBlocks.PALM_WOOD, "Palm Wood");
+        addBlock(ModBlocks.FIBROUS_PALM_LOG, "Fibrous Palm Log");
+        addBlock(ModBlocks.FIBROUS_PALM_WOOD, "Fibrous Palm Wood");
+        addBlock(ModBlocks.STRIPPED_PALM_LOG, "Stripped Palm Log");
+        addBlock(ModBlocks.STRIPPED_PALM_WOOD, "Stripped Palm Wood");
+        addBlock(ModBlocks.PALM_SAPLING, "Palm Sapling");
+        addBlock(ModBlocks.PALM_PLANKS, "Palm Planks");
+        addBlock(ModBlocks.PALM_STAIRS, "Palm Stairs");
+        addBlock(ModBlocks.PALM_SLAB, "Palm Slab");
+        addBlock(ModBlocks.PALM_PRESSURE_PLATE, "Palm Pressure Plate");
+        addBlock(ModBlocks.PALM_BUTTON, "Palm Button");
+        addBlock(ModBlocks.PALM_DOOR, "Palm Door");
+        addBlock(ModBlocks.PALM_TRAPDOOR, "Palm Trapdoor");
+        addBlock(ModBlocks.PALM_FENCE, "Palm Fence");
+        addBlock(ModBlocks.PALM_FENCE_GATE, "Palm Fence Gate");
+        addBlock(ModBlocks.PALM_LEAVES, "Palm Leaves");
+
         addBlock(ModBlocks.WHITE_COBBLESTONE, "White Cobblestone");
         addBlock(ModBlocks.WHITE_COBBLESTONE_WALL, "White Cobbl stone Wall");
         addBlock(ModBlocks.WHITE_COBBLESTONE_SLAB, "White Cobblestone Slab");

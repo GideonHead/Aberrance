@@ -1,4 +1,4 @@
-// 1.20.1	2023-08-25T09:53:09.013947	Loot Tables
+// 1.20.1	2023-08-26T13:09:23.5833381	Loot Tables
 7c42149e07b56d27d06c1f2f65b090398a446faa data/aberrance/loot_tables/blocks/acacia_mesquite_leaves.json
 ebd8840a8bd2767cad8e5a40a1b2ca8074a5f2f9 data/aberrance/loot_tables/blocks/acacia_mesquite_sapling.json
 c1423ae166710bc9b0c94105735f67aa528159e1 data/aberrance/loot_tables/blocks/broadleaf_button.json
@@ -29,6 +29,8 @@ c4face1c3ecb92790016a463de010a73af0ece75 data/aberrance/loot_tables/blocks/crepe
 857452cdcf2725d3b106142f0698a1955f623d94 data/aberrance/loot_tables/blocks/crepe_myrtle_stairs.json
 98db20ae6ee268f4d33a6964627b456441fc6ea8 data/aberrance/loot_tables/blocks/crepe_myrtle_trapdoor.json
 9e1ecc621a43e68059f603557d9e369dce646b0f data/aberrance/loot_tables/blocks/crepe_myrtle_wood.json
+6e17c748fad55293d04cce06c75df2b6c79d8212 data/aberrance/loot_tables/blocks/fibrous_palm_log.json
+e6408a17e0307167408b0455da36e9d8bc6a23db data/aberrance/loot_tables/blocks/fibrous_palm_wood.json
 c743ab8528444af7af98ebab21db78cc05cef45f data/aberrance/loot_tables/blocks/kyanite_block.json
 0df57408feb1fde436e55ffe56126c2740f00b8e data/aberrance/loot_tables/blocks/kyanite_ore.json
 082f9436e5697413a788c96cabbe1ccc004fa40d data/aberrance/loot_tables/blocks/kyanite_ore_deepslate.json

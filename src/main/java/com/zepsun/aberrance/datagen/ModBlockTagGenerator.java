@@ -51,7 +51,13 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.STARVED_STEM.get())
                 .add(ModBlocks.STARVED_HYPHAE.get())
                 .add(ModBlocks.STRIPPED_STARVED_STEM.get())
-                .add(ModBlocks.STRIPPED_STARVED_HYPHAE.get());
+                .add(ModBlocks.STRIPPED_STARVED_HYPHAE.get())
+                .add(ModBlocks.PALM_LOG.get())
+                .add(ModBlocks.PALM_WOOD.get())
+                .add(ModBlocks.FIBROUS_PALM_LOG.get())
+                .add(ModBlocks.FIBROUS_PALM_WOOD.get())
+                .add(ModBlocks.STRIPPED_PALM_LOG.get())
+                .add(ModBlocks.STRIPPED_PALM_WOOD.get());
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.WHITE_COBBLESTONE.get())
@@ -114,7 +120,35 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.CREPE_MYRTLE_DOOR.get())
                 .add(ModBlocks.CREPE_MYRTLE_TRAPDOOR.get())
                 .add(ModBlocks.CREPE_MYRTLE_STAIRS.get())
-                .add(ModBlocks.CREPE_MYRTLE_SLAB.get());
+                .add(ModBlocks.CREPE_MYRTLE_SLAB.get())
+
+                .add(ModBlocks.PALM_LOG.get())
+                .add(ModBlocks.STRIPPED_PALM_LOG.get())
+                .add(ModBlocks.PALM_WOOD.get())
+                .add(ModBlocks.STRIPPED_PALM_WOOD.get())
+                .add(ModBlocks.PALM_PLANKS.get())
+                .add(ModBlocks.PALM_BUTTON.get())
+                .add(ModBlocks.PALM_PRESSURE_PLATE.get())
+                .add(ModBlocks.PALM_FENCE.get())
+                .add(ModBlocks.PALM_FENCE_GATE.get())
+                .add(ModBlocks.PALM_DOOR.get())
+                .add(ModBlocks.PALM_TRAPDOOR.get())
+                .add(ModBlocks.PALM_STAIRS.get())
+                .add(ModBlocks.PALM_SLAB.get())
+
+                .add(ModBlocks.STARVED_STEM.get())
+                .add(ModBlocks.STRIPPED_STARVED_STEM.get())
+                .add(ModBlocks.STARVED_HYPHAE.get())
+                .add(ModBlocks.STRIPPED_STARVED_HYPHAE.get())
+                .add(ModBlocks.STARVED_PLANKS.get())
+                .add(ModBlocks.STARVED_BUTTON.get())
+                .add(ModBlocks.STARVED_PRESSURE_PLATE.get())
+                .add(ModBlocks.STARVED_FENCE.get())
+                .add(ModBlocks.STARVED_FENCE_GATE.get())
+                .add(ModBlocks.STARVED_DOOR.get())
+                .add(ModBlocks.STARVED_TRAPDOOR.get())
+                .add(ModBlocks.STARVED_STAIRS.get())
+                .add(ModBlocks.STARVED_SLAB.get());
 
         this.tag(BlockTags.MINEABLE_WITH_HOE)
                 .add(ModBlocks.LIVE_OAK_LEAVES.get())
@@ -165,7 +199,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.CREPE_MYRTLE_FENCE.get())
                 .add(ModBlocks.LIVE_OAK_FENCE.get())
                 .add(ModBlocks.STARVED_FENCE.get())
-                .add(ModBlocks.BROADLEAF_FENCE.get());
+                .add(ModBlocks.BROADLEAF_FENCE.get())
+                .add(ModBlocks.PALM_FENCE.get());
         this.tag(BlockTags.WALLS)
                 .add(ModBlocks.WHITE_COBBLESTONE_WALL.get())
                 .add(ModBlocks.WHITE_STONE_WALL.get())
@@ -174,6 +209,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.CREPE_MYRTLE_FENCE_GATE.get())
                 .add(ModBlocks.LIVE_OAK_FENCE_GATE.get())
                 .add(ModBlocks.STARVED_FENCE_GATE.get())
+                .add(ModBlocks.PALM_FENCE_GATE.get())
                 .add(ModBlocks.BROADLEAF_FENCE_GATE.get());
 
         this.tag(BlockTags.SOUL_SPEED_BLOCKS)

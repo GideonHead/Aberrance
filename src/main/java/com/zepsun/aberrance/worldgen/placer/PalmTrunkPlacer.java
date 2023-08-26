@@ -2,6 +2,7 @@ package com.zepsun.aberrance.worldgen.placer;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import com.zepsun.aberrance.block.ModBlocks;
 import com.zepsun.aberrance.worldgen.ModTrunkPlacerTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -15,6 +16,7 @@ import net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacerType;
 
 import java.util.List;
 import java.util.function.BiConsumer;
+import java.util.function.Function;
 
 public class PalmTrunkPlacer extends TrunkPlacer {
     public static final Codec<PalmTrunkPlacer> CODEC = RecordCodecBuilder.create(palmTrunkPlacerInstance ->
@@ -80,15 +82,34 @@ public class PalmTrunkPlacer extends TrunkPlacer {
 
             int segmentLength = pRandom.nextInt(3, 6);
 
-            for(int j = 0; j< segmentLength; j++) {
+            for(int j = 0; j < segmentLength; j++) {
 
-                placeLog(pLevel, pBlockSetter, pRandom, thisPos, pConfig);
-                thisPos = thisPos.above();
+                if (i == branchLength - 1) {
+                    if(j >= segmentLength/3) {
+                        placeFibrousLog(pLevel, pBlockSetter, thisPos);
+                        thisPos = thisPos.above();
+                    } else {
+                        placeLog(pLevel, pBlockSetter, pRandom, thisPos, pConfig);
+                        thisPos = thisPos.above();
+                    }
+                } else {
+                    placeLog(pLevel, pBlockSetter, pRandom, thisPos, pConfig);
+                    thisPos = thisPos.above();
+                }
             }
             endPos = thisPos;
             thisPos = thisPos.relative(pDirection);
         }
 
         return new FoliagePlacer.FoliageAttachment(endPos.offset(0, +1, 0), 0, false);
+    }
+
+    protected boolean placeFibrousLog(LevelSimulatedReader pLevel, BiConsumer<BlockPos, BlockState> pBlockSetter, BlockPos pPos) {
+        if (this.validTreePos(pLevel, pPos)) {
+            pBlockSetter.accept(pPos, ModBlocks.FIBROUS_PALM_LOG.get().defaultBlockState());
+            return true;
+        } else {
+            return false;
+        }
     }
 }

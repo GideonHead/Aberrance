@@ -295,7 +295,8 @@ public class ModBlocks {
                     .randomTicks().sound(SoundType.GRASS).noOcclusion().isSuffocating(ModBlocks::never).isViewBlocking(ModBlocks::never)
                     .ignitedByLava().pushReaction(PushReaction.DESTROY).isRedstoneConductor(ModBlocks::never)));
     public static final RegistryObject<Block> PALM_SAPLING = registerBlock("palm_sapling",
-            () -> new SaplingBlock(new CrepeMyrtleTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).copy(Blocks.OAK_SAPLING)));
+            () -> new CustomPlacementSaplingBlock(new PalmTreeGrower(), ModTags.Blocks.ABERRANCE_PLANT_PLACEABLES,
+                    BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).copy(Blocks.OAK_SAPLING)));
     public static final RegistryObject<Block> STRIPPED_PALM_WOOD = registerBlock("stripped_palm_wood",
             () -> new FlammableWoodLog(BlockBehaviour.Properties.of().copy(Blocks.OAK_LOG).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> PALM_WOOD = registerBlock("palm_wood",
@@ -304,9 +305,9 @@ public class ModBlocks {
             () -> new FlammableWoodLog(BlockBehaviour.Properties.of().copy(Blocks.OAK_LOG).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> PALM_LOG = registerBlock("palm_log",
             () -> new StrippableFlammableWoodLog(STRIPPED_PALM_LOG, BlockBehaviour.Properties.of().copy(Blocks.OAK_LOG).sound(SoundType.WOOD)));
-    public static final RegistryObject<Block> FIBROUS_PALM_LOG = registerBlock("palm_log",
+    public static final RegistryObject<Block> FIBROUS_PALM_LOG = registerBlock("fibrous_palm_log",
             () -> new StrippableFlammableWoodLog(STRIPPED_PALM_LOG, BlockBehaviour.Properties.of().copy(Blocks.OAK_LOG).sound(SoundType.WOOD)));
-    public static final RegistryObject<Block> FIBROUS_PALM_WOOD = registerBlock("palm_wood",
+    public static final RegistryObject<Block> FIBROUS_PALM_WOOD = registerBlock("fibrous_palm_wood",
             () -> new StrippableFlammableWoodLog(STRIPPED_PALM_WOOD, BlockBehaviour.Properties.of().copy(Blocks.OAK_LOG).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> PALM_PLANKS = registerBlock("palm_planks",
             () -> new FlammableBlock(BlockBehaviour.Properties.of().copy(Blocks.OAK_PLANKS).sound(SoundType.WOOD)));

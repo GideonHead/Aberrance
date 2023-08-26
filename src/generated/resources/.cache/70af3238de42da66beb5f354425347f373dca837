@@ -1,12 +1,12 @@
-// 1.20.1	2023-08-21T17:06:44.3010271	Block Tags
+// 1.20.1	2023-08-26T13:58:45.0298655	Block Tags
 0c8d2e41b6ac4f4a2e3df91d06d0e890971034c6 data/aberrance/tags/blocks/aberrance_plant_placeables.json
 536894d180d0221b16c63a3224032469ceb42a93 data/aberrance/tags/blocks/soul_dirt.json
 477ed93b15027c861323b5a320606f216e54031d data/forge/tags/blocks/needs_netherite_tool.json
 2364d20111a9af2c5e506db2355a669818b1edaf data/minecraft/tags/blocks/dirt.json
-cb6abb25e9215588e99539b591fcd7251cd53768 data/minecraft/tags/blocks/fences.json
-58889b6372ec23063048ce7a73baed6726318016 data/minecraft/tags/blocks/fence_gates.json
-ea42b3f4af205ea4eb7a73641a38b815281f1dfa data/minecraft/tags/blocks/logs.json
-415ddaf50d629726da3d6e9737dcfbc0f33c26da data/minecraft/tags/blocks/mineable/axe.json
+b63f0fdc6f9825cb60af5fc5600a871c6529354f data/minecraft/tags/blocks/fences.json
+3bfc65dcbf806726109ac36ee29a080464340ed7 data/minecraft/tags/blocks/fence_gates.json
+882daf1ddae5ebca500a43370a5b4fa1a35cc50e data/minecraft/tags/blocks/logs.json
+02ddbddfdfbfda1cbd6028c37ba7ac85e50be1a2 data/minecraft/tags/blocks/mineable/axe.json
 1c938b06ac352ef6463d1feb119264d0f9bca512 data/minecraft/tags/blocks/mineable/hoe.json
 7370fd3556641e04b15d0f4abdc554733dcd4c79 data/minecraft/tags/blocks/mineable/pickaxe.json
 a5ad9666e7fd1eea1e8935776c14d721ca820172 data/minecraft/tags/blocks/needs_stone_tool.json

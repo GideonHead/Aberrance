@@ -83,6 +83,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItem(ModBlocks.BROADLEAF_DOOR);
         simpleBlockItem(ModBlocks.BROADLEAF_SAPLING);
 
+        fenceItem(ModBlocks.PALM_FENCE, ModBlocks.PALM_PLANKS);
+        buttonItem(ModBlocks.PALM_BUTTON, ModBlocks.PALM_PLANKS);
+        simpleBlockItem(ModBlocks.PALM_DOOR);
+        simpleBlockItem(ModBlocks.PALM_SAPLING);
+
         simpleBlockItem(ModBlocks.MURDEROUS_SOUL_GRASS);
         simpleBlockItem(ModBlocks.STARVED_SOUL_GRASS);
         simpleBlockItem(ModBlocks.STARVED_FUNGUS);

@@ -112,6 +112,24 @@ public class ModItemGroups {
             ModBlocks.BROADLEAF_STAIRS.get()
     );
 
+    public static final TreeGroup PALM_TREE_GROUP = new TreeGroup(
+            ModBlocks.PALM_LOG.get(),
+            ModBlocks.PALM_WOOD.get(),
+            ModBlocks.STRIPPED_PALM_LOG.get(),
+            ModBlocks.STRIPPED_PALM_WOOD.get(),
+            ModBlocks.PALM_PLANKS.get(),
+            ModBlocks.PALM_LEAVES.get(),
+            ModBlocks.PALM_SAPLING.get(),
+            ModBlocks.PALM_DOOR.get(),
+            ModBlocks.PALM_TRAPDOOR.get(),
+            ModBlocks.PALM_BUTTON.get(),
+            ModBlocks.PALM_PRESSURE_PLATE.get(),
+            ModBlocks.PALM_FENCE.get(),
+            ModBlocks.PALM_FENCE_GATE.get(),
+            ModBlocks.PALM_SLAB.get(),
+            ModBlocks.PALM_STAIRS.get()
+    );
+
     public static final TreeGroup STARVED_TREE_GROUP = new TreeGroup(
             ModBlocks.STARVED_STEM.get(),
             ModBlocks.STARVED_HYPHAE.get(),
