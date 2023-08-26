@@ -77,6 +77,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         treeGroupRecipes(pWriter, "has_live_oak", ModItemGroups.LIVE_OAK_TREE_GROUP);
         treeGroupRecipes(pWriter, "has_broadleaf", ModItemGroups.BROADLEAF_TREE_GROUP);
         treeGroupRecipes(pWriter, "has_starved", ModItemGroups.STARVED_TREE_GROUP);
+        treeGroupRecipes(pWriter, "has_palm", ModItemGroups.PALM_TREE_GROUP);
 
 
         armorToolsSmithingRecipes(pWriter, "has_kyanite_ingot", ModItemGroups.NETHERITE_ARMOR_TOOLS_GROUP, ModItemGroups.KYANITE_ARMOR_TOOLS_GROUP);
@@ -136,6 +137,26 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('C', Items.STRING)
                 .unlockedBy("has_iron_ingot", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Items.IRON_INGOT).build()))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.PALM_PLANKS.get(), 4)
+                .requires(ModBlocks.FIBROUS_PALM_LOG.get())
+                .unlockedBy("has_palm", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.PALM_LOG.get()).build()))
+                .save(pWriter, new ResourceLocation(Aberrance.MOD_ID, getItemName(ModBlocks.PALM_PLANKS.get().asItem()) + "_from_fibrous_log"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.PALM_PLANKS.get(), 4)
+                .requires(ModBlocks.FIBROUS_PALM_WOOD.get())
+                .unlockedBy("has_palm", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.PALM_LOG.get()).build()))
+                .save(pWriter, new ResourceLocation(Aberrance.MOD_ID, getItemName(ModBlocks.PALM_PLANKS.get().asItem()) + "_from_fibrous_wood"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.FIBROUS_PALM_WOOD.get(), 3)
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.FIBROUS_PALM_LOG.get())
+                .unlockedBy("has_palm", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.PALM_LOG.get()).build()))
                 .save(pWriter);
 
     }

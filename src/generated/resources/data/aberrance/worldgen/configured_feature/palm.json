@@ -17,7 +17,7 @@
     "foliage_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "minecraft:jungle_leaves",
+        "Name": "aberrance:palm_leaves",
         "Properties": {
           "distance": "7",
           "persistent": "false",

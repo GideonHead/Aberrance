@@ -212,11 +212,33 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 
         //Palm
-        logBlock((RotatedPillarBlock) ModBlocks.PALM_LOG.get());
+        logBlock(((RotatedPillarBlock) ModBlocks.PALM_LOG.get()));
         axisBlock(((RotatedPillarBlock) ModBlocks.PALM_WOOD.get()), blockTexture(ModBlocks.PALM_LOG.get()), blockTexture(ModBlocks.PALM_LOG.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_PALM_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_PALM_WOOD.get()), blockTexture(ModBlocks.STRIPPED_PALM_LOG.get()),
+                blockTexture(ModBlocks.STRIPPED_PALM_LOG.get()));
+        blockWithItem(ModBlocks.PALM_LEAVES);
+        blockWithItem(ModBlocks.PALM_PLANKS);
+        saplingBlock(ModBlocks.PALM_SAPLING);
         blockItem(ModBlocks.PALM_LOG);
         blockItem(ModBlocks.PALM_WOOD);
-        logBlock((RotatedPillarBlock) ModBlocks.FIBROUS_PALM_LOG.get());
+        blockItem(ModBlocks.STRIPPED_PALM_LOG);
+        blockItem(ModBlocks.STRIPPED_PALM_WOOD);
+        stairsBlock((StairBlock) ModBlocks.PALM_STAIRS.get(), blockTexture(ModBlocks.PALM_PLANKS.get()));
+        slabBlock((SlabBlock) ModBlocks.PALM_SLAB.get(), blockTexture(ModBlocks.PALM_PLANKS.get()), blockTexture(ModBlocks.PALM_PLANKS.get()));
+        blockItem(ModBlocks.PALM_STAIRS);
+        blockItem(ModBlocks.PALM_SLAB);
+        trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.PALM_TRAPDOOR.get(), modLoc("block/palm_trapdoor"), true, "cutout");
+        doorBlockWithRenderType((DoorBlock) ModBlocks.PALM_DOOR.get(), modLoc("block/palm_door_bottom"), modLoc("block/palm_door_top"),
+                "cutout");
+        trapdoorBlockItem(ModBlocks.PALM_TRAPDOOR);
+        buttonBlock((ButtonBlock) ModBlocks.PALM_BUTTON.get(), blockTexture(ModBlocks.PALM_PLANKS.get()));
+        pressurePlateBlock((PressurePlateBlock) ModBlocks.PALM_PRESSURE_PLATE.get(), blockTexture(ModBlocks.PALM_PLANKS.get()));
+        blockItem(ModBlocks.PALM_PRESSURE_PLATE);
+        fenceBlock((FenceBlock) ModBlocks.PALM_FENCE.get(), blockTexture(ModBlocks.PALM_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.PALM_FENCE_GATE.get(), blockTexture(ModBlocks.PALM_PLANKS.get()));
+        blockItem(ModBlocks.PALM_FENCE_GATE);
+        logBlock(((RotatedPillarBlock) ModBlocks.FIBROUS_PALM_LOG.get()));
         axisBlock(((RotatedPillarBlock) ModBlocks.FIBROUS_PALM_WOOD.get()), blockTexture(ModBlocks.FIBROUS_PALM_LOG.get()), blockTexture(ModBlocks.FIBROUS_PALM_LOG.get()));
         blockItem(ModBlocks.FIBROUS_PALM_LOG);
         blockItem(ModBlocks.FIBROUS_PALM_WOOD);

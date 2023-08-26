@@ -166,7 +166,7 @@ public class ModConfiguredFeatures {
         register(context, PALM_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.PALM_LOG.get()),
                 new PalmTrunkPlacer(3, 2, 1),
-                BlockStateProvider.simple(Blocks.JUNGLE_LEAVES),
+                BlockStateProvider.simple(ModBlocks.PALM_LEAVES.get()),
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 2),
                 new TwoLayersFeatureSize(3, 0, 2)).build());
     }

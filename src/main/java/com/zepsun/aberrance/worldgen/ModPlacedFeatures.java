@@ -22,7 +22,8 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> CREPE_MYRTLE_EXTRA_PLACED_KEY = registerKey("crepe_myrtle_extra_placed");
     public static final ResourceKey<PlacedFeature> BROADLEAF_PLACED_KEY = registerKey("broadleaf_placed");
     public static final ResourceKey<PlacedFeature> BROADLEAF_EXTRA_PLACED_KEY = registerKey("broadleaf_extra_placed");
-
+    public static final ResourceKey<PlacedFeature> PALM_PLACED_KEY = registerKey("palm_placed");
+    public static final ResourceKey<PlacedFeature> PALM_EXTRA_PLACED_KEY = registerKey("palm_extra_placed");
     public static final ResourceKey<PlacedFeature> LIVE_OAK_PLACED_KEY = registerKey("live_oak_placed");
     public static final ResourceKey<PlacedFeature> LIVE_OAK_RARE_PLACED_KEY = registerKey("live_oak_rare_placed");
     public static final ResourceKey<PlacedFeature> FANCY_LIVE_OAK_PLACED_KEY = registerKey("fancy_live_oak_placed");
@@ -71,6 +72,13 @@ public class ModPlacedFeatures {
         register(context, CREPE_MYRTLE_EXTRA_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CREPE_MYRTLE_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(12, 0.1f, 2),
                         ModBlocks.CREPE_MYRTLE_SAPLING.get()));
+
+        register(context, PALM_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.PALM_KEY),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(1, 0.1f, 2),
+                        ModBlocks.PALM_SAPLING.get()));
+        register(context, PALM_EXTRA_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.PALM_KEY),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(6, 0.1f, 2),
+                        ModBlocks.PALM_SAPLING.get()));
 
         register(context, LIVE_OAK_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.LIVE_OAK_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(1, 0.1f, 2),

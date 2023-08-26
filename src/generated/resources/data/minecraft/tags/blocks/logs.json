@@ -15,6 +15,12 @@
     "aberrance:starved_stem",
     "aberrance:starved_hyphae",
     "aberrance:stripped_starved_stem",
-    "aberrance:stripped_starved_hyphae"
+    "aberrance:stripped_starved_hyphae",
+    "aberrance:palm_log",
+    "aberrance:palm_wood",
+    "aberrance:fibrous_palm_log",
+    "aberrance:fibrous_palm_wood",
+    "aberrance:stripped_palm_log",
+    "aberrance:stripped_palm_wood"
   ]
 }

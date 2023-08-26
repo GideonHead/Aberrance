@@ -24,6 +24,8 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_TREE_CREPE_MYRTLE_FOREST = registerKey("add_tree_crepe_myrtle_forest");
     public static final ResourceKey<BiomeModifier> ADD_TREE_CREPE_MYRTLE_PLAINS = registerKey("add_tree_crepe_myrtle_plains");
 
+    public static final ResourceKey<BiomeModifier> ADD_TREE_PALM_BEACH = registerKey("add_tree_palm_beach");
+
     public static final ResourceKey<BiomeModifier> ADD_TREE_BROADLEAF_JUNGLE = registerKey("add_tree_broadleaf_jungle");
 
     public static final ResourceKey<BiomeModifier> ADD_KYANITE_ORE = registerKey("add_kyanite_ore");
@@ -70,6 +72,11 @@ public class ModBiomeModifiers {
         //        biomes.getOrThrow(BiomeTags.IS_FOREST),
         //        HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.FANCY_LIVE_OAK_PLACED_KEY)),
         //        GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        context.register(ADD_TREE_PALM_BEACH, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_BEACH),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.PALM_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
 
         context.register(ADD_TREE_BROADLEAF_JUNGLE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_JUNGLE),

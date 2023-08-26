@@ -125,6 +125,24 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BROADLEAF_FENCE.get());
                         output.accept(ModBlocks.BROADLEAF_FENCE_GATE.get());
 
+                        output.accept(ModBlocks.PALM_LEAVES.get());
+                        output.accept(ModBlocks.PALM_SAPLING.get());
+                        output.accept(ModBlocks.PALM_LOG.get());
+                        output.accept(ModBlocks.PALM_WOOD.get());
+                        output.accept(ModBlocks.FIBROUS_PALM_LOG.get());
+                        output.accept(ModBlocks.FIBROUS_PALM_WOOD.get());
+                        output.accept(ModBlocks.STRIPPED_PALM_LOG.get());
+                        output.accept(ModBlocks.STRIPPED_PALM_WOOD.get());
+                        output.accept(ModBlocks.PALM_PLANKS.get());
+                        output.accept(ModBlocks.PALM_STAIRS.get());
+                        output.accept(ModBlocks.PALM_SLAB.get());
+                        output.accept(ModBlocks.PALM_DOOR.get());
+                        output.accept(ModBlocks.PALM_TRAPDOOR.get());
+                        output.accept(ModBlocks.PALM_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.PALM_BUTTON.get());
+                        output.accept(ModBlocks.PALM_FENCE.get());
+                        output.accept(ModBlocks.PALM_FENCE_GATE.get());
+
                         output.accept(ModBlocks.WHITE_COBBLESTONE.get());
                         output.accept(ModBlocks.WHITE_COBBLESTONE_WALL.get());
                         output.accept(ModBlocks.WHITE_COBBLESTONE_STAIRS.get());
