@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "aberrance:palm_planks"
+    }
+  ],
+  "result": {
+    "item": "aberrance:palm_button"
+  }
+}

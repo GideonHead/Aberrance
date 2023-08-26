@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "aberrance:block/fibrous_palm_log_top",
+    "side": "aberrance:block/fibrous_palm_log"
+  }
+}

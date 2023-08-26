@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "aberrance:block/palm_planks",
+    "side": "aberrance:block/palm_planks",
+    "top": "aberrance:block/palm_planks"
+  }
+}
