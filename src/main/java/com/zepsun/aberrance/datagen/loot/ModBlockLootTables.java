@@ -179,6 +179,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.PALM_STAIRS.get());
         this.dropSelf(ModBlocks.PALM_LOG.get());
         this.dropSelf(ModBlocks.PALM_WOOD.get());
+        this.dropSelf(ModBlocks.FIBROUS_PALM_LOG.get());
+        this.dropSelf(ModBlocks.FIBROUS_PALM_WOOD.get());
         this.dropSelf(ModBlocks.STRIPPED_PALM_LOG.get());
         this.dropSelf(ModBlocks.STRIPPED_PALM_WOOD.get());
         this.dropSelf(ModBlocks.PALM_PLANKS.get());

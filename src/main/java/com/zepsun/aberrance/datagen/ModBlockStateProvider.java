@@ -216,6 +216,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         axisBlock(((RotatedPillarBlock) ModBlocks.PALM_WOOD.get()), blockTexture(ModBlocks.PALM_LOG.get()), blockTexture(ModBlocks.PALM_LOG.get()));
         blockItem(ModBlocks.PALM_LOG);
         blockItem(ModBlocks.PALM_WOOD);
+        logBlock((RotatedPillarBlock) ModBlocks.FIBROUS_PALM_LOG.get());
+        axisBlock(((RotatedPillarBlock) ModBlocks.FIBROUS_PALM_WOOD.get()), blockTexture(ModBlocks.FIBROUS_PALM_LOG.get()), blockTexture(ModBlocks.FIBROUS_PALM_LOG.get()));
+        blockItem(ModBlocks.FIBROUS_PALM_LOG);
+        blockItem(ModBlocks.FIBROUS_PALM_WOOD);
     }
 
     public void makeCrossCrop(CropBlock block, String modelName, String textureName) {

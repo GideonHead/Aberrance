@@ -299,11 +299,15 @@ public class ModBlocks {
     public static final RegistryObject<Block> STRIPPED_PALM_WOOD = registerBlock("stripped_palm_wood",
             () -> new FlammableWoodLog(BlockBehaviour.Properties.of().copy(Blocks.OAK_LOG).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> PALM_WOOD = registerBlock("palm_wood",
-            () -> new StrippableFlammableWoodLog(STRIPPED_CREPE_MYRTLE_WOOD, BlockBehaviour.Properties.of().copy(Blocks.OAK_LOG).sound(SoundType.WOOD)));
+            () -> new StrippableFlammableWoodLog(STRIPPED_PALM_WOOD, BlockBehaviour.Properties.of().copy(Blocks.OAK_LOG).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> STRIPPED_PALM_LOG = registerBlock("stripped_palm_log",
             () -> new FlammableWoodLog(BlockBehaviour.Properties.of().copy(Blocks.OAK_LOG).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> PALM_LOG = registerBlock("palm_log",
-            () -> new StrippableFlammableWoodLog(STRIPPED_CREPE_MYRTLE_LOG, BlockBehaviour.Properties.of().copy(Blocks.OAK_LOG).sound(SoundType.WOOD)));
+            () -> new StrippableFlammableWoodLog(STRIPPED_PALM_LOG, BlockBehaviour.Properties.of().copy(Blocks.OAK_LOG).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> FIBROUS_PALM_LOG = registerBlock("palm_log",
+            () -> new StrippableFlammableWoodLog(STRIPPED_PALM_LOG, BlockBehaviour.Properties.of().copy(Blocks.OAK_LOG).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> FIBROUS_PALM_WOOD = registerBlock("palm_wood",
+            () -> new StrippableFlammableWoodLog(STRIPPED_PALM_WOOD, BlockBehaviour.Properties.of().copy(Blocks.OAK_LOG).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> PALM_PLANKS = registerBlock("palm_planks",
             () -> new FlammableBlock(BlockBehaviour.Properties.of().copy(Blocks.OAK_PLANKS).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> PALM_STAIRS = registerBlock("palm_stairs",
