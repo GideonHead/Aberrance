@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.12.0-1.20.1
+
+### Added
+
+- Palm Tree and Wood Set
+
 ## 0.11.1-1.20.1
 
 ### Fixed
