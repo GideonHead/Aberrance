@@ -74,7 +74,7 @@ public class ModPlacedFeatures {
                         ModBlocks.CREPE_MYRTLE_SAPLING.get()));
 
         register(context, PALM_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.PALM_KEY),
-                VegetationPlacements.treePlacement(PlacementUtils.countExtra(1, 0.1f, 2),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(1/2, 0.1f, 2),
                         ModBlocks.PALM_SAPLING.get()));
         register(context, PALM_EXTRA_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.PALM_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(6, 0.1f, 2),

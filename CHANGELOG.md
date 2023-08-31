@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.12.1-1.20.1
+
+### Changed
+
+- Changed Palm Placed Rarity
+
 ## 0.12.0-1.20.1
 
 ### Added
